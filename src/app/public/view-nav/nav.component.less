@@ -1,0 +1,59 @@
+.navbar-default {
+  border-color: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  font-family: "Merriweather Sans", Arial, sans-serif;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+.navbar-wrapper {
+  border-radius: initial;
+  margin-top: 0 !important;
+}
+
+.nav .open > a,
+.nav .open > a:focus,
+.nav .open > a:hover {
+  background-color: transparent;
+}
+
+@media (max-width: 768px) {
+
+  .navbar-default {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 992px) {
+
+  .navbar-default {
+
+    background-color: rgba(255, 255, 255, 0.7);
+    border: transparent;
+
+    ul.navbar-nav {
+
+      > .active {
+        color: #FFF;
+
+        a,
+        a:focus,
+        a:hover {
+          color: #FFF;
+          background-color: #ffc000;
+        }
+      }
+
+      > li > a {
+        color: inherit;
+
+        &:hover {
+          color: #FFF;
+          background: rgb(255, 192, 0); /* Fall-back for browsers that don't support rgba */
+          background: rgbargba(255, 192, 0, 0.5);
+        }
+      }
+    }
+  }
+}

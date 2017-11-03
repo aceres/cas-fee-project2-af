@@ -1,0 +1,84 @@
+<app-admin-nav [title]="title" [user]="authService.user"></app-admin-nav>
+
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col-sm-3 col-md-2 sidebar">
+
+      <div class="form-group welcome" *ngIf="authService.user | async">
+        <p>Willkommen {{ (authService.user | async)?.email }}!</p>
+        <a class="logout" (click)="logout()" *ngIf="authService.user | async">
+          <i class="flaticon-logout"></i> Abmelden
+        </a>
+      </div>
+
+      <div *ngIf="!(authService.user | async)">
+        <div class="form-group">
+          <label for="inputEmail">E-Mail</label>
+          <input type="text" class="form-control" id="inputEmail" [(ngModel)]="email" placeholder="E-Mail">
+        </div>
+        <div class="form-group">
+          <label for="inputPassword">Passwort</label>
+          <input type="password" class="form-control" id="inputPassword" [(ngModel)]="password" placeholder="Passwort">
+        </div>
+        <button type="button" class="btn btn-default" (click)="login()" [disabled]="!email || !password">
+          <i class="fa fa-sign-in"></i> Anmelden
+        </button>
+      </div>
+
+      <ul *ngIf="(authService.user | async)" class="nav nav-sidebar">
+        <li [routerLinkActive]="['active']"><a [routerLink]="['/admin/recipes']">
+          <i class="icon flaticon-recipes"></i>Meine Rezepte
+          <span class="sr-only">(Aktuell)</span>
+        </a>
+        </li>
+        <li [routerLinkActive]="['active']">
+          <a [routerLink]="['/admin/recipe-add']">
+            <i class="icon flaticon-add"></i>Neues Rezept
+          </a>
+        </li>
+      </ul>
+      <ul *ngIf="(authService.user | async)" class="nav nav-sidebar">
+        <li [routerLinkActive]="['active']"><a [routerLink]="['/admin/favorites']">
+          <i class="icon flaticon-like"></i>Meine Lieblingsrezepte
+        </a>
+        </li>
+      </ul>
+      <ul *ngIf="(authService.user | async)" class="nav nav-sidebar">
+        <li [routerLinkActive]="['active']">
+          <a [routerLink]="['/admin/basis-data-category']">
+            <i class="icon flaticon-category"></i>Kategorie
+          </a>
+        </li>
+        <li [routerLinkActive]="['active']">
+          <a [routerLink]="['/admin/basis-data-cuisine']">
+            <i class="icon flaticon-cuisine"></i>Länderküche
+          </a>
+        </li>
+        <li [routerLinkActive]="['active']">
+          <a [routerLink]="['/admin/basis-data-difficulty']">
+            <i class="icon flaticon-level"></i>Schwierigkeitsgrad
+          </a>
+        </li>
+      </ul>
+      <ul *ngIf="(authService.user | async) && role === 'admin'" class="nav nav-sidebar">
+        <li [routerLinkActive]="['active']">
+          <a [routerLink]="['/admin/users']">
+            <i class="icon flaticon-maintenance"></i>Benutzer
+          </a>
+        </li>
+        <li [routerLinkActive]="['active']">
+          <a [routerLink]="['/admin/all-recipes']">
+            <i class="icon flaticon-maintenance"></i>Alle Rezepte
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+      <router-outlet style="padding-top: 40px"></router-outlet>
+    </div>
+  </div>
+</div>
+
+<app-alert #childAlert></app-alert>

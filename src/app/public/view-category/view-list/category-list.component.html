@@ -1,0 +1,62 @@
+<div class="navbar-wrapper">
+  <div class="container">
+    <app-nav></app-nav>
+  </div>
+</div>
+
+<section class="category-details">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="category-list-heading">{{ category }}</h1>
+
+        <div class="form-group">
+          <input name="searchRecipe" class="form-control" placeholder="Rezept suchen..." [(ngModel)]="searchTerm" id="search-box" />
+        </div>
+
+        <div class="col-xs-6 col-sm-4 col-md-3" *ngFor="let recipe of specificRecipes | async | filter:searchTerm">
+          <div class="category-list-item">
+            <div class="category-list-item-image">
+              <div class="category-list-item-image-card">
+                <a class="category-list-item-link" [routerLink]="['/recipe-detail/' + recipe.$key]">
+                  <img class="category-list-item-image-img" src="{{ recipe.image?.url }}" alt="{{ recipe.receipt}}" />
+                </a>
+              </div>
+            </div>
+            <div class="category-list-item-meta-container">
+              <div class="category-list-item-meta-info">
+                <i class="icon flaticon-preptime"></i>{{recipe.prepTime}} min.
+              </div>
+              <div class="category-list-item-meta-info">
+                <i class="icon flaticon-level"></i>{{recipe.level}}
+              </div>
+              <div class="category-list-item-meta-info">
+                <span class="icon flaticon-like">{{recipe.rating}}</span>
+              </div>
+            </div>
+            <div class="category-list-item-title">
+              <h5 class="category-list-item-title">{{recipe.receipt}}</h5>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="back">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="back">
+          <button (click)="goBack()" class="btn">
+            <i class="fa fa-arrow-left"></i> Zurück
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>

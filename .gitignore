@@ -40,15 +40,3 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
-
-# firebase account
-/src/environment/*
-doc/
-e2e/
-firebase.json
-karma.conf.js
-package.json
-protractor.conf.js
-src/
-tsconfig.json
-tslint.json

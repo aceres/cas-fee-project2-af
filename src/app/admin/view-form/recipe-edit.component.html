@@ -1,0 +1,210 @@
+<div *ngIf="recipe">
+<h1 class="page-header">Rezept: {{ recipe?.receipt }}</h1>
+
+<form #recipeForm="ngForm">
+  <div class="form-group">
+    <label for="recipeName">Name:</label>
+    <input name="recipeName" id="recipeName" class="form-control" [(ngModel)]="recipe.receipt" #recipeName="ngModel" placeholder="Rezept" required />
+    <div [hidden]="recipeName.valid || recipeName.pristine" class="alert alert-danger">
+      Rezeptname ist verlangt.
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="description">Beschreibung:</label>
+    <input name="description" id="description" class="form-control" [(ngModel)]="recipe.description" placeholder="Beschreibung" #recipeDescription="ngModel" required />
+    <div [hidden]="recipeDescription.valid || recipeDescription.pristine" class="alert alert-danger">
+      Beschreibung ist verlangt.
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="portion">Anzahl Personen:</label>
+    <select name="portion" id="portion" class="form-control" [ngModel]="recipe.portion" #recipePortion>
+      <option *ngFor="let portion of listPortions" [value]="portion.value">{{portion.display}}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="prepTime">Zubereitungszeit in Minuten:</label>
+    <input type="number" name="prepTime" id="prepTime" class="form-control" placeholder="90" min="0" [(ngModel)]="recipe.prepTime" #recipePrepTime="ngModel" required />
+    <div [hidden]="recipePrepTime.valid || recipePrepTime.pristine" class="alert alert-danger">
+      Zubereitungszeit in Minuten ist verlangt.
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="prepTime">Rating:</label>
+    <input type="number" name="rating" id="rating" class="form-control" [ngModel]="recipe.rating" #recipeRating readonly />
+  </div>
+
+  <div class="form-group">
+    <label for="level">Schwierigkeitsgrad:</label>
+    <select name="level" id="level" class="form-control" [ngModel]="recipe.level" #recipeLevel>
+      <option *ngFor="let level of listLevels" [value]="level.value">{{level.display}}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="category">Kategorie:</label>
+    <select name="category" id="category" class="form-control" [ngModel]="recipe.category" #recipeCategory>
+      <option *ngFor="let category of listCategories" [value]="category.value">{{category.display}}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="cuisine">Länderküche:</label>
+    <select name="cuisine" id="cuisine" class="form-control" [ngModel]="recipe.cuisine" #recipeCuisine>
+      <option *ngFor="let cuisine of listCuisines" [value]="cuisine.value">{{cuisine.display}}</option>
+    </select>
+  </div>
+</form>
+
+<hr>
+
+<h3>Einkaufsliste (Zutaten)</h3>
+
+<form #ingredientForm="ngForm">
+  <div class="form-group">
+    <label for="recipeQuantity">Menge</label>
+    <input type="number" placeholder="1" min="0" name="recipeQuantity" id="recipeQuantity" class="form-control" [(ngModel)]="ingredient.recipeQuantity" #recipeQuantity="ngModel" required>
+    <div [hidden]="recipeQuantity.valid || recipeQuantity.pristine" class="alert alert-danger">
+      Menge ist verlangt.
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Einheit</label>
+    <select name="unit" id="unit" class="form-control" #recipeUnit>
+      <option *ngFor="let unit of listUnits" [value]="unit.value">{{unit.display}}</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="recipeIngredient">Zutat</label>
+    <input type="text" name="recipeIngredient" id="recipeIngredient" class="form-control" placeholder="Gelatine" [(ngModel)]="ingredient.recipeIngredient" #recipeIngredient="ngModel" required>
+    <div [hidden]="recipeIngredient.valid || recipeIngredient.pristine" class="alert alert-danger">
+      Zutat ist verlangt.
+    </div>
+  </div>
+  <div class="form-group">
+    <label></label>
+    <button (click)="addIngredient(recipeQuantity.value, recipeUnit.value, recipeIngredient.value); this.ingredient.recipeQuantity=''; this.ingredient.recipeIngredient=''"
+            [disabled]="!ingredientForm.form.valid" class="btn btn-default">
+      <i class="fa fa-floppy-o"></i> Hinzufügen
+    </button>
+  </div>
+</form>
+
+<table class="table table-striped table-hover">
+  <thead>
+  <th>Menge</th>
+  <th>Einheit</th>
+  <th>Zutat</th>
+  <th></th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let ingredient of ingredients; let i = index;">
+    <td>
+      <input type="number" [ngModel]="ingredient.quantity" name="quantity" class="form-control" min="0" #recipeQuantity>
+    </td>
+    <td>
+      <select name="unit" form="unit" [(ngModel)]="ingredient.unit" class="form-control" #recipeUnit>
+        <option *ngFor="let unit of listUnits" [value]="unit.value">{{unit.value}}</option>
+      </select>
+    </td>
+    <td>
+      <input type="text" name="ingredient" [ngModel]="ingredient.ingredient" class="form-control" #recipeIngredient>
+    </td>
+    <td style="text-align: right">
+      <button (click)="removeIngredient(ingredient)" class="btn btn-default">
+        <i class="fa fa-trash"></i>
+      </button>
+    </td>
+  </tr>
+  </tbody>
+  <!--<tbody *ngIf="ingredients.length === 0">-->
+    <!--Keine Einträge vorhanden.-->
+  <!--</tbody>-->
+</table>
+
+<hr>
+
+<h3>Zubereitungsschritte</h3>
+
+<form #stepForm="ngForm">
+  <div class="form-group">
+    <label for="stepDescription">Schrittbeschreibung</label>
+    <input class="form-control" id="stepDescription" name="stepDescription" placeholder="..." required [(ngModel)]="step.stepDescription" #stepDescription="ngModel">
+    <div [hidden]="stepDescription.valid || stepDescription.pristine" class="alert alert-danger">
+      Beschreibung ist verlangt.
+    </div>
+  </div>
+  <div class="form-group">
+    <label></label>
+    <button (click)="addStep(stepDescription.value); this.step.stepDescription=''" [disabled]="!stepForm.form.valid" class="btn btn-default">
+      <i class="fa fa-floppy-o"></i> Hinzufügen
+    </button>
+  </div>
+</form>
+
+<hr>
+
+<table class="table table-striped table-hover">
+  <thead>
+  <th>Schritt</th>
+  <th>Beschreibung</th>
+  <th></th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let step of steps; let i = index;">
+    <td>
+      Schritt: {{i+1}}
+    </td>
+    <td>
+      {{ step.stepDescription }}
+    </td>
+    <td style="text-align: right;">
+      <button (click)="removeStep(step)" class="btn btn-default">
+        <i class="fa fa-trash"></i>
+      </button>
+    </td>
+  </tr>
+  </tbody>
+  <!--<tbody *ngIf="steps.length === 0">-->
+    <!--Keine Einträge vorhanden.-->
+  <!--</tbody>-->
+</table>
+
+<hr>
+
+<h3>Bild</h3>
+
+<div class="recipes-list-item-image-card">
+  <img src="{{ recipe.image?.url }}" alt="{{ recipe.receipt }}" />
+</div>
+
+<hr>
+
+<h4>Bild wechseln</h4>
+
+<div class="form-group">
+  <label>Bild hochladen und ersetzen</label>
+  <div *ngIf="currentUpload">
+    <div class="progress">
+      <div class="progress-bar progress-bar-animated" [ngStyle]="{ 'width': currentUpload?.progress + '%' }"></div>
+    </div>
+    Progress: {{currentUpload?.name}} | {{currentUpload?.progress}}% Complete
+  </div>
+  <label>
+    <input type="file" (change)="detectFiles($event)" class="form-control">
+  </label>
+</div>
+
+<!-- TODO: Restyle it when we can manage uploaded photos (edit / remove) -->
+<app-alert #childAlert></app-alert>
+
+<button class="btn btn-default" [disabled]="!recipeForm.form.valid" (click)="update(recipeName.value, recipeDescription.value, recipePortion.value, recipePrepTime.value, recipeRating.value, recipeLevel.value, recipeCategory.value, recipeCuisine.value, recipeSteps, recipeIngredients)">
+  <i class="fa fa-floppy-o"></i> Speichern
+</button>
+<button (click)="goBack()" class="btn btn-default">
+  <i class="fa fa-arrow-left"></i> Zurück
+</button>
+</div>

@@ -1,0 +1,291 @@
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+
+body {
+  font-family: "Merriweather Sans", Arial, sans-serif;
+  color: #5a5a5a;
+  padding-top: 0;
+}
+
+section {
+  padding: 50px 0;
+}
+
+
+h1, h2, h4, h5, h6 {
+  color: #5A5A5A;
+  font-family: "Happy Monkey", Arial, sans-serif;
+}
+
+h3 {
+  color: #FFC000;
+  font-family: "Happy Monkey", Arial, sans-serif;
+}
+
+p {
+  color: #5A5A5A;
+  font-family: "Merriweather Sans", Arial, sans-serif;
+}
+
+.btn-default {
+  background-color: #FFC000;
+  border: 2px solid #FFC000 !important;
+  color: #fff;
+}
+
+.btn-default:hover {
+  background-color: #fff;
+  border: 2px solid #FFC000;
+  color: #FFC000;
+}
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 4px 0;
+  border-radius: 15px;
+}
+
+input[type="search"] {
+  background-color: #F4F2EE;
+}
+
+/*
+ * Global add-ons
+ */
+
+.sub-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+.navbar-fixed-top {
+  border: 0;
+}
+
+.navbar-right button[type="button"] {
+  margin: 8px 8px 8px 0;
+}
+
+/*
+ * Sidebar
+ */
+
+/* Adapt sidebar for the mobile version */
+@media (max-width: 768px) {
+  .sidebar {
+    margin-top: 80px;
+  }
+  .main {
+    padding-top: 0;
+  }
+}
+
+/*
+ * Icons
+*/
+
+
+.icon:before {
+  margin: 0 8px 0 0;
+  position: relative;
+}
+
+
+@media (min-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 51px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    background-color: #f5f5f5;
+    border-right: 1px solid #eee;
+  }
+}
+
+/* Sidebar navigation */
+.nav-sidebar {
+  margin-right: -21px; /* 20px padding + 1px border */
+  margin-bottom: 20px;
+  margin-left: -20px;
+}
+.nav-sidebar > li > a {
+  color: #5A5A5A;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+  color: #fff;
+  background-color: #BAC64A;
+}
+
+/* Pagination */
+
+.custom-pagination {
+  margin-top: 50px;
+}
+
+.pagination > li > a,
+.pagination > li > span {
+  color: #5A5A5A;
+}
+
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  background-color: #BAC64A;
+  border-color: #BAC64A;
+}
+
+
+/*
+ * Main content
+ */
+
+.main {
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+.main .page-header {
+  margin-top: 0;
+}
+
+/*
+ * Placeholder dashboard ideas
+ */
+
+.placeholders {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.placeholders h4 {
+  margin-bottom: 0;
+}
+.placeholder {
+  margin-bottom: 20px;
+}
+.placeholder img {
+  display: inline-block;
+  border-radius: 50%;
+}
+
+@media (min-width: 992px) {
+
+}
+
+/*
+ * Initialize App (Waiting animation)
+ */
+
+app-root div.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000;
+}
+
+.spinner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform: -webkit-translate(-50%, -50%);
+  transform: -moz-translate(-50%, -50%);
+  transform: -ms-translate(-50%, -50%);
+}
+
+.ball {
+  background-color: rgba(0,0,0,0);
+  border: 5px solid rgba(255,192,0,0.9);
+  opacity: .9;
+  border-top: 5px solid rgba(0,0,0,0);
+  border-left: 5px solid rgba(0,0,0,0);
+  border-radius: 50px;
+  box-shadow: 0 0 35px #FFC000;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  -moz-animation: spin .5s infinite linear;
+  -webkit-animation: spin .5s infinite linear;
+}
+
+.ball1 {
+  background-color: rgba(0,0,0,0);
+  border: 5px solid rgba(255,192,0,0.9);
+  opacity: .9;
+  border-top: 5px solid rgba(0,0,0,0);
+  border-left: 5px solid rgba(0,0,0,0);
+  border-radius: 50px;
+  box-shadow: 0 0 15px #FFC000;
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+  position: relative;
+  top: -40px;
+  -moz-animation: spinoff .5s infinite linear;
+  -webkit-animation: spinoff .5s infinite linear;
+}
+
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes spinoff {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(-360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spinoff {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(-360deg);
+  }
+}
