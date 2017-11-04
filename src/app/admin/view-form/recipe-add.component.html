@@ -42,14 +42,14 @@
   <div class="form-group">
     <label>Kategorie:</label>
     <select name="category" class="form-control" ngModel #recipeCategory="ngModel">
-      <option *ngFor="let category of listCategories" [value]="category.value">{{category.display}}</option>
+      <option *ngFor="let category of listCategories" [value]="category.value">{{category.name}}</option>
     </select>
   </div>
 
   <div class="form-group">
     <label>Länderküche:</label>
     <select name="cuisine" class="form-control" ngModel #recipeCuisine="ngModel">
-      <option *ngFor="let cuisine of listCuisines" [value]="cuisine.value">{{cuisine.display}}</option>
+      <option *ngFor="let cuisine of listCuisines" [value]="cuisine.value">{{cuisine.name}}</option>
     </select>
   </div>
 </form>

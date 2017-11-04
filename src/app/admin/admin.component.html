@@ -55,11 +55,6 @@
             <i class="icon flaticon-cuisine"></i>Länderküche
           </a>
         </li>
-        <li [routerLinkActive]="['active']">
-          <a [routerLink]="['/admin/basis-data-difficulty']">
-            <i class="icon flaticon-level"></i>Schwierigkeitsgrad
-          </a>
-        </li>
       </ul>
       <ul *ngIf="(authService.user | async) && role === 'admin'" class="nav nav-sidebar">
         <li [routerLinkActive]="['active']">

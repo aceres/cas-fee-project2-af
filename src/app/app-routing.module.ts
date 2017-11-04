@@ -25,8 +25,8 @@ import { AllRecipesListComponent } from './admin/view-list/all-recipes-list.comp
 import { RegisterComponent } from './register/register.component';
 import { UsersListComponent } from './admin/view-list/users-list.component';
 // Master Data Basis
-import { BasisDataCategoryComponent } from './admin/basis-data-category.component';
-import { BasisDataCuisineComponent } from './admin/basis-data-cuisine.component';
+import { CategoryComponent } from './admin/view-list/category.component';
+import { CuisineComponent } from './admin/view-list/cuisine.component';
 
 const appRoutes: Routes = [
   { path: 'public', component: PublicComponent },
@@ -43,8 +43,8 @@ const appRoutes: Routes = [
     { path: 'recipe-detail/:id', component: RecipeDetailComponent},
     { path: 'recipe-add', component: RecipeAddComponent},
     { path: 'recipe-edit/:id', component: RecipeEditComponent},
-    { path: 'basis-data-category', component: BasisDataCategoryComponent},
-    { path: 'basis-data-cuisine', component: BasisDataCuisineComponent},
+    { path: 'basis-data-category', component: CategoryComponent},
+    { path: 'basis-data-cuisine', component: CuisineComponent},
     { path: 'users', component: UsersListComponent},
     { path: 'all-recipes', component: AllRecipesListComponent}
   ] },

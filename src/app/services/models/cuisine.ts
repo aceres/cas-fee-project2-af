@@ -1,4 +1,4 @@
 export class Cuisine {
-  key: string
+  value: string;
   name: string;
 }

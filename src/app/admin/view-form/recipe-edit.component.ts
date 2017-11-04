@@ -29,6 +29,8 @@ import { AlertComponent } from '../../directives/alert/alert.component';
 })
 export class RecipeEditComponent implements OnInit {
   key;
+  // TODO: Refactor this id
+  id;
   recipe: Recipe;
   // @Input() recipe: Recipe;
 
@@ -75,6 +77,9 @@ export class RecipeEditComponent implements OnInit {
       .switchMap((params: ParamMap) => this.recipeService.getRecipe(params.get('id')))
       .subscribe(recipe => this.recipe = recipe);
 
+      this.id = this.route.snapshot.params['id'];
+      console.log('this.id', this.id);
+
     // this.recipeService.getRecipeDetail(this.id).subscribe(recipe => {
     //   console.log('Edit recipe: ', recipe);
     //   this.key = recipe.$key;
@@ -110,49 +115,51 @@ export class RecipeEditComponent implements OnInit {
     this.selectedFiles = event.target.files;
   }
 
-  // update(
-  //     receipt: string,
-  //     description: string,
-  //     portion: string,
-  //     prepTime: number,
-  //     rating: number,
-  //     level: string,
-  //     category: string,
-  //     cuisine: string,
-  //     steps: any[],
-  //     ingredients: any[],
-  //     image: any[],
-  //     uid: string,
-  //     user: string): void {
-  //   receipt = receipt.trim();
-  //   description = description.trim();
-  //   portion = portion.trim();
-  //   prepTime = prepTime;
-  //   rating = rating;
-  //   level = level.trim();
-  //   category = category.trim();
-  //   cuisine = cuisine.trim();
-  //   steps = this.steps;
-  //   ingredients = this.ingredients;
-  //   image = this.image;
-  //   uid = this.currentUser.uid;
-  //   user = this.currentUser.email;
-  //
-  //   this.recipeService.update(this.id, receipt, description, portion, prepTime, rating, level, category, cuisine, steps, ingredients, image, uid, user)
-  //     .then(response => {
-  //       if (this.selectedFiles !== undefined) {
-  //         this.removeExistedImage(this.id);
-  //         const file = this.selectedFiles.item(0);
-  //         console.log('File', file);
-  //         console.log('Key recipe', this.key);
-  //         this.currentUpload = new Upload(file);
-  //         this.upSvc.pushUpload(this.currentUpload, this.key)
-  //       }
-  //
-  //       // Show notification
-  //       this.childAlert.showAlert('success', `Rezept wurde erfolgreich aktualisiert! (Geändert am: ${(new Date()).toLocaleTimeString()})`);
-  //     });
-  // }
+  update(
+      receipt: string,
+      description: string,
+      portion: string,
+      prepTime: number,
+      rating: number,
+      level: string,
+      category: string,
+      cuisine: string,
+      steps: any[],
+      ingredients: any[],
+      image: any[],
+      uid: string,
+      user: string): void {
+    receipt = receipt.trim();
+    description = description.trim();
+    portion = portion.trim();
+    prepTime = prepTime;
+    rating = rating;
+    level = level.trim();
+    category = category.trim();
+    cuisine = cuisine.trim();
+    steps = this.steps;
+    ingredients = this.ingredients;
+    image = this.image;
+    uid = this.currentUser.uid;
+    user = this.currentUser.email;
+
+    console.log('this.id', this.id);
+
+    this.recipeService.update(this.id, receipt, description, portion, prepTime, rating, level, category, cuisine, steps, ingredients, image, uid, user)
+      .then(response => {
+        if (this.selectedFiles !== undefined) {
+          this.removeExistedImage(this.id);
+          const file = this.selectedFiles.item(0);
+          console.log('File', file);
+          console.log('Key recipe', this.key);
+          this.currentUpload = new Upload(file);
+          this.upSvc.pushUpload(this.currentUpload, this.key)
+        }
+
+        // Show notification
+        this.childAlert.showAlert('success', `Rezept wurde erfolgreich aktualisiert! (Geändert am: ${(new Date()).toLocaleTimeString()})`);
+      });
+  }
 
   removeExistedImage(key) {
     this.upSvc.deleteFileData(key);

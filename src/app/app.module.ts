@@ -17,11 +17,11 @@ import { AppRoutingModule } from './app-routing.module';
 // Services
 import { AuthService } from './services/auth.service';
 import { RecipeService } from './services/recipe.service';
-import { BasisDataCategoryService } from './services/basis-data-category.service';
-import { BasisDataCuisineService } from './services/basis-data-cuisine.service';
 import { UploadService } from './services/upload.service';
 import { RegisterService } from './services/register.service';
 import { FavoriteService } from './services/favorite.service';
+import { CategoryService } from './services/category.service';
+import { CuisineService } from './services/cuisine.service';
 
 // App
 import { AppComponent } from './app.component';
@@ -55,8 +55,8 @@ import { NavAdminComponent } from './admin/view-nav/nav-admin.component';
 import { AllRecipesListComponent } from './admin/view-list/all-recipes-list.component';
 
 // Master Data Basis
-import { BasisDataCategoryComponent } from './admin/basis-data-category.component';
-import { BasisDataCuisineComponent } from './admin/basis-data-cuisine.component';
+import { CategoryComponent } from './admin/view-list/category.component';
+import { CuisineComponent } from './admin/view-list/cuisine.component';
 
 // Register
 import { RegisterComponent } from './register/register.component';
@@ -117,9 +117,9 @@ import { FilterPipe } from './pipes/search-filter.pipe';
     // Register
     RegisterComponent,
     UsersListComponent,
-    // Master Data (Basis),
-    BasisDataCategoryComponent,
-    BasisDataCuisineComponent,
+    // Global Static Data (Basis),
+    CategoryComponent,
+    CuisineComponent,
     // ngx-bootstrap
     AlertComponent,
     PaginationLimitComponent,
@@ -136,11 +136,11 @@ import { FilterPipe } from './pipes/search-filter.pipe';
     UserAuthGuardService,
     // Services
     RecipeService,
-    BasisDataCategoryService,
-    BasisDataCuisineService,
     UploadService,
     RegisterService,
     FavoriteService,
+    CategoryService,
+    CuisineService,
     // Components
     AlertComponent,
     ModalComponent

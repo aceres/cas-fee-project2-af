@@ -28,7 +28,7 @@ export class CategoryListComponent implements OnInit {
 
       for (let i = 0; i < listCategories.length; i++) {
         if (listCategories[i].value === category) {
-          this.category = listCategories[i].display;
+          this.category = listCategories[i].name;
         }
       }
 

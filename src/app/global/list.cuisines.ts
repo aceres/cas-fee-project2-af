@@ -1,9 +1,11 @@
-export const listCuisines = [
-  { value: 'indian', display: 'indisch' },
-  { value: 'oriental', display: 'orientalisch' },
-  { value: 'french', display: 'französisch' },
-  { value: 'german', display: 'deutsch' },
-  { value: 'asian', display: 'asiatisch' },
-  { value: 'italian', display: 'italienisch' },
-  { value: 'polish', display: 'polnisch' }
+import { Cuisine } from '../services/models/cuisine';
+
+export const listCuisines: Cuisine[] = [
+  { value: 'indian', name: 'indisch' },
+  { value: 'oriental', name: 'orientalisch' },
+  { value: 'french', name: 'französisch' },
+  { value: 'german', name: 'deutsch' },
+  { value: 'asian', name: 'asiatisch' },
+  { value: 'italian', name: 'italienisch' },
+  { value: 'polish', name: 'polnisch' }
 ];
