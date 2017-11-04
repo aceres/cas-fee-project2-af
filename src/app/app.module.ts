@@ -39,6 +39,10 @@ import { CategoryListComponent } from './public/view-category/view-list/category
 import { SearchComponent } from './public/view-search/search.component';
 import { PublicReceiptDetailComponent } from './public/view-recipe/view-detail/detail.component';
 
+// Auth
+import { UserAuthGuardService } from './services/auth-guard.service';
+import { LoginComponent } from './admin/view-login/login.component';
+
 // Admin
 import { AdminComponent } from './admin/admin.component';
 import { RecipesListComponent } from './admin/view-list/recipes-list.component';
@@ -98,6 +102,8 @@ import { FilterPipe } from './pipes/search-filter.pipe';
     SearchComponent,
     PublicReceiptDetailComponent,
     CategoryListComponent,
+    // Auth
+    LoginComponent,
     // Admin
     AdminComponent,
     RecipesListComponent,
@@ -125,13 +131,17 @@ import { FilterPipe } from './pipes/search-filter.pipe';
     ModalComponent,
   ],
   providers: [
+    // Auth
     AuthService,
+    UserAuthGuardService,
+    // Services
     RecipeService,
     BasisDataCategoryService,
     BasisDataCuisineService,
     UploadService,
     RegisterService,
     FavoriteService,
+    // Components
     AlertComponent,
     ModalComponent
   ],

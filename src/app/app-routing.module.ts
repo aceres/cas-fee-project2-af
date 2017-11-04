@@ -10,6 +10,9 @@ import { ContactComponent } from './public/contact.component';
 import { AboutComponent } from './public/about.component';
 import { PublicReceiptDetailComponent } from './public/view-recipe/view-detail/detail.component';
 import { CategoryListComponent } from './public/view-category/view-list/category-list.component';
+// Auth
+import { UserAuthGuardService } from './services/auth-guard.service';
+import { LoginComponent } from './admin/view-login/login.component';
 // Admin
 import { AdminComponent } from './admin/admin.component';
 import { RecipesListComponent } from './admin/view-list/recipes-list.component';
@@ -32,8 +35,9 @@ const appRoutes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'recipe-detail/:id', component: PublicReceiptDetailComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'category-list/:category', component: CategoryListComponent },
-  { path: 'admin', component: AdminComponent, children: [
+  { path: 'admin', component: AdminComponent, canActivate: [UserAuthGuardService], children: [
     { path: 'recipes', component: RecipesListComponent},
     { path: 'favorites', component: FavoritesListComponent},
     { path: 'recipe-detail/:id', component: RecipeDetailComponent},

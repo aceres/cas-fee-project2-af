@@ -1,15 +1,15 @@
 <div class="alert-box">
   <div class="modal-header">
-    <h5 class="modal-title">Bestätgung</h5>
+    <h5 class="modal-title">{{ title }}</h5>
     <button type="button" class="close" aria-label="Close" (click)="bsModalRef.hide()">
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
   <div class="modal-body">
-    Sind Sie sicher, dass Sie dies löschen möchten?
+    {{ message }}
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn btn-secondary" (click)="onConfirm()">Ja</button>
-    <button type="button" class="btn btn-secondary" (click)="onCancel()">Nein</button>
+    <button type="button" class="btn btn-secondary" (click)="onConfirm()">{{ _OK }}</button>
+    <button type="button" class="btn btn-secondary" (click)="onCancel()">{{ _cancel }}</button>
   </div>
 </div>

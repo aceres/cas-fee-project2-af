@@ -13,6 +13,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li [routerLinkActive]="['active']"><a [routerLink]="['/public']">Manducare</a></li>
         <li><a [routerLink]="['/admin']">Meine Rezepte</a></li>
+        <li><a *ngIf="!authService.isAuthenticated()" [routerLink]="['/login']">Login</a></li>
         <li><a [routerLink]="['/register']">Registrieren</a></li>
         <li><a [routerLink]="['/about']">Über manducare</a></li>
         <li class="dropdown">

@@ -41,6 +41,15 @@ export class AuthService {
       });
   }
 
+  isAuthenticated() {
+      const user = this.firebaseAuth.auth.currentUser;
+      if (user) {
+          return true;
+      } else {
+          return false;
+      }
+  }
+
   logout() {
     return this.firebaseAuth
       .auth

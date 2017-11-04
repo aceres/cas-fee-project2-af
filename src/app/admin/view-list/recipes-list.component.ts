@@ -61,6 +61,10 @@ export class RecipesListComponent implements OnInit {
     event.stopPropagation();
 
     this.modalRef = this.modalService.show(ModalComponent);
+    this.modalRef.content.title = 'Bestätgung';
+    this.modalRef.content.message = 'Sind Sie sicher, dass Sie dies löschen möchten?';
+    this.modalRef.content._OK = 'Ja';
+    this.modalRef.content._cancel = 'Nein';
     this.modalRef.content.onClose.subscribe(result => {
       this.result = result;
       console.log('this.result: ', this.result);
