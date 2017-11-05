@@ -1,5 +1,5 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule } from '@angular/core';
+import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -10,6 +10,9 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AlertModule } from 'ngx-bootstrap/alert';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { ModalModule } from 'ngx-bootstrap/modal';
+
+// Custom Error Handler
+import { CustomErrorHandler } from './services/error/CustomErrorHandler';
 
 // Router
 import { AppRoutingModule } from './app-routing.module';
@@ -131,6 +134,11 @@ import { FilterPipe } from './pipes/search-filter.pipe';
     ModalComponent,
   ],
   providers: [
+    // Custom Error Hanlder
+    {
+      provide: ErrorHandler,
+      useClass: CustomErrorHandler
+    },
     // Auth
     AuthService,
     UserAuthGuardService,

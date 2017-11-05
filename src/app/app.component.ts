@@ -1,8 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import { AuthService } from './services/auth.service';
-
-import { Recipe } from './services/models/recipe';
-import { RecipeService } from './services/recipe.service';
 
 @Component({
   selector: 'app-root',
@@ -11,11 +7,6 @@ import { RecipeService } from './services/recipe.service';
 })
 export class AppComponent implements OnInit {
   title = 'Manducare';
-
-  constructor(
-    public authService: AuthService,
-    private recipeService: RecipeService
-  ) {}
 
   ngOnInit(): void {}
 }

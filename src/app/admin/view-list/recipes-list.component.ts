@@ -12,7 +12,6 @@ import { BsModalService } from 'ngx-bootstrap/modal';
 import { BsModalRef } from 'ngx-bootstrap/modal/modal-options.class';
 import { ModalComponent } from '../../directives/modal/modal.component';
 
-
 @Component({
   selector: 'app-recipes-list',
   templateUrl: './recipes-list.component.html',
