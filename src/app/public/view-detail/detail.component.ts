@@ -90,7 +90,12 @@ export class PublicReceiptDetailComponent implements OnInit {
 
   rateRecipe() {
     const databaseRef = this.db.object('recipes').$ref.child(this.key).child('rating');
-    databaseRef.transaction(rating => rating + 1);
+    databaseRef.transaction(function(rating) {
+      if (rating || (rating === 0)) {
+        rating++;
+      }
+      return rating;
+    });
     // TODO: Look it with Tutor
     this.getRecipe();
   }
