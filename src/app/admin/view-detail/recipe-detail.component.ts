@@ -13,6 +13,7 @@ import { RecipeService } from '../../services/recipe.service';
 })
 export class RecipeDetailComponent implements OnInit {
   recipe: Recipe;
+  id;
 
   constructor(
     private recipeService: RecipeService,
@@ -24,6 +25,9 @@ export class RecipeDetailComponent implements OnInit {
     this.route.paramMap
       .switchMap((params: ParamMap) => this.recipeService.getRecipe(params.get('id')))
       .subscribe(recipe => this.recipe = recipe);
+
+      this.id = this.route.snapshot.params['id'];
+      console.log('this.id', this.id);
   }
 
   goBack(): void {
