@@ -2,7 +2,7 @@
 
 ## 14. Oktober 2017
 
-- Status anschauen
+- OK 👌 Status anschauen
 
 ## Weiteres Vorgehen
 
@@ -45,15 +45,15 @@
 
 - Almost OK 👌 Public: Herz - Alle können liken / IP ?? - 1x liken möglich
 
-- npm package installieren anstelle url verwenden /javascript/
+- OK 👌 npm package installieren anstelle url verwenden /javascript/
 
 - Created Date - implemeent interface class -> register, recipe nochmals anschauen (Refactoring)
 
-- TypeScript Grundlagen verstehen
+- OK 👌 TypeScript Grundlagen verstehen
 
 - OK 👌 Rezept speichern - In der Administration: Favoriten anziegen (nur für User)
 - Menge berechnen
-- Migrieren - Global Basis Data (Menge, Kategorie, ) -> Firebase (Später die Daten im Admin einpflegen)
+- OK 👌 Migrieren - Global Basis Data (Menge, Kategorie, ) -> Firebase (Später die Daten im Admin einpflegen)
 
 - OK 👌 Beim Hinzufügen:
 
