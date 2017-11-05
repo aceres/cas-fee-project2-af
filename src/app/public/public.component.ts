@@ -14,7 +14,8 @@ export class PublicComponent {
 
   constructor(
     private router: Router,
-    db: AngularFireDatabase) {
+    db: AngularFireDatabase
+  ) {
       this.allRecipes = db.list('/recipes', {
         query: {
           orderByChild: 'rating'
