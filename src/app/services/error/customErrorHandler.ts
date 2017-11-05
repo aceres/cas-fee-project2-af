@@ -15,7 +15,7 @@ export class CustomErrorHandler extends ErrorHandler {
             console.log('MyError!');
             console.log(`[CUSTOM ERROR]:::${error.originalError.toString()}`);
         } else {
-            console.log('error: ', error);
+            console.log('Error: ', error);
             super.handleError(error);
         }
     }

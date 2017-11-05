@@ -58,7 +58,11 @@ export class LoginComponent implements OnInit {
 
         } else if (response.code === 'auth/wrong-password') {
 
-          this.childAlert.showAlert('info', `${ response.message }!`);
+            this.childAlert.showAlert('info', `${ response.message }!`);
+
+        } else if (response.code === 'auth/network-request-failed') {
+
+            this.childAlert.showAlert('danger', `${ response.message }!`);
 
         } else {
 
@@ -71,7 +75,6 @@ export class LoginComponent implements OnInit {
           currentUser['email'] = response.email;
 
           // Get the role of user
-          // TODO - instead this -> this.db.object
           this.db.list('/users', {
             query: {
               orderByChild: 'uid',
@@ -81,7 +84,7 @@ export class LoginComponent implements OnInit {
           })
           .subscribe(user => {
 
-            // TODO: Clean up / Somehow dirty
+            // TODO: Clean up
             this.role = user[0].role;
             currentUser['role'] = this.role;
             console.log('inside this.role: ', this.role);

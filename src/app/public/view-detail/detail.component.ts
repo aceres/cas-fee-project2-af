@@ -73,7 +73,11 @@ export class PublicReceiptDetailComponent implements OnInit {
   }
 
   getRecipe() {
-    this.recipeService.getRecipe(this.key).then(data => this.recipe = data);
+    this.recipeService.getRecipe(this.key)
+        .then(data => this.recipe = data)
+        .catch( error => {
+            this.childAlert.showAlert('danger', `Keine Verbindung! ` + error);
+        })
   }
 
   addRecipeToFavorites(recipeKey, recipeName) {
@@ -82,7 +86,6 @@ export class PublicReceiptDetailComponent implements OnInit {
     this.currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
 
     if (this.currentUser !== null) {
-
       this.favoriteService.addRecipeToFavorites(this.currentUser.uid, recipeKey, recipeName);
       this.childAlert.showAlert('success', `Super! Ihr Lieblingsrezept wurde in Ihrem Favoriten hinzugefügt! (Hinzugefügt am: ${(new Date()).toLocaleTimeString()})`);
     }
@@ -101,6 +104,8 @@ export class PublicReceiptDetailComponent implements OnInit {
         this.getRecipe();
         this.childAlert.showAlert('success', `Super! Vielen Dank für das Voten!`);
 
+    }).catch( error => {
+        this.childAlert.showAlert('danger', `Keine Verbindung! ` + error);
     })
   }
 
