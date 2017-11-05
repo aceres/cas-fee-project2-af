@@ -34,10 +34,10 @@ import { ContactComponent } from './public/contact.component';
 import { AboutComponent } from './public/about.component';
 import { NavComponent } from './public/view-nav/nav.component';
 import { FooterComponent } from './public/view-footer/footer.component';
-import { CoverComponent } from './public/view-recipe/view-cover/cover.component';
+import { CoverComponent } from './public/view-detail/view-cover/cover.component';
 import { CategoryListComponent } from './public/view-category/view-list/category-list.component';
 import { SearchComponent } from './public/view-search/search.component';
-import { PublicReceiptDetailComponent } from './public/view-recipe/view-detail/detail.component';
+import { PublicReceiptDetailComponent } from './public/view-detail/detail.component';
 
 // Auth
 import { UserAuthGuardService } from './services/auth-guard.service';

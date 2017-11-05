@@ -8,7 +8,7 @@ import { PublicComponent } from './public/public.component';
 import { ImpressumComponent } from './public/impressum.component';
 import { ContactComponent } from './public/contact.component';
 import { AboutComponent } from './public/about.component';
-import { PublicReceiptDetailComponent } from './public/view-recipe/view-detail/detail.component';
+import { PublicReceiptDetailComponent } from './public/view-detail/detail.component';
 import { CategoryListComponent } from './public/view-category/view-list/category-list.component';
 // Auth
 import { UserAuthGuardService } from './services/auth-guard.service';

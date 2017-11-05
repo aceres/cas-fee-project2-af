@@ -126,7 +126,7 @@ export class RecipeService {
         user: user
       }), {headers: this.headers})
       .toPromise()
-      .then(res => res.json().data as Recipe)
+      .then(res => res.json() as Recipe)
       .catch(this.handleError);
   }
 

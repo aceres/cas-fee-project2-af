@@ -1,8 +1,6 @@
 import 'rxjs/add/operator/switchMap';
 
-import { AngularFireDatabase } from 'angularfire2/database';
-
-import { Component, OnInit, Input, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Location } from '@angular/common';
 
@@ -29,13 +27,11 @@ import { AlertComponent } from '../../directives/alert/alert.component';
 })
 export class RecipeEditComponent implements OnInit {
   key;
-  // TODO: Refactor this id
   id;
   recipe: Recipe;
-  // @Input() recipe: Recipe;
 
   // Image
-  image = [];
+  // image = [];
   selectedFiles: FileList;
   currentUpload: Upload;
 
@@ -68,8 +64,7 @@ export class RecipeEditComponent implements OnInit {
     private recipeService: RecipeService,
     private route: ActivatedRoute,
     private location: Location,
-    private upSvc: UploadService,
-    private af: AngularFireDatabase
+    private upSvc: UploadService
   ) {}
 
   ngOnInit(): void {
@@ -78,34 +73,9 @@ export class RecipeEditComponent implements OnInit {
       .subscribe(recipe => this.recipe = recipe);
 
       this.id = this.route.snapshot.params['id'];
+      this.key = this.route.snapshot.params['id'];
       console.log('this.id', this.id);
-
-    // this.recipeService.getRecipeDetail(this.id).subscribe(recipe => {
-    //   console.log('Edit recipe: ', recipe);
-    //   this.key = recipe.$key;
-    //   this.receipt = recipe.receipt;
-    //   this.description = recipe.description;
-    //   this.portion = recipe.portion;
-    //   this.prepTime = recipe.prepTime;
-    //   this.rating = recipe.rating;
-    //   this.level = recipe.level;
-    //   this.category = recipe.category;
-    //   this.cuisine = recipe.cuisine;
-    //
-    //   if (recipe.ingredients === undefined) {
-    //     this.ingredients = [];
-    //   } else {
-    //     this.ingredients = recipe.ingredients;
-    //   }
-    //
-    //   if (recipe.steps === undefined) {
-    //       this.steps = [];
-    //   } else {
-    //     this.steps = recipe.steps;
-    //   }
-    //
-    //   this.image = recipe.image;
-    // });
+      console.log('this.key', this.key);
 
     // Get the currentUser from the sessionStorage
     this.currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
@@ -129,24 +99,37 @@ export class RecipeEditComponent implements OnInit {
       image: any[],
       uid: string,
       user: string): void {
-    receipt = receipt.trim();
-    description = description.trim();
-    portion = portion.trim();
-    prepTime = prepTime;
-    rating = rating;
-    level = level.trim();
-    category = category.trim();
-    cuisine = cuisine.trim();
-    steps = this.steps;
-    ingredients = this.ingredients;
-    image = this.image;
+    receipt = this.recipe.receipt.trim();
+    description = this.recipe.description.trim();
+    portion = this.recipe.portion.trim();
+    prepTime = this.recipe.prepTime;
+    rating = this.recipe.rating;
+    level = this.recipe.level.trim();
+    category = this.recipe.category.trim();
+    cuisine = this.recipe.cuisine.trim();
+    steps = this.recipe.steps;
+    ingredients = this.recipe.ingredients;
+    image = this.recipe.image;
     uid = this.currentUser.uid;
     user = this.currentUser.email;
 
     console.log('this.id', this.id);
+    console.log('this.recipe.receipt', this.recipe.receipt);
+    console.log('this.recipe.description', this.recipe.description);
+    console.log('this.recipe.portion', this.recipe.portion);
+    console.log('this.recipe.prepTime', this.recipe.prepTime);
+    console.log('this.recipe.rating', this.recipe.rating);
+    console.log('this.recipe.level', this.recipe.level);
+    console.log('this.recipe.category', this.recipe.category);
+    console.log('this.recipe.cuisine', this.recipe.cuisine);
+    console.log('this.recipe.steps', this.recipe.steps);
+    console.log('this.recipe.ingredients', this.recipe.ingredients);
+    console.log('this.recipe.image', this.recipe.image);
+    console.log('this.currentUser.uid', this.currentUser.uid);
+    console.log('this.currentUser.email', this.currentUser.email);
 
     this.recipeService.update(this.id, receipt, description, portion, prepTime, rating, level, category, cuisine, steps, ingredients, image, uid, user)
-      .then(response => {
+        .then(response => {
         if (this.selectedFiles !== undefined) {
           this.removeExistedImage(this.id);
           const file = this.selectedFiles.item(0);
@@ -155,8 +138,6 @@ export class RecipeEditComponent implements OnInit {
           this.currentUpload = new Upload(file);
           this.upSvc.pushUpload(this.currentUpload, this.key)
         }
-
-        // Show notification
         this.childAlert.showAlert('success', `Rezept wurde erfolgreich aktualisiert! (Geändert am: ${(new Date()).toLocaleTimeString()})`);
       });
   }
@@ -166,21 +147,21 @@ export class RecipeEditComponent implements OnInit {
   }
 
   addIngredient(quantity: number, unit: string, ingredient: string) {
-    this.ingredients.push(new Ingredient(quantity, unit, ingredient));
+    this.recipe.ingredients.push(new Ingredient(quantity, unit, ingredient));
   }
 
   removeIngredient(index) {
-    this.ingredients.splice(index, 1);
+    this.recipe.ingredients.splice(index, 1);
   }
 
   addStep(stepDescription: string) {
     if (stepDescription) {
-      this.steps.push(new Step(stepDescription));
+      this.recipe.steps.push(new Step(stepDescription));
     }
   }
 
   removeStep(index) {
-    this.steps.splice(index, 1);
+    this.recipe.steps.splice(index, 1);
   }
 
   goBack(): void {
