@@ -99,6 +99,8 @@ export class PublicReceiptDetailComponent implements OnInit {
     }).then( result => {
       console.log('result: ', result);
         this.getRecipe();
+        this.childAlert.showAlert('success', `Super! Vielen Dank für das Voten!`);
+
     })
   }
 
