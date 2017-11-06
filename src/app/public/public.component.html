@@ -10,23 +10,21 @@
       <div class="col-md-12 text-center">
         <h2 class="favorite__heading"><span class="favorite__heading favorite__heading--yellow">Rezepte</span> die jeder mag</h2>
       </div>
-      <div class="col-md-4 col-sm-4 col-xs-12" *ngFor="let recipe of (allRecipes | async)?.slice(0,3)">
+      <div class="col-sm-4 col-md-4" *ngFor="let recipe of (allRecipes | async)?.slice(0,3)">
         <div class="favorite">
-          <div class="favorite__image">
-            <div class="favorite__image--top">
+          <div class="favorite__cover">
+            <div class="favorite__cover--top">
               <img src="{{recipe.image?.url}}" alt="{{recipe.receipt}}">
             </div>
-            <div class="favorite__info">
-              <div class="favorite__header">
-                  <h3 class="favorite__recipe">{{recipe.receipt}}</h3>
-              </div>
-                <p class="favorite__text">{{recipe.description}}</p>
-                <span class="icon flaticon-like">{{recipe.rating}}</span>
+          </div>
+          <div class="favorite__info">
+            <div class="favorite__header">
+              <h3 class="favorite__recipe">{{recipe.receipt}}</h3>
             </div>
+            <p class="favorite__text">{{recipe.description}}</p>
           </div>
-          <div class="favorite__button">
-            <p><a class="btn btn-default" (click)="detail(recipe)" role="button">Zum Rezept</a></p>
-          </div>
+          <span class="favorite__like icon flaticon-like">{{recipe.rating}}</span>
+          <a class="favorite__button btn btn-default" (click)="detail(recipe)" role="button">Zum Rezept</a>
         </div>
       </div>
     </div>

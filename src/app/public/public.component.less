@@ -21,7 +21,9 @@
 
 .favorite {
   background: @white;
+  height: 100%;
   margin: 0 0 20px 0;
+  max-height: 500px;
   overflow: hidden;
   padding: 0;
   position: relative;
@@ -38,10 +40,13 @@
 
   &__recipe {
     font-size: 22px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
-  &__image {
-    height: 23em;
+  &__cover{
+    height: auto;
     left: -15%;
     overflow: hidden;
     position: relative;
@@ -51,16 +56,11 @@
       background-position: center center;
       background-size: cover;
       border-radius: 0 0 50% 50%;
-      -moz-border-radius: 0 0 50% 50%;
-      -webkit-border-radius: 0 0 50% 50%;
       display: block;
       height: 22em;
       margin-top: -9.5em;
       overflow: hidden;
       position: relative;
-      transition: all ease .4s;
-      -moz-transition: all ease .4s;
-      -webkit-transition: all ease .4s;
       z-index: 2;
 
       & img {
@@ -70,23 +70,35 @@
   }
 
   &__info {
-    bottom: inherit;
     box-sizing: border-box;
+    height: 150px;
     left: 0;
-    padding: 0 6em;
-    position: absolute;
-    transition: all ease .4s;
-    -moz-transition: all ease .4s;
-    -webkit-transition: all ease .4s;
+    padding: 20px;
     width: 100%;
     z-index: 3;
   }
 
-  &__content {
+  &__text {
+    height: 60px;
     margin-top: 0.65em;
-    max-height: 5em;
     overflow: hidden;
+    position: relative;
     text-overflow: ellipsis;
+
+    &:after {
+      content: "";
+      text-align: right;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 50%;
+      height: 20px;
+      background: linear-gradient(to right, rgba(255, 255, 255, 0), #ffffff 50%);
+    }
+  }
+  
+  &__like {
+    display: block;
   }
 
   &__button {
@@ -182,20 +194,18 @@
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
-@media (max-width: 479px) {
-
-  .col-lg-4 {
-    width: 100%;
+@media (min-width: 568px) {
+  .col.xs-12 {
+    width: 50px;
   }
 }
 
 @media (min-width: 768px) {
 
   .favorite__info {
-    padding: 0 4em;
   }
 
-  .favorite__image--top {
+  .favorite__cover--top {
     height: 20em;
   }
 }
@@ -213,8 +223,7 @@
       margin: 0 0 50px 0;
     }
 
-    &__image {
-      height: 27.6em;
+    &__cover {
 
       &--top {
         height: 25em;
@@ -222,8 +231,6 @@
     }
 
     &__info {
-      bottom: 30px;
-      padding: 0 6em;
     }
   }
 
