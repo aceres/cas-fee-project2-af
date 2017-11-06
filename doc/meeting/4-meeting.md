@@ -21,7 +21,7 @@
 - OK 👌 DetailCoverComponent -> listCategory
 - OK 👌 Public Detail: Einkaufsliste -> Hintergrund: Notiz / schräges Notiz
 - OK 👌 Elipsis -> ToolTip Bootstrap
-- OK 👌 Pagination
+- Pagination
 
 ### Status bei André
 
@@ -39,7 +39,7 @@
 - OK 👌 Suche im Public: Ab Kleinbuchstaben soll auch möglich sein
 - OK 👌 Versuchen - Background (Image: Ev. besser?)
 - OK 👌 Admin - alle Rezepte sollte anzeigen!
-- Neuer Rubrik - Alle Rezepte -> zum Aktivieren -> Auch schon probiert
+- OK 👌 Neuer Rubrik - Alle Rezepte -> zum Aktivieren -> Auch schon probiert -> neue Lösung: Nur die neu hinzugefügtes Rezept als Werbung darstellen
 - OK 👌 Public -> 3 -> die beste geliked rezepte
 - OK 👌 Admin: Herz - nur zum Anzeigen, wieviele wurde dies geliked!
 
