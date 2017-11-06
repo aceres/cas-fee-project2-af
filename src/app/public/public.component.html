@@ -44,11 +44,11 @@
     <div class="row">
       <div class="col-md-7 col-sm-7 col-xs-12">
         <h2 class="tip-heading">Auch schon probiert?</h2>
-        <p>Zwetschgen-Tomatensuppe</p>
-        <p><a class="btn btn-tip" href="#" role="button">Zum Rezept</a></p>
+        <p>{{randomRecipe.receipt}}</p>
+        <p><a class="btn btn-tip" (click)="detail(randomRecipe)" role="button">Zum Rezept</a></p>
       </div>
       <div class="col-md-5 col-sm-5 col-xs-12">
-        <img class="featurette-image img-responsive center-block" src="./assets/img/tomaten_suppe.jpg" alt="Generic placeholder image">
+        <img class="featurette-image img-responsive center-block" src="{{randomRecipe.image?.url}}" alt="{{randomRecipe.receipt}}">
       </div>
     </div>
   </div>
