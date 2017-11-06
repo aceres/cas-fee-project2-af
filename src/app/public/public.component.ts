@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
-import {AngularFireDatabase, FirebaseListObservable, FirebaseObjectObservable} from 'angularfire2/database';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import { Router } from '@angular/router';
-
-import { RecipeService } from '../services/recipe.service';
 
 @Component({
   selector: 'app-public',
@@ -13,14 +11,11 @@ export class PublicComponent {
   title = 'Manducare';
 
   allRecipes: FirebaseListObservable<any[]>;
-  getAllRecipes;
-  calculateAllRecipes;
   randomRecipe;
 
   constructor(
     private router: Router,
-    db: AngularFireDatabase,
-    private recipeService: RecipeService,
+    db: AngularFireDatabase
   ) {
       this.allRecipes = db.list('/recipes', {
         query: {
