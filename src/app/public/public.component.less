@@ -1,237 +1,187 @@
-/* GLOBAL STYLES
+@import "../../settings";
+@import "../../fonts";
+
+
+/* Navbar
 -------------------------------------------------- */
-/* Padding below the footer and lighter body text */
-
-body {
-  padding-bottom: 40px;
-  color: #5a5a5a;
-}
-
-footer a {
-  color: #BAC64A;
-}
-
-/* CUSTOMIZE THE NAVBAR
--------------------------------------------------- */
-
-/* Special class on .container surrounding .navbar, used for positioning it into place. */
-.navbar-wrapper {
-  position: absolute;
-  top: 0;
-  right: 0;
+.navbar__wrapper {
   left: 0;
+  position: absolute;
+  right: 0;
+  width: 100%;
   z-index: 20;
 }
 
-/* Flip around the padding for proper display in narrow viewports */
-.navbar-wrapper > .container {
-  padding-right: 0;
-  padding-left: 0;
-}
-.navbar-wrapper .navbar {
-  padding-right: 15px;
-  padding-left: 15px;
-}
-.navbar-wrapper .navbar .container {
-  width: auto;
-}
 
-
-
-/* MARKETING CONTENT
+/* Favorites
 -------------------------------------------------- */
-
-/* Center align the text within the three columns below the carousel */
-.marketing .col-lg-4 {
-  margin-bottom: 20px;
-  text-align: center;
-}
-.marketing h2 {
-  font-weight: normal;
-}
-.marketing .col-lg-4 p {
-  margin-right: 10px;
-  margin-left: 10px;
+.favorite-group {
+  background-color: @light-grey;
 }
 
-
-/* Featurettes
-------------------------- */
-
-.featurette-divider {
-  margin: 80px 0; /* Space out the Bootstrap <hr> more */
-}
-
-/* Thin out the marketing headings */
-.featurette-heading {
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -1px;
-}
-
-.col-xs-12 {
-  padding-bottom: 20px;
-}
-
-.section-heading {
-  font-size: 30px;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-.section-heading span {
-  color: #ffc000;
-}
-
-.favorite_item {
-  background: #fff;
-  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0);
-  -moz-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0);
-  -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0);
-  margin: 0;
+.favorite {
+  background: @white;
+  margin: 0 0 20px 0;
   overflow: hidden;
   padding: 0;
   position: relative;
   text-align: center;
-  transition: all ease .3s;
-  -moz-transition: all ease .3s;
-  -webkit-transition: all ease .3s;
+
+  &__heading {
+    margin-bottom: 30px;
+    text-align: center;
+
+    &--yellow {
+      color: @yellow;
+    }
+  }
+
+  &__recipe {
+    font-size: 22px;
+  }
+
+  &__image {
+    height: 23em;
+    left: -15%;
+    overflow: hidden;
+    position: relative;
+    width: 130%;
+
+    &--top {
+      background-position: center center;
+      background-size: cover;
+      border-radius: 0 0 50% 50%;
+      -moz-border-radius: 0 0 50% 50%;
+      -webkit-border-radius: 0 0 50% 50%;
+      display: block;
+      height: 22em;
+      margin-top: -9.5em;
+      overflow: hidden;
+      position: relative;
+      transition: all ease .4s;
+      -moz-transition: all ease .4s;
+      -webkit-transition: all ease .4s;
+      z-index: 2;
+
+      & img {
+        height: inherit;
+      }
+    }
+  }
+
+  &__info {
+    bottom: inherit;
+    box-sizing: border-box;
+    left: 0;
+    padding: 0 6em;
+    position: absolute;
+    transition: all ease .4s;
+    -moz-transition: all ease .4s;
+    -webkit-transition: all ease .4s;
+    width: 100%;
+    z-index: 3;
+  }
+
+  &__content {
+    margin-top: 0.65em;
+    max-height: 5em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__button {
+    margin: 1.75em 0 2.6em;
+  }
 }
 
-.favorite_item h3 {
-  font-size: 22px;
-}
 
-.bg-image-wrap {
-  height: 23em;
-  left: -15%;
-  overflow: hidden;
-  position: relative;
-  width: 130%;
-}
-
-.bg-image-top {
-  background-position: center center;
-  background-size: cover;
-  border-radius: 0 0 50% 50%;
-  -moz-border-radius: 0 0 50% 50%;
-  -webkit-border-radius: 0 0 50% 50%;
-  display: block;
-  height: 22em;
-  margin-top: -9.5em;
-  overflow: hidden;
-  position: relative;
-  transition: all ease .4s;
-  -moz-transition: all ease .4s;
-  -webkit-transition: all ease .4s;
-  z-index: 2;
-}
-
-.bg-image-top img {
-  height: inherit;
-}
-
-.favorite_item_info {
-  bottom: inherit;
-  box-sizing: border-box;
-  left: 0;
-  padding: 0 6em;
-  position: absolute;
-  transition: all ease .4s;
-  -moz-transition: all ease .4s;
-  -webkit-transition: all ease .4s;
-  width: 100%;
-  z-index: 3;
-}
-
-.favorite_item_content {
-  margin-top: 0.65em;
-  max-height: 5em;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.favorite_item_button {
-  margin: 1.75em 0 2.6em;
-}
-
-.favorites {
-  background-color: #F4F2EE;
-}
-
+/* Tip
+-------------------------------------------------- */
 .tip {
-  background-color: #BAC64A;
+  background-color: @green;
   background-image: url("/assets/img/food-pattern.png");
+
+  &__heading {
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    color: #fff;
+    font-size: 16px;
+    padding-bottom: 20px;
+  }
+
+  &__btn {
+    background-color: @white;
+    border: 2px solid @white !important;
+    color: @green;
+
+    &:hover {
+      background-color: transparent;
+      border: 2px solid @white;
+      color: @white;
+    }
+  }
 }
 
-.categories {
+
+/* Categories
+-------------------------------------------------- */
+.category-group {
   background-image: url("/assets/img/cherry.jpeg");
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.tip-heading {
-  color: #fff;
-  font-size: 30px;
-  margin-bottom: 30px;
+.category {
+    background-color: #F4F2EE;
+    border: 1px solid #F4F2EE;
+    border-radius:40px;
+    -moz-border-radius: 40px;
+    -webkit-border-radius: 40px;
+    margin: 20px auto;
+    padding: 50px;
+    width: 300px;
+
+  &__heading {
+    margin: 0 0 30px 0;
+
+    &--yellow {
+      color: @yellow;
+    }
+  }
+
+  &__img {
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    display: block;
+    height: 170px;
+    margin: 0 auto;
+    width: 170px;
+
+    &--top {
+      float: left;
+      height: 100%;
+      left: 20%;
+      max-height: 100px;
+      position: relative;
+      top: 20%;
+      vertical-align: center;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    text-align: center;
+  }
 }
 
-.tip p {
-  color: #fff;
-  font-size: 16px;
-  padding-bottom: 20px;
-}
 
-.btn-tip {
-  background-color: #fff;
-  border: 2px solid #fff !important;
-  color: #BAC64A;
-}
-
-.btn-tip:hover {
-  background-color: transparent;
-  border: 2px solid #fff;
-  color: #fff;
-}
-
-.category-card {
-  background-color: #F4F2EE;
-  border: 1px solid #F4F2EE;
-  border-radius:40px;
-  -moz-border-radius: 40px;
-  -webkit-border-radius: 40px;
-  margin: 20px auto;
-  padding: 50px;
-  width: 300px;
-}
-
-.category-img-bg {
-  background-color: #fff;
-  border: 1px solid #fff;
-  border-radius: 100%;
-  display: block;
-  height: 170px;
-  margin: 0 auto;
-  width: 170px;
-}
-
-.card-img-top {
-  float: left;
-  height: 100%;
-  left: 20%;
-  max-height: 100px;
-  position: relative;
-  top: 20%;
-  vertical-align: center;
-}
-
-.card-title {
-  font-size: 24px;
-  text-align: center;
-}
 /* RESPONSIVE CSS
 -------------------------------------------------- */
-
 @media (max-width: 479px) {
 
   .col-lg-4 {
@@ -241,11 +191,11 @@ footer a {
 
 @media (min-width: 768px) {
 
-  .favorite_item_info {
+  .favorite__info {
     padding: 0 4em;
   }
 
-  .bg-image-top {
+  .favorite__image--top {
     height: 20em;
   }
 }
@@ -256,26 +206,28 @@ footer a {
     margin-top: 120px;
   }
 
-  .section-heading {
-    font-size: 50px;
-    margin-bottom: 50px;
-    text-align: center;
+  .favorite {
+
+    &__heading {
+      font-size: 50px;
+      margin: 0 0 50px 0;
+    }
+
+    &__image {
+      height: 27.6em;
+
+      &--top {
+        height: 25em;
+      }
+    }
+
+    &__info {
+      bottom: 30px;
+      padding: 0 6em;
+    }
   }
 
-  .bg-image-wrap {
-    height: 27.6em;
-  }
-
-  .bg-image-top {
-    height: 25em;
-  }
-
-  .favorite_item_info {
-    bottom: 30px;
-    padding: 0 6em;
-  }
-
-  .categories {
+  .category-group {
     background-position: -25% 80%;
     background-size: 80% auto;
 
@@ -295,12 +247,28 @@ footer a {
     }
   }
 
-  .tip-heading {
-    font-size: 50px;
-    margin-bottom: 50px;
+  .category {
+    &__heading {
+      font-size: 50px;
+      margin: 0 0 50px 0;
+    }
   }
 
-  .tip p {
-    font-size: 20px;
+  .tip  {
+
+    &__heading {
+      font-size: 50px;
+      margin-bottom: 50px;
+    }
+
+    &__text {
+      font-size: 20px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .navbar__wrapper {
+    padding: 0 40px;
   }
 }
