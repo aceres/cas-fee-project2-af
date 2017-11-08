@@ -54,7 +54,7 @@ import { RecipeDetailComponent } from './admin/view-detail/recipe-detail.compone
 import { RecipeAddComponent } from './admin/view-form/recipe-add.component';
 import { RecipeEditComponent } from './admin/view-form/recipe-edit.component';
 import { RecipeSearchComponent } from './admin/view-search/recipe-search.component';
-import { NavAdminComponent } from './admin/view-nav/nav-admin.component';
+import { NavAdminComponent } from './admin/view-head-nav/nav-admin.component';
 import { AllRecipesListComponent } from './admin/view-list/all-recipes-list.component';
 
 // Master Data Basis
