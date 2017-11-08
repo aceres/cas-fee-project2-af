@@ -32,9 +32,9 @@ import { PageNotFoundComponent } from './not-found.component';
 
 // Public
 import { PublicComponent } from './public/public.component';
-import { ImpressumComponent } from './public/impressum.component';
-import { ContactComponent } from './public/contact.component';
-import { AboutComponent } from './public/about.component';
+import { ImpressumComponent } from './public/view-page/impressum.component';
+import { ContactComponent } from './public/view-page/contact.component';
+import { AboutComponent } from './public/view-page/about.component';
 import { NavComponent } from './public/view-nav/nav.component';
 import { FooterComponent } from './public/view-footer/footer.component';
 import { CoverComponent } from './public/view-detail/view-cover/cover.component';
@@ -66,9 +66,9 @@ import { RegisterComponent } from './register/register.component';
 import { UsersListComponent } from './admin/view-list/users-list.component';
 
 // ngx-bootstrap
-import { AlertComponent } from './directives/alert/alert.component';
-import { PaginationLimitComponent } from './directives/pagination/pagination.component';
-import { ModalComponent } from './directives/modal/modal.component';
+import { AlertComponent } from './ngx/alert/alert.component';
+import { PaginationLimitComponent } from './ngx/pagination/pagination.component';
+import { ModalComponent } from './ngx/modal/modal.component';
 
 // Pipes
 import { FilterPipe } from './pipes/search-filter.pipe';

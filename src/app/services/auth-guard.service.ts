@@ -6,7 +6,7 @@ import { AuthService } from './auth.service';
 
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { BsModalRef } from 'ngx-bootstrap/modal/modal-options.class';
-import { ModalComponent } from '../directives/modal/modal.component';
+import { ModalComponent } from '../ngx/modal/modal.component';
 
 @Injectable()
 export class UserAuthGuardService {

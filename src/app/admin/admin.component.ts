@@ -2,7 +2,7 @@ import { Component, ViewChild, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { Router } from '@angular/router';
-import { AlertComponent } from '../directives/alert/alert.component';
+import { AlertComponent } from '../ngx/alert/alert.component';
 
 @Component({
   selector: 'app-admin',

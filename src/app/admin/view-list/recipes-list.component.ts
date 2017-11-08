@@ -6,11 +6,11 @@ import { Recipe } from '../../services/models/recipe';
 import { RecipeService } from '../../services/recipe.service';
 import { UploadService } from '../../services/upload.service';
 
-import { AlertComponent } from '../../directives/alert/alert.component';
+import { AlertComponent } from '../../ngx/alert/alert.component';
 
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { BsModalRef } from 'ngx-bootstrap/modal/modal-options.class';
-import { ModalComponent } from '../../directives/modal/modal.component';
+import { ModalComponent } from '../../ngx/modal/modal.component';
 
 @Component({
   selector: 'app-recipes-list',

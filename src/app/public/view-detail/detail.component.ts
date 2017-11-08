@@ -5,7 +5,7 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/switchMap';
 
-import { AlertComponent } from '../../directives/alert/alert.component';
+import { AlertComponent } from '../../ngx/alert/alert.component';
 
 import { RecipeService } from '../../services/recipe.service';
 import { FavoriteService } from '../../services/favorite.service';

@@ -5,9 +5,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { PageNotFoundComponent } from './not-found.component';
 // Public
 import { PublicComponent } from './public/public.component';
-import { ImpressumComponent } from './public/impressum.component';
-import { ContactComponent } from './public/contact.component';
-import { AboutComponent } from './public/about.component';
+import { ImpressumComponent } from './public/view-page/impressum.component';
+import { ContactComponent } from './public/view-page/contact.component';
+import { AboutComponent } from './public/view-page/about.component';
 import { PublicReceiptDetailComponent } from './public/view-detail/detail.component';
 import { CategoryListComponent } from './public/view-category/view-list/category-list.component';
 // Auth

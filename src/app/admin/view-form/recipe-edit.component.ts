@@ -18,7 +18,7 @@ import { Step } from '../../services/models/step';
 import { RecipeService } from '../../services/recipe.service';
 import { UploadService } from '../../services/upload.service';
 
-import { AlertComponent } from '../../directives/alert/alert.component';
+import { AlertComponent } from '../../ngx/alert/alert.component';
 
 @Component({
   selector: 'app-recipe-edit',

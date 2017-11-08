@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 import { Favorite } from '../../services/models/favorite';
 import { FavoriteService } from '../../services/favorite.service';
 
-import { AlertComponent } from '../../directives/alert/alert.component';
+import { AlertComponent } from '../../ngx/alert/alert.component';
 import { BsModalService } from 'ngx-bootstrap/modal';
 // import { ModalContentComponent } from '../directives/modal/modal.component';
 // import { BsModalRef } from 'ngx-bootstrap/modal/modal-options.class';

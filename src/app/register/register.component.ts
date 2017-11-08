@@ -3,7 +3,7 @@ import { AuthService } from '../services/auth.service';
 import { RegisterService } from '../services/register.service';
 import { Router } from '@angular/router';
 
-import { AlertComponent } from '../directives/alert/alert.component';
+import { AlertComponent } from '../ngx/alert/alert.component';
 
 @Component({
   selector: 'app-register',

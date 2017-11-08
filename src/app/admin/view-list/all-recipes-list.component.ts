@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 import { Recipe } from '../../services/models/recipe';
 import { RecipeService } from '../../services/recipe.service';
 
-import { AlertComponent } from '../../directives/alert/alert.component';
+import { AlertComponent } from '../../ngx/alert/alert.component';
 import { BsModalService } from 'ngx-bootstrap/modal';
 // import { ModalContentComponent } from '../directives/modal/modal.component';
 // import { BsModalRef } from 'ngx-bootstrap/modal/modal-options.class';
