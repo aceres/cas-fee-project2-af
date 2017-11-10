@@ -29,15 +29,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.flaticon-email:before { content: "\f100"; }
-.flaticon-like:before { content: "\f101"; }
-.flaticon-cuisine:before { content: "\f102"; }
-.flaticon-preptime:before { content: "\f103"; }
-.flaticon-edit:before { content: "\f104"; }
-.flaticon-maintenance:before { content: "\f105"; }
-.flaticon-delete:before { content: "\f106"; }
-.flaticon-logout:before { content: "\f107"; }
-.flaticon-recipes:before { content: "\f108"; }
-.flaticon-category:before { content: "\f109"; }
-.flaticon-add:before { content: "\f10a"; }
-.flaticon-level:before { content: "\f10b"; }
+.flaticon-broken-link:before { content: "\f100"; }
+.flaticon-email:before { content: "\f101"; }
+.flaticon-like:before { content: "\f102"; }
+.flaticon-cuisine:before { content: "\f103"; }
+.flaticon-preptime:before { content: "\f104"; }
+.flaticon-edit:before { content: "\f105"; }
+.flaticon-maintenance:before { content: "\f106"; }
+.flaticon-delete:before { content: "\f107"; }
+.flaticon-logout:before { content: "\f108"; }
+.flaticon-recipes:before { content: "\f109"; }
+.flaticon-category:before { content: "\f10a"; }
+.flaticon-add:before { content: "\f10b"; }
+.flaticon-level:before { content: "\f10c"; }
