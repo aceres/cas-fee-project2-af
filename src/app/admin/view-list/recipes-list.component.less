@@ -1,160 +1,142 @@
-.recipes-list-item {
-  height: 220px;
-  padding-bottom: 25px;
+@import "../../../settings";
+@import "../../../fonts";
+
+
+.recipe-list {
+  padding: 0 0 20px 0;
+
+  &__wrapper {
+    background-color: @grey;
+    padding-bottom: 56.25%;
+    position: relative;
+    width: 100%;
+  }
+
+  &__image {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.7;
+    }
+
+    &:before {
+      background-color: @grey;
+      border: 2px dotted @dark-grey;
+      border-radius: 5px;
+      content: "";
+      display: block;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      width: 100%;
+    }
+
+    &:after {
+      /* TODO: Clean up here later - move it to the master CSS */
+      content: "\f100" " Broken Image of " attr(alt);
+      display: block;
+      font-size: 16px;
+      font-style: normal;
+      font-family: Flaticon;
+      color: @black;
+      position: absolute;
+      top: 5px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__buttons {
+    bottom: 0;
+    display: flex;
+    flex-basis: 100%;
+    font-size: 20px;
+    margin: 10px 0;
+    position: absolute;
+    right: 0;
+    width: auto;
+    z-index: 1;
+  }
+
+  &__edit,
+  &__delete {
+    color: @white;
+    cursor: pointer;
+    font-size: 18px;
+    margin-right: 10px;
+
+    &:hover {
+      color: @yellow;
+    }
+  }
+
+  &__title {
+    height: 30px;
+    hyphens: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+    &:after {
+      .overflow-gradient();
+      bottom: 0;
+      content: "";
+      height: 16px;
+      position: absolute;
+      right: 0;
+      text-align: right;
+      width: 50%;
+    }
+  }
+
+  &__meta-container {
+    display: none;
+  }
+
+  &__meta-info {
+    flex: auto;
+    line-height: 16px;
+
+    &:nth-child(3) > span {
+      float: right
+    }
+  }
 }
 
-.recipes-list-item-image {
-  position: relative;
-}
-
-.recipes-list-item-image-card,
-.recipes-list-item-image-img {
-  height: 151.5px;
-}
-
-.recipes-list-item-image-card {
-  background: #F4F2EE;
-  display: block;
-  overflow: hidden;
-}
-
-.recipes-list-item-image-img {
-  background-position: center;
-  background-size: cover;
-  cursor: pointer;
-  width: 100%;
-}
-
-.recipes-list-item-buttons {
-  bottom: 0;
-  position: absolute;
-  text-align: right;
-  width: 100%;
-  z-index: 1;
-}
-
-.recipes-list-item-buttons-list {
-  list-style: none;
-  margin: 10px;
-  padding: 0;
-}
-
-.recipes-list-item-buttons-edit,
-.recipes-list-item-buttons-delete {
-  display: inline-block;
-  margin: 0 0 0 8px;
-  position: relative;
-}
-
-.recipes-list-item-title {
-  height: 40px;
-  hyphens: auto;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-}
-
-.recipes-list-item-title:after {
-  content: "";
-  text-align: right;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 50%;
-  height: 15px;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
-}
-
-.recipes-list-item-meta-container {
-  display: none;
-}
-
-.recipes-list-item-meta-info {
-  flex: auto;
-  line-height: 16px;
-}
-
-.recipes-list-item-meta-info:nth-child(3) > span {
-  float: right
-}
-
-/* Broken Images */
-/* TODO: Clean up here later - move it to the master CSS */
-
-.recipes-list-item-image {
-  position: relative;
-}
-
-.recipes-list-item-image img {
-  /* Same as first example */
-  min-height: 50px;
-  object-fit: cover;
-}
-
-.recipes-list-item-image img:hover {
-  opacity: 0.7;
-}
-
-.recipes-list-item-image img:before {
-  content: " ";
-  display: block;
-
-  position: absolute;
-  left: 0;
-  height: calc(100%);
-  width: 100%;
-  background-color: rgb(230, 230, 230);
-  border: 2px dotted rgb(200, 200, 200);
-  border-radius: 5px;
-}
-
-.recipes-list-item-image img:after {
-  content: "\f100" " Broken Image of " attr(alt);
-  display: block;
-  font-size: 16px;
-  font-style: normal;
-  font-family: Flaticon;
-  color: rgb(100, 100, 100);
-
-  position: absolute;
-  top: 5px;
-  left: 0;
-  width: 100%;
-  text-align: center;
-}
 
 @media (min-width: 768px) {
-  .recipes-list-item-title {
-    font-size: 16px;
-    height: 45px;
+  .recipe-list {
+    padding: 0 0 10px 0;
+
+    &__title {
+      font-size: 16px;
+      height: 35px;
+    }
   }
-
-  .recipes-list-item-title:after {
-    height: 16px;
-  }
-}
-
-@media (min-width: 992px) {
-
 }
 
 @media (min-width: 1200px) {
-  .recipes-list-item {
-    height: 250px;
-  }
+  .recipe-list {
 
-  .recipes-list-item-title {
-    font-size: 18px;
-    height: 49px;
-  }
+    &__title {
+      font-size: 18px;
+      height: 39px;
 
-  .recipes-list-item-title:after {
-    height: 19px;
-  }
+      &:after {
+        height: 19px;
+      }
+    }
 
-  .recipes-list-item-meta-container {
-    display: flex;
-    padding: 6px 0 0 0;
+    &__meta-container {
+      display: flex;
+      padding: 6px 0 0 0;
+    }
   }
 }
 
