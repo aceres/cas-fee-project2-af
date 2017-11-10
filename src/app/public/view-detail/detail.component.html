@@ -4,32 +4,30 @@
   </div>
 </div>
 
-<section class="recipe-details">
+<section class="details">
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <div class="recipe-image">
-          <img class="featurette-image img-responsive center-block" src="{{ (recipe)?.image?.url }}" alt="{{(recipe)?.receipt}}">
-        </div>
+        <img class="details__image featurette-image img-responsive center-block" src="{{ (recipe)?.image?.url }}" alt="{{(recipe)?.receipt}}">
       </div>
       <div class="col-md-6">
-        <h1 class="recipe-details-heading">{{(recipe)?.receipt}}</h1>
-        <p class="recipe-details-description">{{(recipe)?.description}}</p>
+        <h1 class="details__heading">{{(recipe)?.receipt}}</h1>
+        <p class="details__description">{{(recipe)?.description}}</p>
         <div class="row">
           <div class="col-md-12">
-            <div class="meta-container">
-              <ul class="meta-list">
+            <div class="meta__container">
+              <ul class="meta__list">
                 <li>
                   <i class="icon flaticon-preptime"></i>Zubereitungszeit:
-                  <span class="meta-value">{{(recipe)?.prepTime}} min.</span>
+                  <span class="meta__value">{{(recipe)?.prepTime}} min.</span>
                 </li>
                 <li>
                   <i class="icon flaticon-level"></i>Schwierigkeitsgrad:
-                  <span class="meta-value">{{(recipe)?.level}}</span>
+                  <span class="meta__value">{{(recipe)?.level}}</span>
                 </li>
                 <li>
                   <i class="icon flaticon-cuisine"></i>Länderküche:
-                  <span class="meta-value">{{(recipe)?.cuisine}}</span>
+                  <span class="meta__value">{{(recipe)?.cuisine}}</span>
                 </li>
               </ul>
             </div>
@@ -38,7 +36,7 @@
         <div class="row">
           <div class="col-md-12">
             <div class="like-group">
-              <ul class="like-list">
+              <ul class="like__list">
                 <li>
                   <span (click)="rateRecipe()" class="icon flaticon-like"></span>
                   {{(recipe)?.rating}}
@@ -59,27 +57,27 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h2 class="preparation-heading">Zubereitung</h2>
+        <h2 class="preparation__heading">Zubereitung</h2>
       </div>
       <div class="col-md-6">
-        <div class="preparation-ingredients">
-          <h3 class="preparation-ingredients-heading">Zutaten für {{(recipe)?.portion}} Personen</h3>
-            <table >
-              <tr class="preparation-ingredients-item" *ngFor="let ingredient of (recipe)?.ingredients; let i = index;">
-                <td class="preparation-ingredients-quantity">{{ ingredient.quantity }}</td>
-                <td class="preparation-ingredients-unit">{{ ingredient.unit }}</td>
-                <td class="preparation-ingredients-ingredient">{{ ingredient.ingredient }} </td>
-              </tr>
-            </table>
+        <div class="ingredients">
+          <h3 class="ingredients__heading">Zutaten für {{(recipe)?.portion}} Personen</h3>
+          <table >
+            <tr class="ingredients__item" *ngFor="let ingredient of (recipe)?.ingredients; let i = index;">
+              <td class="ingredients__quantity">{{ ingredient.quantity }}</td>
+              <td class="ingredients__unit">{{ ingredient.unit }}</td>
+              <td class="ingredients__ingredient">{{ ingredient.ingredient }} </td>
+            </tr>
+          </table>
         </div>
       </div>
       <div class="col-md-6">
-        <div class="preparation-steps">
-          <div class="preparation-steps-step" *ngFor="let step of (recipe)?.steps; let i = index;">
-            <span class="step">
+        <div class="steps">
+          <div class="step" *ngFor="let step of (recipe)?.steps; let i = index;">
+            <span class="step__number">
               {{i+1}}
             </span>
-            <p>
+            <p class="step__description">
               {{ step.stepDescription }}
             </p>
           </div>

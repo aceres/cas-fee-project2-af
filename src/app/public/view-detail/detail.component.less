@@ -1,225 +1,233 @@
-.recipe-details {
-  background-color: #fff;
+@import "../../../settings";
+@import "../../../fonts";
+
+.details {
+  background-color: @white;
   font-family: inherit;
-}
 
-.recipe-details-heading {
-  color: #FFC000;
-  margin-top: 0;
-  padding: 48px 0 0 0;
-  text-align: center;
-}
+  &__image {
+    min-height: 50px;
 
-.recipe-details-description {
-  text-align: center;
-}
+    &:before {
+      background-color: rgb(230, 230, 230);
+      border: 2px dotted rgb(200, 200, 200);
+      border-radius: 5px;
+      content: "";
+      display: block;
+      height: calc(100% + 10px);
+      left: 0;
+      position: absolute;
+      top: -10px;
+      width: 100%;
+    }
 
-.meta-container {
-  max-width: 400px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 20px;
-}
+    &:after {
+      color: @black;
+      content: "\f127" " Broken Image of " attr(alt);
+      display: block;
+      font-size: 16px;
+      font-style: normal;
+      font-family: FontAwesome;
+      left: 0;
+      position: absolute;
+      text-align: center;
+      top: 5px;
+      width: 100%;
+    }
+  }
 
-.meta-list {
-  line-height: 30px;
-  list-style-type: none;
-  padding: 0;
-}
+  &__heading {
+    color: @yellow;
+    margin-top: 0;
+    padding: 48px 0 0 0;
+    text-align: center;
+  }
 
-.meta-info {
-  margin-left: 10px;
-  min-width: 200px;
-}
-
-/* Flat Icon Like */
-.flaticon-like {
-
-  &:hover {
-    cursor: pointer;
+  &__description {
+    text-align: center;
   }
 }
 
+.meta {
+
+  &__container {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+  }
+
+  &__list {
+    line-height: 30px;
+    list-style-type: none;
+    padding: 0;
+  }
+
+  &__info {
+    margin-left: 10px;
+    min-width: 200px;
+  }
+
+  &__like {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__value {
+    float: right;
+    min-width: 100px;
+  }
+}
+
+/* Todo: move to public css */
 .icon {
   font-size: 20px;
   top: 2px;
 }
 
-.meta-value {
-  float: right;
-  min-width: 100px;
-}
-
 .like-group {
   padding: 10px 0 50px;
+
+  & li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 18px;
+  }
 }
 
-.like-list {
-  margin: 0;
-  padding: 0;
-  text-align: center;
+.like {
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
 }
 
-.like-group li {
-  display: inline-block;
-  list-style: none;
-  margin: 0 18px;
-}
 
 .preparation {
-  background-color: #F4F2EE;
+  background-color: @light-grey;
   position: relative;
   z-index: 0;
+
+  &__heading {
+    color: @green;
+    font-size: 30px;
+    padding: 24px 0;
+    text-align: center;
+  }
 }
 
-.preparation-heading {
-  color: #BAC64A;
-  padding: 24px 0;
-  text-align: center;
-}
-
-.preparation-ingredients {
-  background: #fff;
+.ingredients {
+  background: @white;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
   margin: 26px auto;
   max-width: 550px;
   min-height: 300px;
-  padding: 24px 24px 50px 24px;
+  padding: 24px 50px 50px 50px;
   position: relative;
+
+  &:before,
+  &:after {
+    content: "";
+    height: 98%;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+  }
+
+  &:before {
+    background: #fafafa;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    left: -5px;
+    top: 4px;
+    transform: rotate(-2.5deg);
+  }
+
+  &:after {
+    background: #f6f6f6;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    right: -3px;
+    top: 1px;
+    transform: rotate(1.4deg);
+  }
+
+  &__heading {
+    color: inherit;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+
+  &__item {
+    line-height: 25px;
+    padding: 0 20px;
+  }
+
+  &__quantity {
+    padding: 0 10px 0 0;
+    text-align: right;
+    width: 50px;
+  }
+
+  &__unit {
+    width: 90px;
+  }
+
+  &__ingredient {
+    width: 250px;
+  }
 }
 
-.preparation-ingredients:before, .preparation-ingredients:after {
-  content: "";
-  height: 98%;
-  position: absolute;
-  width: 100%;
-  z-index: -1;
-}
-.preparation-ingredients:before {
-  background: #fafafa;
-  box-shadow: 0 0 8px rgba(0,0,0,0.2);
-  left: -5px;
-  top: 4px;
-  transform: rotate(-2.5deg);
-}
-.preparation-ingredients:after {
-  background: #f6f6f6;
-  box-shadow: 0 0 3px rgba(0,0,0,0.2);
-  right: -3px;
-  top: 1px;
-  transform: rotate(1.4deg);
-}
-
-.preparation-ingredients-heading {
-  color: inherit;
-  padding-bottom: 20px;
-  text-align: center;
-}
-
-.preparation-ingredients-item {
-  line-height: 25px;
-  padding: 0 20px;
-}
-
-.preparation-ingredients-quantity {
-  padding: 0 10px 0 0;
-  text-align: right;
-  width: 50px;
-}
-
-.preparation-ingredients-unit {
-  width: 90px;
-}
-
-.preparation-ingredients-ingredient {
-  width: 250px;
-}
-
-.preparation-steps-step {
+.step {
   margin: 20px;
+
+  &__number {
+    background: transparent;
+    border: 3px solid @green;
+    border-radius: 100%;
+    color: @green;
+    display: inline-block;
+    font-family: "Happy Monkey", Arial, sans-serif;
+    font-size: 32px;
+    height: 40px;
+    line-height: 34px;
+    margin: 10px 0;
+    text-align: center;
+    width: 40px;
+  }
 }
 
-span.step {
-  background: transparent;
-  border: 3px solid #BAC64A;
-  border-radius: 100%;
-  -moz-border-radius: 100%;
-  -webkit-border-radius: 100%;
-  color: #BAC64A;
-  display: inline-block;
-  font-family: "Happy Monkey", Arial, sans-serif;
-  font-size: 32px;
-  height: 40px;
-  line-height: 34px;
-  margin: 10px 0;
-  text-align: center;
-  width: 40px;
-}
-
+/* Todo: move to public css */
 .back {
   padding: 20px;
 }
 
 @media (min-width: 568px) {
-  .preparation-ingredients {
+  .ingredients {
     margin: 26px auto 50px auto;
   }
 }
 
 @media (min-width: 768px) {
-  .preparation-ingredients {
+  .ingredients {
     margin: 26px auto 50px auto;
     padding: 24px 50px 50px 50px;
   }
 
-  .preparation-steps {
+  .steps {
     padding: 20px 0;
   }
 }
 
 @media (min-width: 992px) {
-  .recipe-details-heading {
+  .details__heading {
     padding: 0;
   }
 
-  .preparation-ingredients {
+  .ingredients {
     margin: 0;
   }
-}
-
-/* Broken Images */
-img {
-  /* Same as first example */
-  min-height: 50px;
-}
-
-img:before {
-  content: " ";
-  display: block;
-
-  position: absolute;
-  top: -10px;
-  left: 0;
-  height: calc(100% + 10px);
-  width: 100%;
-  background-color: rgb(230, 230, 230);
-  border: 2px dotted rgb(200, 200, 200);
-  border-radius: 5px;
-}
-
-img:after {
-  content: "\f127" " Broken Image of " attr(alt);
-  display: block;
-  font-size: 16px;
-  font-style: normal;
-  font-family: FontAwesome;
-  color: rgb(100, 100, 100);
-
-  position: absolute;
-  top: 5px;
-  left: 0;
-  width: 100%;
-  text-align: center;
 }
 
 @media (min-width: 1200px) {
@@ -227,27 +235,23 @@ img:after {
     padding: 40px;
   }
 
-  .recipe-details-heading {
-    padding: 0;
-  }
-
-  .meta-container {
+  .meta__container {
     margin: 50px auto;
   }
 
-  .preparation-heading {
+  .preparation__heading {
     padding: 0 0 50px 0;
   }
 
-  .preparation-ingredients {
+  .ingredients {
     margin: 0;
+
+    &__item {
+      padding: 0 40px;
+    }
   }
 
-  .preparation-ingredients-item {
-    padding: 0 40px;
-  }
-
-  .preparation-steps {
+  .steps {
     padding: 0;
   }
 }
