@@ -6,7 +6,7 @@
     <div class="col-sm-3 col-md-2 sidebar">
 
       <div class="form-group welcome" *ngIf="authService.user | async">
-        <p>Willkommen {{ (authService.user | async)?.email }}!</p>
+        <p>Willkommen<br>{{ firstName }} {{ lastName }}!</p>
         <a class="logout" (click)="logout()" *ngIf="authService.user | async">
           <i class="flaticon-logout"></i> Abmelden
         </a>

@@ -18,6 +18,8 @@ export class AdminComponent implements OnInit {
 
   // Role
   public role: string;
+  public firstName: string;
+  public lastName: string;
 
   // Alert
   @ViewChild('childAlert') public childAlert: AlertComponent;
@@ -42,7 +44,10 @@ export class AdminComponent implements OnInit {
           }
       })
       .subscribe(user => {
+          console.log('user', user);
           this.role = user[0].role;
+          this.firstName = user[0].firstName;
+          this.lastName = user[0].lastName;
       });
   }
 
