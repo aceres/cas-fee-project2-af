@@ -86,25 +86,41 @@
   top: 2px;
 }
 
-.like-group {
-  padding: 10px 0 50px;
-
-  & li {
-    display: inline-block;
-    list-style: none;
-    margin: 0 18px;
-  }
-}
-
 .like {
 
+  &-group {
+    padding: 10px 0 50px;
+
+    & li {
+      display: inline-block;
+      list-style: none;
+      margin: 0 18px;
+    }
+  }
+
   &__list {
-    margin: 0;
-    padding: 0;
     text-align: center;
+
+    &--like {
+      cursor: pointer;
+
+      &:before {
+        font-size: 18px;
+      }
+
+      &:hover {
+        color: @yellow;
+      }
+    }
+
+    &--favorite {
+      &:before {
+        font-size: 18px;
+        margin: 0 5px 0 0;
+      }
+    }
   }
 }
-
 
 .preparation {
   background-color: @light-grey;
