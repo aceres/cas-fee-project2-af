@@ -6,9 +6,6 @@ import { Recipe } from '../../services/models/recipe';
 import { RecipeService } from '../../services/recipe.service';
 
 import { AlertComponent } from '../../ngx/alert/alert.component';
-import { BsModalService } from 'ngx-bootstrap/modal';
-// import { ModalContentComponent } from '../directives/modal/modal.component';
-// import { BsModalRef } from 'ngx-bootstrap/modal/modal-options.class';
 
 @Component({
   selector: 'app-all-recipes-list',
@@ -30,37 +27,11 @@ export class AllRecipesListComponent implements OnInit {
   // Search Pipe
   public searchTerm;
 
-  // sessionStorage
-  currentUser;
-
-  // Modal
-  // bsModalRef: BsModalRef;
-
   constructor(
     private router: Router,
     private recipeService: RecipeService,
-    db: AngularFireDatabase,
-    private modalService: BsModalService) {
-
-    // TODO: Not clean at the moment / Improve it! It is provisional version for now
-    this.currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
-
-    if (this.currentUser != null) {
-      console.log('this.currentUser: ', this.currentUser);
-
-      this.allRecipes = db.list('/recipes')
-    }
-  }
-
-  // public openModalWithComponent() {
-  //   const list = ['Open a modal with component', 'Pass your data', 'Do something else', '...'];
-  //   this.bsModalRef = this.modalService.show(ModalContentComponent);
-  //   this.bsModalRef.content.title = 'Modal with component';
-  //   this.bsModalRef.content.list = list;
-  //   setTimeout(() => {
-  //     list.push('PROFIT!!!');
-  //   }, 2000);
-  // }
+    private db: AngularFireDatabase,
+  ) {}
 
   remove(id): void {
     this.recipeService
@@ -70,10 +41,8 @@ export class AllRecipesListComponent implements OnInit {
       });
   }
 
-  ngOnInit(): void {
-    // Get the currentUser from the sessionStorage
-    this.currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
-    console.log('this.currentUser: ', this.currentUser);
+  ngOnInit() {
+      this.allRecipes = this.db.list('/recipes');
   }
 
   public pageChanged(event: any): void {
