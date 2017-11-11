@@ -32,8 +32,6 @@ export class RecipesListComponent implements OnInit {
   // Search Pipe
   public searchTerm;
 
-  role;
-
   constructor(
     private router: Router,
     private recipeService: RecipeService,
