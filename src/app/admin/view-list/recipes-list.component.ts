@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { Recipe } from '../../services/models/recipe';
 import { RecipeService } from '../../services/recipe.service';
 import { UploadService } from '../../services/upload.service';
+import { AuthService } from '../../services/auth.service';
 
 import { AlertComponent } from '../../ngx/alert/alert.component';
 
@@ -31,29 +32,16 @@ export class RecipesListComponent implements OnInit {
   // Search Pipe
   public searchTerm;
 
-  // sessionStorage
-  currentUser;
+  role;
 
   constructor(
     private router: Router,
     private recipeService: RecipeService,
     private uploadService: UploadService,
     private modalService: BsModalService,
-    db: AngularFireDatabase
-  ) {
-
-    this.currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
-    if (this.currentUser != null) {
-      console.log('this.currentUser: ', this.currentUser);
-
-      this.allRecipes = db.list('/recipes', {
-        query: {
-          orderByChild: 'uid',
-          equalTo: this.currentUser.uid
-        }
-      })
-    }
-  }
+    private db: AngularFireDatabase,
+    private authService: AuthService
+  ) {}
 
   remove(recipe): void {
 
@@ -66,7 +54,6 @@ export class RecipesListComponent implements OnInit {
     this.modalRef.content._cancel = 'Nein';
     this.modalRef.content.onClose.subscribe(result => {
       this.result = result;
-      console.log('this.result: ', this.result);
 
       if (this.result === true) {
         this.recipeService
@@ -74,16 +61,18 @@ export class RecipesListComponent implements OnInit {
           .then(() => {
             this.childAlert.showAlert('success', `Rezept wurde erfolgreich entfernt! (Geändert am: ${(new Date()).toLocaleTimeString()})`);
           });
-        console.log('recipe', recipe);
         this.uploadService.deleteFileData(recipe.$key);
       }
     })
   }
 
-  ngOnInit(): void {
-    // Get the currentUser from the sessionStorage
-    this.currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
-    console.log('this.currentUser: ', this.currentUser);
+  ngOnInit() {
+      this.allRecipes = this.db.list('/recipes', {
+          query: {
+              orderByChild: 'uid',
+              equalTo: this.authService.getUid().uid
+          }
+      });
   }
 
   public pageChanged(event: any): void {

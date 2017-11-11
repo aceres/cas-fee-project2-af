@@ -11,6 +11,21 @@ Highlights:
 - Registration Überlegung
 - AngularFire / Angular - Firebase (Vermischung) - Services
 
+Problem beim 2. Crash
+=====================
+
+- 0 - remove firebase bevore .Promise
+  1 - remove AngularFire
+  
+  2 - Now: Upgrade
+  OLD:
+  "angularfire2": "^4.0.0-rc.1",
+  "firebase": "^4.1.3”
+  
+  Edit, Git (dann soll Tanja versuchen)
+  
+  3- Ansonsten: Upgrade 5.0
+
 Ausprobieren:
 
 - JWT Token

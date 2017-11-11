@@ -9,7 +9,9 @@ import { Observable } from 'rxjs/Observable';
 export class AuthService {
   user: Observable<firebase.User>;
 
-  constructor(private firebaseAuth: AngularFireAuth) {
+  constructor(
+      private firebaseAuth: AngularFireAuth
+  ) {
     this.user = firebaseAuth.authState;
   }
 
@@ -25,6 +27,11 @@ export class AuthService {
         console.log('Something went wrong:', error.message);
         return error;
       });
+  }
+
+  getUid() {
+      const user = this.firebaseAuth.auth.currentUser;
+      return user;
   }
 
   login(email: string, password: string) {
