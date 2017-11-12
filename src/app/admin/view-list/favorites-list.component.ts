@@ -13,6 +13,7 @@ import { AlertComponent } from '../../ngx/alert/alert.component';
   styleUrls: ['./favorites-list.component.less']
 })
 export class FavoritesListComponent implements OnInit {
+
   allFavorites: FirebaseListObservable<any[]>;
 
   // Alert

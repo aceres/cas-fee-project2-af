@@ -19,6 +19,7 @@ import { ModalComponent } from '../../ngx/modal/modal.component';
   styleUrls: ['./recipes-list.component.less']
 })
 export class RecipesListComponent implements OnInit {
+
   recipes: Recipe[];
   allRecipes: FirebaseListObservable<any[]>;
 
