@@ -8,6 +8,7 @@ import { listUnits } from '../../global/list.units';
 
 import { Recipe } from '../../services/models/recipe';
 import { RecipeService } from '../../services/recipe.service';
+import { AuthService } from '../../services/auth.service';
 
 import { UploadService } from '../../services/upload.service';
 import { Upload } from '../../services/models/upload';
@@ -22,6 +23,7 @@ import { AlertComponent } from '../../ngx/alert/alert.component';
   styleUrls: ['./recipe-add.component.less']
 })
 export class RecipeAddComponent implements OnInit {
+
   recipes: Recipe[];
 
   listCategories = listCategories;
@@ -37,9 +39,6 @@ export class RecipeAddComponent implements OnInit {
   // Alert
   @ViewChild('childAlert') public childAlert: AlertComponent;
 
-  // sessionStorage
-  currentUser;
-
   // Initialize Step / Ingredient
   ingredients = [];
   steps = [];
@@ -54,7 +53,9 @@ export class RecipeAddComponent implements OnInit {
 
   constructor(
     private recipeService: RecipeService,
-    private upSvc: UploadService) { }
+    private upSvc: UploadService,
+    public authService: AuthService
+  ) {}
 
   detectFiles(event) {
     this.selectedFiles = event.target.files;
@@ -82,8 +83,8 @@ export class RecipeAddComponent implements OnInit {
             steps = this.steps;
             ingredients = this.ingredients;
             image = this.image;
-            uid = this.currentUser.uid;
-            user = this.currentUser.email;
+            uid = this.authService.getUid().uid;
+            user = this.authService.getUid().email;
 
             console.log('this.selectedFiles: ', this.selectedFiles);
             if (this.selectedFiles !== undefined) {
@@ -118,7 +119,5 @@ export class RecipeAddComponent implements OnInit {
     this.steps.splice(index, 1);
   }
 
-  ngOnInit(): void {
-    this.currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
-  }
+  ngOnInit(): void {}
 }

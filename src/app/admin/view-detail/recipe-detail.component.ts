@@ -12,6 +12,7 @@ import { RecipeService } from '../../services/recipe.service';
   templateUrl: './recipe-detail.component.html'
 })
 export class RecipeDetailComponent implements OnInit {
+
   recipe: Recipe;
   id;
 

@@ -17,6 +17,7 @@ import { Step } from '../../services/models/step';
 
 import { RecipeService } from '../../services/recipe.service';
 import { UploadService } from '../../services/upload.service';
+import { AuthService } from '../../services/auth.service';
 
 import { AlertComponent } from '../../ngx/alert/alert.component';
 
@@ -44,9 +45,6 @@ export class RecipeEditComponent implements OnInit {
   // Alert
   @ViewChild('childAlert') public childAlert: AlertComponent;
 
-  // sessionStorage
-  currentUser;
-
   // Initialize
   ingredients;
   steps;
@@ -63,7 +61,8 @@ export class RecipeEditComponent implements OnInit {
     private recipeService: RecipeService,
     private route: ActivatedRoute,
     private location: Location,
-    private upSvc: UploadService
+    private upSvc: UploadService,
+    public authService: AuthService
   ) {}
 
   ngOnInit(): void {
@@ -75,9 +74,6 @@ export class RecipeEditComponent implements OnInit {
       this.key = this.route.snapshot.params['id'];
       console.log('this.id', this.id);
       console.log('this.key', this.key);
-
-    // Get the currentUser from the sessionStorage
-    this.currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
   }
 
   detectFiles(event) {
@@ -109,8 +105,8 @@ export class RecipeEditComponent implements OnInit {
     steps = this.recipe.steps;
     ingredients = this.recipe.ingredients;
     image = this.recipe.image;
-    uid = this.currentUser.uid;
-    user = this.currentUser.email;
+    uid = this.authService.getUid().uid;
+    user = this.authService.getUid().email;
 
     console.log('this.id', this.id);
     console.log('this.recipe.receipt', this.recipe.receipt);
@@ -124,8 +120,8 @@ export class RecipeEditComponent implements OnInit {
     console.log('this.recipe.steps', this.recipe.steps);
     console.log('this.recipe.ingredients', this.recipe.ingredients);
     console.log('this.recipe.image', this.recipe.image);
-    console.log('this.currentUser.uid', this.currentUser.uid);
-    console.log('this.currentUser.email', this.currentUser.email);
+    console.log('this.currentUser.uid', this.authService.getUid().uid);
+    console.log('this.currentUser.email', this.authService.getUid().email);
 
     this.recipeService.update(this.id, receipt, description, portion, prepTime, rating, level, category, cuisine, steps, ingredients, image, uid, user)
         .then(response => {
