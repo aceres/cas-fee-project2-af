@@ -2,13 +2,10 @@ import { Component, ViewChild, OnInit } from '@angular/core';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import { Router } from '@angular/router';
 
-import { Favorite } from '../../services/models/favorite';
+import { AuthService } from '../../services/auth.service';
 import { FavoriteService } from '../../services/favorite.service';
 
 import { AlertComponent } from '../../ngx/alert/alert.component';
-import { BsModalService } from 'ngx-bootstrap/modal';
-// import { ModalContentComponent } from '../directives/modal/modal.component';
-// import { BsModalRef } from 'ngx-bootstrap/modal/modal-options.class';
 
 @Component({
   selector: 'app-favorites-list',
@@ -16,7 +13,6 @@ import { BsModalService } from 'ngx-bootstrap/modal';
   styleUrls: ['./favorites-list.component.less']
 })
 export class FavoritesListComponent implements OnInit {
-  favorite: Favorite[];
   allFavorites: FirebaseListObservable<any[]>;
 
   // Alert
@@ -25,32 +21,12 @@ export class FavoritesListComponent implements OnInit {
   // Search Pipe
   public searchTerm;
 
-  // sessionStorage
-  currentUser;
-
-  // Modal
-  // bsModalRef: BsModalRef;
-
   constructor(
     private router: Router,
     private favoriteService: FavoriteService,
-    db: AngularFireDatabase,
-    private modalService: BsModalService) {
-
-    // TODO: Not clean at the moment / Improve it! It is provisional version for now
-    this.currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
-
-    if (this.currentUser != null) {
-      console.log('this.currentUser: ', this.currentUser);
-
-      this.allFavorites = db.list('/favorites', {
-        query: {
-          orderByChild: 'uid',
-          equalTo: this.currentUser.uid
-        }
-      })
-    }
-  }
+    private db: AngularFireDatabase,
+    public authService: AuthService
+  ) {}
 
   remove(id): void {
     console.log('id: ', id);
@@ -62,8 +38,12 @@ export class FavoritesListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // Get the currentUser from the sessionStorage
-    this.currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
+    this.allFavorites = this.db.list('/favorites', {
+        query: {
+            orderByChild: 'uid',
+            equalTo: this.authService.getUid().uid
+        }
+    })
   }
 
   detail(recipe): void {

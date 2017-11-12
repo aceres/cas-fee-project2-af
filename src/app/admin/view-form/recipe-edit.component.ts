@@ -31,7 +31,6 @@ export class RecipeEditComponent implements OnInit {
   recipe: Recipe;
 
   // Image
-  // image = [];
   selectedFiles: FileList;
   currentUpload: Upload;
 
