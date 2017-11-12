@@ -9,6 +9,7 @@ import { AlertComponent } from '../../ngx/alert/alert.component';
 
 import { RecipeService } from '../../services/recipe.service';
 import { FavoriteService } from '../../services/favorite.service';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-public-recipe-detail',
@@ -22,10 +23,9 @@ export class PublicReceiptDetailComponent implements OnInit {
   key;
   rating: FirebaseListObservable<any[]>;
 
-  // sessionStorage
-  currentUser;
+  uid;
   recipeId;
-  showAddFavorite;
+  public showAddFavorite;
 
   recipeName;
 
@@ -37,28 +37,28 @@ export class PublicReceiptDetailComponent implements OnInit {
     private favoriteService: FavoriteService,
     private route: ActivatedRoute,
     private location: Location,
-    public db: AngularFireDatabase
-  ) {
-    this.key = this.route.snapshot.params['id'];
-  }
+    public db: AngularFireDatabase,
+    public authService: AuthService
+  ) {}
 
   ngOnInit() {
 
+    this.key = this.route.snapshot.params['id'];
     this.getRecipe();
 
     // Save Favorite Recipe allowed or not
-    this.currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
-    if (this.currentUser !== null) {
+    if (this.authService !== null) {
 
       this.db.list('favorites', {
         query: {
           orderByChild: 'uid',
-          equalTo: this.currentUser.uid
+          equalTo: this.authService.getUid().uid
         }
       }).subscribe(items => {
+
         const filtered = items.filter(item => item.recipeId === this.key);
         if (filtered.length !== 0) {
-          if (filtered[0].recipeId === this.key && filtered[0].uid === this.currentUser.uid) {
+          if (filtered[0].recipeId === this.key && filtered[0].uid === this.authService.getUid().uid) {
             this.showAddFavorite = false;
           } else {
             this.showAddFavorite = true;
@@ -69,7 +69,7 @@ export class PublicReceiptDetailComponent implements OnInit {
       });
 
     }
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
   }
 
   getRecipe() {
@@ -81,12 +81,11 @@ export class PublicReceiptDetailComponent implements OnInit {
   }
 
   addRecipeToFavorites(recipeKey, recipeName) {
+
     event.preventDefault();
 
-    this.currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
-
-    if (this.currentUser !== null) {
-      this.favoriteService.addRecipeToFavorites(this.currentUser.uid, recipeKey, recipeName);
+    if (this.authService !== null) {
+      this.favoriteService.addRecipeToFavorites(this.authService.getUid().uid, recipeKey, recipeName);
       this.childAlert.showAlert('success', `Super! Ihr Lieblingsrezept wurde in Ihrem Favoriten hinzugefügt! (Hinzugefügt am: ${(new Date()).toLocaleTimeString()})`);
     }
   }
@@ -100,7 +99,6 @@ export class PublicReceiptDetailComponent implements OnInit {
       }
       return rating;
     }).then( result => {
-      console.log('result: ', result);
         this.getRecipe();
         this.childAlert.showAlert('success', `Super! Vielen Dank für das Voten!`);
 

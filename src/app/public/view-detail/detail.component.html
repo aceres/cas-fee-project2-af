@@ -41,8 +41,8 @@
                   <span (click)="rateRecipe()" class="like__list like__list--like flaticon-like"></span>
                   {{(recipe)?.rating}}
                 </li>
-                <li *ngIf="currentUser">
-                  <button type="button" class="btn btn-default like__list like__list--favorite flaticon-book" [disabled]="!this.showAddFavorite" href="#" (click)="addRecipeToFavorites(key, recipe.receipt)" role="button">Rezept speichern</button>
+                <li *ngIf="authService.user | async">
+                  <button type="button" class="btn btn-default like__list like__list--favorite flaticon-book" [disabled]="!showAddFavorite" href="#" (click)="addRecipeToFavorites(key, recipe.receipt)" role="button">Rezept speichern</button>
                 </li>
               </ul>
             </div>
