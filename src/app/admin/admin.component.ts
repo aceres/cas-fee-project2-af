@@ -44,7 +44,6 @@ export class AdminComponent implements OnInit {
           }
       })
       .subscribe(user => {
-          console.log('user', user);
           this.role = user[0].role;
           this.firstName = user[0].firstName;
           this.lastName = user[0].lastName;

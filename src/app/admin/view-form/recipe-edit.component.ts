@@ -72,8 +72,6 @@ export class RecipeEditComponent implements OnInit {
 
       this.id = this.route.snapshot.params['id'];
       this.key = this.route.snapshot.params['id'];
-      console.log('this.id', this.id);
-      console.log('this.key', this.key);
   }
 
   detectFiles(event) {
@@ -108,28 +106,11 @@ export class RecipeEditComponent implements OnInit {
     uid = this.authService.getUid().uid;
     user = this.authService.getUid().email;
 
-    console.log('this.id', this.id);
-    console.log('this.recipe.receipt', this.recipe.receipt);
-    console.log('this.recipe.description', this.recipe.description);
-    console.log('this.recipe.portion', this.recipe.portion);
-    console.log('this.recipe.prepTime', this.recipe.prepTime);
-    console.log('this.recipe.rating', this.recipe.rating);
-    console.log('this.recipe.level', this.recipe.level);
-    console.log('this.recipe.category', this.recipe.category);
-    console.log('this.recipe.cuisine', this.recipe.cuisine);
-    console.log('this.recipe.steps', this.recipe.steps);
-    console.log('this.recipe.ingredients', this.recipe.ingredients);
-    console.log('this.recipe.image', this.recipe.image);
-    console.log('this.currentUser.uid', this.authService.getUid().uid);
-    console.log('this.currentUser.email', this.authService.getUid().email);
-
     this.recipeService.update(this.id, receipt, description, portion, prepTime, rating, level, category, cuisine, steps, ingredients, image, uid, user)
         .then(response => {
         if (this.selectedFiles !== undefined) {
           this.removeExistedImage(this.id);
           const file = this.selectedFiles.item(0);
-          console.log('File', file);
-          console.log('Key recipe', this.key);
           this.currentUpload = new Upload(file);
           this.upSvc.pushUpload(this.currentUpload, this.key)
         }

@@ -86,11 +86,9 @@ export class RecipeAddComponent implements OnInit {
             uid = this.authService.getUid().uid;
             user = this.authService.getUid().email;
 
-            console.log('this.selectedFiles: ', this.selectedFiles);
             if (this.selectedFiles !== undefined) {
               this.recipeService.create(name, description, portion, prepTime, level, category, cuisine, steps, ingredients, image, uid, user)
                 .subscribe(response => {
-                  console.log('Response after created form: ', response.name);
                   const file = this.selectedFiles.item(0)
                   this.currentUpload = new Upload(file);
                   this.upSvc.pushUpload(this.currentUpload, response.name)
