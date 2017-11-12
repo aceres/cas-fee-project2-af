@@ -1,7 +1,9 @@
 import { Component, ViewChild, OnInit } from '@angular/core';
-import { AuthService } from '../../services/auth.service';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { Router } from '@angular/router';
+
+import { AuthService } from '../../services/auth.service';
+
 import { AlertComponent } from '../../ngx/alert/alert.component';
 
 @Component({
@@ -16,9 +18,6 @@ export class LoginComponent implements OnInit {
   email: string;
   password: string;
 
-  // sessionStorage
-  currentUser;
-
   // Role
   public role: string;
 
@@ -32,11 +31,7 @@ export class LoginComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
-    console.log('currentUser: ', this.currentUser);
-    if (this.currentUser !== null) {
-      this.role = this.currentUser.role;
-      console.log('role: ', this.role);
+    if (this.authService !== null) {
       this.router.navigate(['/admin/recipes']);
     } else {
       this.authService.logout();
@@ -49,46 +44,27 @@ export class LoginComponent implements OnInit {
       response => {
 
         if (response.code === 'auth/invalid-email') {
-
           this.childAlert.showAlert('danger', `${ response.message }!`);
-
         } else if (response.code === 'auth/user-not-found') {
-
           this.childAlert.showAlert('info', `${ response.message }!`);
-
         } else if (response.code === 'auth/wrong-password') {
-
             this.childAlert.showAlert('info', `${ response.message }!`);
-
         } else if (response.code === 'auth/network-request-failed') {
-
             this.childAlert.showAlert('danger', `${ response.message }!`);
-
         } else {
-
           this.childAlert.showAlert('success', `Sie sind erfolgreich angemeldet ${ response.email }! (Angemeldet am: ${(new Date()).toLocaleTimeString()})`);
-
-          // Prepare for the sessionStorage
-          const currentUser = {};
-
-          currentUser['uid'] = response.uid;
-          currentUser['email'] = response.email;
 
           // Get the role of user
           this.db.list('/users', {
             query: {
               orderByChild: 'uid',
-              equalTo: response.uid,
+              equalTo: this.authService.getUid().uid,
               limitToFirst: 1
             }
           })
           .subscribe(user => {
 
-            // TODO: Clean up
             this.role = user[0].role;
-            currentUser['role'] = this.role;
-            console.log('inside this.role: ', this.role);
-            sessionStorage.setItem('currentUser', JSON.stringify(currentUser));
             this.router.navigate(['/admin/recipes']);
           });
         }
@@ -99,10 +75,7 @@ export class LoginComponent implements OnInit {
 
   logout() {
     this.authService.logout();
-
     this.childAlert.showAlert('success', `Sie sind erfolgreich abgemeldet am: ${(new Date()).toLocaleTimeString()})`);
-
-    sessionStorage.removeItem('currentUser');
     this.router.navigateByUrl('/admin');
   }
 }
