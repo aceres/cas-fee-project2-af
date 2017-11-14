@@ -14,7 +14,6 @@
 
 #### TODO bei Tanja
 
-- Seiten erstellen, Über uns, Kontakt
 - OK 👌 Liste der Kategorien (alle Rezepte mit der Kategorie: Frühstück)
 - OK 👌 https://angular-2-training-book.rangle.io/handout/routing/query_params.html
 - OK 👌 Richtung: QueryParams, 1 Seite list-category
@@ -22,6 +21,7 @@
 - OK 👌 Public Detail: Einkaufsliste -> Hintergrund: Notiz / schräges Notiz
 - OK 👌 Elipsis -> ToolTip Bootstrap
 - Pagination
+- Seiten erstellen, Über uns, Kontakt
 
 ### Status bei André
 
@@ -48,11 +48,11 @@
 - OK 👌 npm package installieren anstelle url verwenden /javascript/
 
 - Created Date - implemeent interface class -> register, recipe nochmals anschauen (Refactoring)
+- Menge berechnen
 
 - OK 👌 TypeScript Grundlagen verstehen
 
 - OK 👌 Rezept speichern - In der Administration: Favoriten anziegen (nur für User)
-- Menge berechnen
 - OK 👌 Migrieren - Global Basis Data (Menge, Kategorie, ) -> Firebase (Später die Daten im Admin einpflegen)
 
 - OK 👌 Beim Hinzufügen:

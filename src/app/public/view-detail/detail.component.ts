@@ -47,7 +47,7 @@ export class PublicReceiptDetailComponent implements OnInit {
     this.getRecipe();
 
     // Save Favorite Recipe allowed or not
-    if (this.authService !== null) {
+    if (!this.authService) {
 
       this.db.list('favorites', {
         query: {
