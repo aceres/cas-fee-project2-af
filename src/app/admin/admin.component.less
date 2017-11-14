@@ -1,3 +1,6 @@
+@import "../../settings";
+@import "../../fonts";
+
 .main {
   padding-top: 70px;
 }
@@ -7,15 +10,25 @@
   list-style: none;
   padding: 5px;
 
-  p {
-    color: #BAC64A;
+  &__text {
+    color: @green;
   }
 
-  a {
-    color: inherit;
+  &__logout {
+    color: @black;
     cursor: pointer;
     font-size: 12px;
     text-decoration: none;
+  }
+}
+
+.admin {
+  &__nav {
+    &--link {
+      color: inherit;
+      cursor: pointer;
+      text-decoration: none;
+    }
   }
 }
 
