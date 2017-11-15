@@ -10,6 +10,8 @@ Highlights:
 - Lazy Loading (https://namitamalik.github.io/Lazy-Loading-with-Angular2-Routing/)
 - Registration Überlegung
 - AngularFire / Angular - Firebase (Vermischung) - Services
+- Testing - parallel schreiben und nicht am Schluss
+- AOT spät entdeckt
 
 Problem beim 2. Crash
 =====================
@@ -32,3 +34,4 @@ Ausprobieren:
 - Was würden wir gernen noch ausbauen? Ionic?
 - Ev. Login Prozess beschreiben (Login)? - mit XMind App?
 - env --prod (aot)
+- Responsive Image - SRCSET - Upload - 2 Bilder erzeugen lassen

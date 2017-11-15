@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import {AngularFireDatabase, FirebaseListObservable, FirebaseObjectObservable} from 'angularfire2/database';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import { Router } from '@angular/router';
 
-import { RecipeService } from '../services/recipe.service';
+import 'rxjs/add/operator/map';
 
 @Component({
     selector: 'app-public',
@@ -13,21 +13,18 @@ export class PublicComponent {
     title = 'Manducare';
 
     allRecipes: FirebaseListObservable<any[]>;
-    getAllRecipes;
-    calculateAllRecipes;
     randomRecipe;
 
     constructor(
         private router: Router,
-        db: AngularFireDatabase,
-        private recipeService: RecipeService,
+        db: AngularFireDatabase
     ) {
         this.allRecipes = db.list('/recipes', {
             query: {
                 orderByChild: 'rating'
             }
         })
-            .map(items => items.sort((a, b) => b.rating - a.rating)) as FirebaseListObservable<any[]>;
+        .map(items => items.sort((a, b) => b.rating - a.rating)) as FirebaseListObservable<any[]>;
 
         // Get the newest recipe
         this.randomRecipe = db.list('/recipes', {
@@ -35,10 +32,10 @@ export class PublicComponent {
                 limitToLast: 1
             }
         })
-            .subscribe(item => {
-                this.randomRecipe = item[0];
-                console.log('randomRecipe: ', this.randomRecipe);
-            })
+        .subscribe(item => {
+            this.randomRecipe = item[0];
+            console.log('randomRecipe: ', this.randomRecipe);
+        })
     }
 
     detail(recipe): void {

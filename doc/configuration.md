@@ -134,14 +134,20 @@ Active Project: default (project2-60db1)
 
 firebase use default or firebase use project2-60db1
 
+From 15th November: We have a new name: development (project2-60db1)
+
 PRODUCTION
 **********
 
 b) firebase use --add
 
-Created:
+Created (OLD):
 Project: what-to-cook-1
 Alias project: production
+
+Created (NEW):
+Project: manducare-v1
+Alias project: manducare
 
 firebase use
 
@@ -155,6 +161,8 @@ firebase deploy
 TODO: Still not working - AOT problem -> Errors korrigieren nach ng build --prod!
 
 Otherwise you can use: ng build --prod --aot=false
+Correct is also: ng build --env=prod --aot=false
+
 
 URL Web App: https://what-to-cook-1.firebaseapp.com
 URL Firebase Console Admin: https://console.firebase.google.com/project/what-to-cook-1/overview

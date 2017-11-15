@@ -1,15 +1,31 @@
 import { TestBed, async } from '@angular/core/testing';
 import { PublicComponent } from '../public/public.component';
+import { NavComponent } from '../public/view-nav/nav.component';
+import { CoverComponent } from '../public/view-detail/view-cover/cover.component';
+import { FooterComponent } from '../public/view-footer/footer.component';
+import { SearchComponent } from '../public/view-search/search.component';
 import { RouterTestingModule } from '@angular/router/testing';
 
+import { FirebaseApp } from 'angularfire2';
+import { AngularFireDatabase } from 'angularfire2/database';
+
 describe('PublicComponent', () => {
+
     beforeEach(async(() => {
         TestBed.configureTestingModule({
             declarations: [
-                PublicComponent
+                PublicComponent,
+                NavComponent,
+                CoverComponent,
+                FooterComponent,
+                SearchComponent
             ],
             imports: [
                 RouterTestingModule
+            ],
+            providers: [
+                FirebaseApp,
+                AngularFireDatabase
             ]
         }).compileComponents();
     }));
@@ -19,7 +35,7 @@ describe('PublicComponent', () => {
     //     const app = fixture.debugElement.componentInstance;
     //     expect(app).toBeTruthy();
     // }));
-    //
+
     // it(`It shhould have as title 'Manducare'`, async(() => {
     //     const fixture = TestBed.createComponent(PublicComponent);
     //     const app = fixture.debugElement.componentInstance;

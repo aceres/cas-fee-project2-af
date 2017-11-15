@@ -87,8 +87,8 @@ export class RecipeService {
         uid: uid,
         user: user,
         createdAt: new Date()}), {headers: this.headers})
-      // .toPromise()
-      .map(res => res.json())
+      .toPromise()
+      .then(res => res.json() as Recipe)
       .catch(this.handleError);
   }
 

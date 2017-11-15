@@ -1,12 +1,12 @@
 export const environment = {
   production: true,
   firebase: {
-    apiKey: "AIzaSyDrZwy167Tuuj0TEGcfjU5Sw6obOeK_ALU",
-    authDomain: "what-to-cook-1.firebaseapp.com",
-    databaseURL: "https://what-to-cook-1.firebaseio.com",
-    projectId: "what-to-cook-1",
-    storageBucket: "what-to-cook-1.appspot.com",
-    messagingSenderId: "1063506918028"
+    apiKey: "AIzaSyBfCNtrWk37h4lqm28Toes6e5efVY1eJyQ",
+    authDomain: "manducare-v1.firebaseapp.com",
+    databaseURL: "https://manducare-v1.firebaseio.com",
+    projectId: "manducare-v1",
+    storageBucket: "manducare-v1.appspot.com",
+    messagingSenderId: "391938033267"
   },
-  apiUrl: 'https://what-to-cook-1.firebaseio.com/'
+  apiUrl: 'https://manducare-v1.firebaseio.com/'
 };
