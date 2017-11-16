@@ -161,11 +161,15 @@ firebase deploy
 TODO: Still not working - AOT problem -> Errors korrigieren nach ng build --prod!
 
 Otherwise you can use: ng build --prod --aot=false
-Correct is also: ng build --env=prod --aot=false
+ng build --env=prod --aot=false
 
-
+OLD:
 URL Web App: https://what-to-cook-1.firebaseapp.com
 URL Firebase Console Admin: https://console.firebase.google.com/project/what-to-cook-1/overview
+
+NEW:
+URL Web App: https://manducare-v1.firebaseapp.com
+URL Firebase Console Admin: https://console.firebase.google.com/project/manducare-v1/overview
 
 More information:
 

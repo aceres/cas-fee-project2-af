@@ -13,6 +13,7 @@ import { listCategories } from '../../../global/list.categories';
 export class CategoryListComponent implements OnInit {
   title = 'Manducare';
   category;
+  searchTerm;
   specificRecipes: FirebaseListObservable<any[]>;
   itemsReturned: Array<any>;
 

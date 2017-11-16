@@ -47,7 +47,7 @@ export class PublicReceiptDetailComponent implements OnInit {
     this.getRecipe();
 
     // Save Favorite Recipe allowed or not
-    if (!this.authService) {
+    if (this.authService.isAuthenticated()) {
 
       this.db.list('favorites', {
         query: {
@@ -57,6 +57,7 @@ export class PublicReceiptDetailComponent implements OnInit {
       }).subscribe(items => {
 
         const filtered = items.filter(item => item.recipeId === this.key);
+
         if (filtered.length !== 0) {
           if (filtered[0].recipeId === this.key && filtered[0].uid === this.authService.getUid().uid) {
             this.showAddFavorite = false;

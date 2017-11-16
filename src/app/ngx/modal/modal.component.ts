@@ -8,10 +8,14 @@ import { BsModalRef } from 'ngx-bootstrap';
 })
 export class ModalComponent implements OnInit {
 
-  public onClose: Subject<boolean>;
+  public onClose: Subject<boolean>
+  title;
+  message;
+  _OK;
+  _cancel;
 
   constructor(
-    private bsModalRef: BsModalRef
+    public bsModalRef: BsModalRef
   ) {}
 
   public ngOnInit(): void {
