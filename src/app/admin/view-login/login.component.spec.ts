@@ -1,37 +1,43 @@
 import { inject, TestBed } from '@angular/core/testing';
-
+import { Subject } from 'rxjs/Subject';
+import { Observable } from 'rxjs/Observable';
 import { AngularFireAuth } from 'angularfire2/auth';
-import 'rxjs/add/observable/of';
-import { Observable } from 'rxjs/Rx';
-
-import { LoginComponent } from './login.component';
+import * as firebase from 'firebase/app';
 import { AuthService } from '../../services/auth.service';
 
-describe('Component: Login', () => {
 
-    let component: LoginComponent;
-    let service: AuthService;
-    let spy: any;
+const userAuthMethods = [
+    'subscribe'
+];
 
-    beforeEach(() => {
-        service = new AuthService();
-        component = new LoginComponent(service);
+describe('auth/', () => {
+    describe('AuthService', () => {
+        let authService;
+        let authSubject;
+        let mockFirebaseAuth;
+
+        beforeEach(() => {
+            authSubject = new Subject<AngularFireAuth>();
+
+            mockFirebaseAuth = jasmine.createSpyObj('userAuth', userAuthMethods);
+            mockFirebaseAuth.subscribe.and.callFake(callback => {
+                authSubject.subscribe(callback);
+            });
+
+            TestBed.configureTestingModule({
+                providers: [
+                    {provide: AngularFireAuth, useValue: mockFirebaseAuth},
+                    AuthService
+                ]
+            });
+
+            inject([AuthService], (service: AuthService) => {
+                authService = service;
+            })();
+        });
+
+        it('The service: AuthService for the LoginComponent should be defined!', () => {
+            expect(authService).toBeDefined();
+        });
     });
-
-    afterEach(() => {
-        service = null;
-        component = null;
-    });
-    //
-    // it('canLogin returns false when the user is not authenticated', () => {
-    //     spy = spyOn(service, 'isAuthenticated').and.returnValue(false);
-    //     expect(component.login()).toBeTruthy();
-    //     expect(service.isAuthenticated).toHaveBeenCalled();
-    // });
-    //
-    // it('canLogin returns false when the user is not authenticated', () => {
-    //     spy = spyOn(service, 'isAuthenticated').and.returnValue(true);
-    //     expect(component.login()).toBeFalsy();
-    //     expect(service.isAuthenticated).toHaveBeenCalled();
-    // });
 });
