@@ -1,18 +1,21 @@
-.contact__subtitle {
-  color: #BAC64A;
-  font-size: 24px;
-}
+@import "../../../settings";
+@import "../../../fonts";
 
-p,
-.contact__heading {
-  margin: 0 0 50px 0;
-}
+.contact {
 
-a {
-  color: #bac64a;
-  text-decoration: none;
-}
+  &__heading {
+    margin: 0 0 50px 0;
+  }
 
-.flaticon-email:before {
-  font-size: 16px;
+  &__link {
+    color: @green;
+    margin: 30px 0 0 0;
+    text-decoration: none;
+
+    &--icon {
+      &:before {
+        font-size: 16px;
+      }
+    }
+  }
 }
