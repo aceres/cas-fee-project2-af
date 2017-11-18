@@ -20,7 +20,7 @@ describe('Service: Category', () => {
         });
     });
 
-    it('It should create a FavoriteService', inject([CategoryService], (service: CategoryService) => {
+    it('It should create a CategoryService', inject([CategoryService], (service: CategoryService) => {
         expect(service).toBeTruthy();
     }));
 });
