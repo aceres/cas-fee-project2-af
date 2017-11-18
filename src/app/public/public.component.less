@@ -71,7 +71,7 @@
 
   &__info {
     box-sizing: border-box;
-    height: 150px;
+    height: 100%;
     left: 0;
     padding: 20px;
     width: 100%;
@@ -96,7 +96,7 @@
       width: 50%;
     }
   }
-  
+
   &__like {
     display: block;
   }
@@ -201,8 +201,10 @@
 }
 
 @media (min-width: 768px) {
-  .favorite__cover--top {
-    height: 20em;
+  .favorite {
+    &__text {
+      height: 70px;
+    }
   }
 }
 
@@ -215,12 +217,6 @@
     &__heading {
       font-size: 50px;
       margin: 0 0 50px 0;
-    }
-
-    &__cover {
-      &--top {
-        height: 25em;
-      }
     }
   }
 

@@ -1,3 +1,6 @@
+@import "fonts";
+@import "settings";
+
 /*
  * Base structure
  */
@@ -6,8 +9,10 @@
 
 /* Moved to fonts.less -> delete when finished CSS refactoring */
 body {
-  font-family: "Merriweather Sans", Arial, sans-serif;
-  color: #5a5a5a;
+  font-family: @merri-weather;
+  color: @black;
+  font-size: @baseFontSize;
+  line-height: 1.5;
   padding-top: 0;
 }
 
@@ -18,29 +23,33 @@ section {
 
 h1, h2, h4, h5, h6 {
   color: #5A5A5A;
-  font-family: "Happy Monkey", Arial, sans-serif;
+  font-family: @happy-monkey
 }
 
 h3 {
-  color: #FFC000;
-  font-family: "Happy Monkey", Arial, sans-serif;
+  color: @yellow;
+  font-family: @happy-monkey
 }
 
 p {
-  color: #5A5A5A;
-  font-family: "Merriweather Sans", Arial, sans-serif;
+  color: @black;
+  font-family: @merri-weather
+}
+
+.btn {
+  font-size: 16px;
 }
 
 .btn-default {
-  background-color: #FFC000;
-  border: 2px solid #FFC000 !important;
-  color: #fff;
+  background-color: @yellow;
+  border: 2px solid @yellow !important;
+  color: @white;
 }
 
 .btn-default:hover {
-  background-color: #fff;
-  border: 2px solid #FFC000;
-  color: #FFC000;
+  background-color: @white;
+  border: 2px solid @yellow;
+  color: @yellow;
 }
 
 .btn-circle {
@@ -52,7 +61,7 @@ p {
 }
 
 input[type="search"] {
-  background-color: #F4F2EE;
+  background-color: @light-grey;
 }
 
 /*
@@ -102,6 +111,9 @@ input[type="search"] {
 
 
 @media (min-width: 768px) {
+  body {
+    font-size: @desktopBaseFontSize;
+  }
   .sidebar {
     position: fixed;
     top: 51px;
@@ -124,15 +136,15 @@ input[type="search"] {
   margin-left: -20px;
 }
 .nav-sidebar > li > a {
-  color: #5A5A5A;
+  color: @black;
   padding-right: 20px;
   padding-left: 20px;
 }
 .nav-sidebar > .active > a,
 .nav-sidebar > .active > a:hover,
 .nav-sidebar > .active > a:focus {
-  color: #fff;
-  background-color: #BAC64A;
+  color: @white;
+  background-color: @green;
 }
 
 /* Pagination */
@@ -143,7 +155,7 @@ input[type="search"] {
 
 .pagination > li > a,
 .pagination > li > span {
-  color: #5A5A5A;
+  color: @black;
 }
 
 .pagination > .active > a,
@@ -152,8 +164,8 @@ input[type="search"] {
 .pagination > .active > span:hover,
 .pagination > .active > a:focus,
 .pagination > .active > span:focus {
-  background-color: #BAC64A;
-  border-color: #BAC64A;
+  background-color: @green;
+  border-color: @green;
 }
 
 
