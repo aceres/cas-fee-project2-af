@@ -1,4 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import { RegisterService } from '../services/register.service';
 
@@ -21,7 +22,8 @@ export class RegisterComponent {
 
   constructor(
     public authService: AuthService,
-    public registerService: RegisterService
+    public registerService: RegisterService,
+    private router: Router
   ) {}
 
   register() {
@@ -46,6 +48,7 @@ export class RegisterComponent {
               .subscribe(response => {
 
               this.childAlert.showAlert('success', `Sie wurden erfolgreich registriert! (Erstellt am: ${(new Date()).toLocaleTimeString()})`);
+              this.router.navigateByUrl('/admin');
             });
         } else if (response.uid === undefined) {
           this.childAlert.showAlert('danger', response);
