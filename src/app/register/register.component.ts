@@ -1,7 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { RegisterService } from '../services/register.service';
-import { Router } from '@angular/router';
 
 import { AlertComponent } from '../ngx/alert/alert.component';
 
@@ -13,7 +12,7 @@ import { AlertComponent } from '../ngx/alert/alert.component';
 export class RegisterComponent {
   title = 'Manducare';
 
-  // Authentication / Role definition
+  // Authentication / Role definition for the registration
   model: any = {};
   role = 'normal';
 
@@ -22,8 +21,7 @@ export class RegisterComponent {
 
   constructor(
     public authService: AuthService,
-    public registerService: RegisterService,
-    private router: Router
+    public registerService: RegisterService
   ) {}
 
   register() {
@@ -33,14 +31,22 @@ export class RegisterComponent {
         console.log('response.uid: ', response.uid);
 
         if (response.uid !== undefined) {
-          this.registerService.add(response.uid, this.model.firstName, this.model.lastName, this.model.email, this.role,
-          this.model.street, this.model.houseNumber, this.model.zip, this.model.city, this.model.country)
-            .subscribe(response => {
+          this.registerService.add(
+              response.uid,
+              this.model.firstName,
+              this.model.lastName,
+              this.model.email,
+              this.role,
+              this.model.street,
+              this.model.houseNumber,
+              this.model.zip,
+              this.model.city,
+              this.model.country
+          )
+              .subscribe(response => {
 
               this.childAlert.showAlert('success', `Sie wurden erfolgreich registriert! (Erstellt am: ${(new Date()).toLocaleTimeString()})`);
             });
-          // this.authService.logout();
-          // this.router.navigate(['/admin']);
         } else if (response.uid === undefined) {
           this.childAlert.showAlert('danger', response);
         }
