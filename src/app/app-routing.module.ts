@@ -22,7 +22,7 @@ import { RecipeAddComponent } from './admin/view-form/recipe-add.component';
 import { RecipeEditComponent } from './admin/view-form/recipe-edit.component';
 import { AllRecipesListComponent } from './admin/view-list/all-recipes-list.component';
 // Register
-import { RegisterComponent } from './register/register.component';
+import { RegisterComponent } from './public/view-register/register.component';
 import { UsersListComponent } from './admin/view-list/users-list.component';
 // Master Data Basis
 import { CategoryComponent } from './admin/view-list/category.component';

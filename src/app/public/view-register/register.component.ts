@@ -1,9 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from '../services/auth.service';
-import { RegisterService } from '../services/register.service';
+import { AuthService } from '../../services/auth.service';
+import { RegisterService } from '../../services/register.service';
 
-import { AlertComponent } from '../ngx/alert/alert.component';
+import { AlertComponent } from '../../ngx/alert/alert.component';
 
 @Component({
   selector: 'app-register',
@@ -29,8 +29,6 @@ export class RegisterComponent {
   register() {
     this.authService.signup(this.model.email, this.model.password).then(
       response => {
-
-        console.log('response.uid: ', response.uid);
 
         if (response.uid !== undefined) {
           this.registerService.add(

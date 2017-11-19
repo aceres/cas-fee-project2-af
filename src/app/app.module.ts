@@ -62,7 +62,7 @@ import { CategoryComponent } from './admin/view-list/category.component';
 import { CuisineComponent } from './admin/view-list/cuisine.component';
 
 // Register
-import { RegisterComponent } from './register/register.component';
+import { RegisterComponent } from './public/view-register/register.component';
 import { UsersListComponent } from './admin/view-list/users-list.component';
 
 // ngx-bootstrap
@@ -117,7 +117,7 @@ import { FilterPipe } from './pipes/search-filter.pipe';
     RecipeSearchComponent,
     NavAdminComponent,
     AllRecipesListComponent,
-    // Register
+    // Register / Users
     RegisterComponent,
     UsersListComponent,
     // Global Static Data (Basis),
@@ -149,7 +149,7 @@ import { FilterPipe } from './pipes/search-filter.pipe';
     FavoriteService,
     CategoryService,
     CuisineService,
-    // Components
+    // ngx Components
     AlertComponent,
     ModalComponent
   ],
