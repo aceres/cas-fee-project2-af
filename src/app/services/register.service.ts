@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Headers, Http } from '@angular/http';
-import { AngularFireDatabase, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2/database';
+import { FirebaseObjectObservable } from 'angularfire2/database';
 import { environment } from '../../environments/environment';
 
 import 'rxjs/add/operator/toPromise';
@@ -12,12 +12,11 @@ export class RegisterService {
   user: FirebaseObjectObservable<any>;
 
   private headers = new Headers({'Content-Type': 'application/json;charset=utf-8'});
-  private usersUrl = environment.apiUrl + 'users';
+  private usersUrl = environment.apiUrl + 'users.json';
 
   constructor(
-    private http: Http,
-    private db: AngularFireDatabase
-  ) { }
+    private http: Http
+  ) {}
 
   add(
     uid: string,
@@ -31,9 +30,8 @@ export class RegisterService {
     city: string,
     country: string) {
 
-      const url = `${this.usersUrl}.json`;
       return this.http
-        .post(url, JSON.stringify({
+        .post(this.usersUrl, JSON.stringify({
           uid: uid,
           firstName: firstName,
           lastName: lastName,
@@ -50,17 +48,7 @@ export class RegisterService {
   }
 
   getUsers(): Promise<Register[]> {
-    const url = `${this.usersUrl}.json`;
-    return this.http.get(`${this.usersUrl}.json`)
-      .toPromise()
-      .then(response => response.json() as Register[])
-      .catch(this.handleError);
-  }
-
-  getUser(currentUser): Promise<Register[]> {
-    console.log('register service uid: ', currentUser.uid);
-    const url = `${this.usersUrl}.json`;
-    return this.http.get(`${this.usersUrl}.json?orderBy=$key&uid=${currentUser.uid}`)
+    return this.http.get(this.usersUrl)
       .toPromise()
       .then(response => response.json() as Register[])
       .catch(this.handleError);
