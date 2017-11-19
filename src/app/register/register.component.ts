@@ -48,7 +48,10 @@ export class RegisterComponent {
               .subscribe(response => {
 
               this.childAlert.showAlert('success', `Sie wurden erfolgreich registriert! (Erstellt am: ${(new Date()).toLocaleTimeString()})`);
-              this.router.navigateByUrl('/admin');
+
+                  setTimeout((router: Router) => {
+                      this.router.navigate(['admin']);
+                  }, 2000);
             });
         } else if (response.uid === undefined) {
           this.childAlert.showAlert('danger', response);
