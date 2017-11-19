@@ -10,7 +10,7 @@ const userAuthMethods = [
     'subscribe'
 ];
 
-describe('auth/', () => {
+describe('Service: AuthService (Authentication)', () => {
     describe('AuthService', () => {
         let authService;
         let authSubject;

@@ -45,8 +45,8 @@ export class RegisterService {
           city: city,
           country: country,
           createdAt: new Date()}), {headers: this.headers})
-        .map(res => res.json())
-        .catch(this.handleError);
+        .map(res => res.json());
+
   }
 
   getUsers(): Promise<Register[]> {
