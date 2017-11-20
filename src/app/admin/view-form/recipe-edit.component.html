@@ -88,7 +88,7 @@
     <label></label>
     <button (click)="addIngredient(recipeQuantity.value, recipeUnit.value, recipeIngredient.value); this.ingredient.recipeQuantity=''; this.ingredient.recipeIngredient=''"
             [disabled]="!ingredientForm.form.valid" class="btn btn-default">
-      <i class="fa fa-floppy-o"></i> Hinzufügen
+      <i class="flaticon-technology"></i> Hinzufügen
     </button>
   </div>
 </form>
@@ -113,16 +113,13 @@
     <td>
       <input type="text" name="ingredient" [ngModel]="ingredient.ingredient" class="form-control" #recipeIngredient>
     </td>
-    <td style="text-align: right">
-      <button (click)="removeIngredient(ingredient)" class="btn btn-default">
-        <i class="fa fa-trash"></i>
+    <td>
+      <button (click)="removeIngredient(ingredient)" class="btn btn-default btn--right">
+        <i class="flaticon-delete"></i>
       </button>
     </td>
   </tr>
   </tbody>
-  <!--<tbody *ngIf="ingredients.length === 0">-->
-    <!--Keine Einträge vorhanden.-->
-  <!--</tbody>-->
 </table>
 
 <hr>
@@ -140,7 +137,7 @@
   <div class="form-group">
     <label></label>
     <button (click)="addStep(stepDescription.value); this.step.stepDescription=''" [disabled]="!stepForm.form.valid" class="btn btn-default">
-      <i class="fa fa-floppy-o"></i> Hinzufügen
+      <i class="flaticon-technology"></i> Hinzufügen
     </button>
   </div>
 </form>
@@ -161,25 +158,23 @@
     <td>
       {{ step.stepDescription }}
     </td>
-    <td style="text-align: right;">
-      <button (click)="removeStep(step)" class="btn btn-default">
-        <i class="fa fa-trash"></i>
+    <td>
+      <button (click)="removeStep(step)" class="btn btn-default btn--right">
+        <i class="flaticon-delete"></i>
       </button>
     </td>
   </tr>
   </tbody>
-  <!--<tbody *ngIf="steps.length === 0">-->
-    <!--Keine Einträge vorhanden.-->
-  <!--</tbody>-->
 </table>
 
 <hr>
 
 <h3>Bild</h3>
-
-<div class="recipes-list-item-image-card">
-  <img src="{{ recipe.image?.url }}" alt="{{ recipe.receipt }}" />
-</div>
+  <div class="recipe-list">
+    <div class="recipe-list__wrapper">
+      <img class="recipe-list__image" src="{{ recipe.image?.url }}" alt="{{ recipe.receipt }}" />
+    </div>
+  </div>
 
 <hr>
 
@@ -202,9 +197,9 @@
 <app-alert #childAlert></app-alert>
 
 <button class="btn btn-default" [disabled]="!recipeForm.form.valid" (click)="update(recipeName.value, recipeDescription.value, recipePortion.value, recipePrepTime.value, recipeRating.value, recipeLevel.value, recipeCategory.value, recipeCuisine.value, recipeSteps, recipeIngredients)">
-  <i class="fa fa-floppy-o"></i> Speichern
+  <i class="flaticon-technology"></i> Speichern
 </button>
 <button (click)="goBack()" class="btn btn-default">
-  <i class="fa fa-arrow-left"></i> Zurück
+  <i class="flaticon-left-arrow"></i> Zurück
 </button>
 </div>

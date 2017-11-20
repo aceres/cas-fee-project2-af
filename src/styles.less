@@ -25,6 +25,32 @@
     padding: 4px 0;
     border-radius: 50px;
   }
+
+  &--right {
+    float: right;
+  }
+}
+
+
+/* Broken Image
+-------------------------------------------------- */
+.recipe-list {
+
+  &__image {
+    &:after {
+      content: "\f10b" " Broken Image of " attr(alt);
+      display: block;
+      font-size: 16px;
+      font-style: normal;
+      font-family: Flaticon;
+      color: @black;
+      position: absolute;
+      top: 5px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+    }
+  }
 }
 
 
@@ -61,6 +87,21 @@
     margin: 0 8px 0 0;
     position: relative;
   }
+}
+
+
+/* Validation
+-------------------------------------------------- */
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid @green-vaild;
+}
+
+.ng-invalid:not(form)  {
+  border-left: 5px solid @red-invalid;
+}
+
+.progress-bar {
+  background-color: @yellow;
 }
 
 

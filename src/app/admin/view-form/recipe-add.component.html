@@ -108,8 +108,8 @@
       <td>
         <input type="text" name="ingredient" [ngModel]="ingredient.ingredient" class="form-control" #recipeIngredient>
       </td>
-      <td style="text-align: right">
-        <button (click)="removeIngredient(ingredient)" class="btn btn-default">
+      <td>
+        <button (click)="removeIngredient(ingredient)" class="btn btn-default btn--right">
           <i class="flaticon-delete"></i>
         </button>
       </td>
@@ -156,8 +156,8 @@
       <td>
         {{ step.stepDescription }}
       </td>
-      <td style="text-align: right;">
-        <button (click)="removeStep(step)" class="btn btn-default">
+      <td>
+        <button (click)="removeStep(step)" class="btn btn-default btn--right">
           <i class="flaticon-delete"></i>
         </button>
       </td>
