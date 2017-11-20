@@ -83,7 +83,7 @@
     <label></label>
     <button (click)="addIngredient(recipeQuantity.value, recipeUnit.value, recipeIngredient.value); this.ingredient.recipeQuantity=''; this.ingredient.recipeIngredient=''"
             [disabled]="!ingredientForm.form.valid" class="btn btn-default">
-      <i class="fa fa-floppy-o"></i> Hinzufügen
+      <i class="flaticon-technology"></i> Hinzufügen
     </button>
   </div>
 </form>
@@ -110,7 +110,7 @@
       </td>
       <td style="text-align: right">
         <button (click)="removeIngredient(ingredient)" class="btn btn-default">
-          <i class="fa fa-trash"></i>
+          <i class="flaticon-delete"></i>
         </button>
       </td>
     </tr>
@@ -135,7 +135,7 @@
   <div class="form-group">
     <label></label>
     <button (click)="addStep(stepDescription.value); this.step.stepDescription=''" [disabled]="!stepForm.form.valid" class="btn btn-default">
-      <i class="fa fa-floppy-o"></i> Hinzufügen
+      <i class="flaticon-technology"></i> Hinzufügen
     </button>
   </div>
 </form>
@@ -158,7 +158,7 @@
       </td>
       <td style="text-align: right;">
         <button (click)="removeStep(step)" class="btn btn-default">
-          <i class="fa fa-trash"></i>
+          <i class="flaticon-delete"></i>
         </button>
       </td>
     </tr>
@@ -188,10 +188,10 @@
 <app-alert #childAlert></app-alert>
 
 <button class="btn btn-default" [disabled]="!recipeForm.form.valid" (click)="add(recipeName.value, recipeDescription.value, recipePortion.value, recipePrepTime.value, recipeLevel.value, recipeCategory.value, recipeCuisine.value, steps, ingredients); recipeName.value=''; recipeDescription.value=''; recipePortion.value=''; recipePrepTime.value=''; recipeLevel.value=''; recipeCategory.value=''; recipeCuisine.value='';">
-  <i class="fa fa-floppy-o"></i> Speichern
+  <i class="flaticon-technology"></i> Speichern
 </button>
 <button [routerLink]="'/admin/recipes'" class="btn btn-default">
-  <i class="fa fa-ban"></i> Abbrechen
+  <i class="flaticon-cancel"></i> Abbrechen
 </button>
 
 

@@ -1,6 +1,6 @@
 	/*
   	Flaticon icon font: Flaticon
-  	Creation date: 24/10/2017 20:45
+  	Creation date: 20/11/2017 20:42
   	*/
 
 @font-face {
@@ -27,19 +27,24 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
-.flaticon-book:before { content: "\f100"; }
-.flaticon-email:before { content: "\f101"; }
-.flaticon-cuisine:before { content: "\f102"; }
-.flaticon-preptime:before { content: "\f103"; }
-.flaticon-edit:before { content: "\f104"; }
-.flaticon-maintenance:before { content: "\f105"; }
-.flaticon-level:before { content: "\f106"; }
-.flaticon-like:before { content: "\f107"; }
-.flaticon-logout:before { content: "\f108"; }
-.flaticon-recipes:before { content: "\f109"; }
-.flaticon-category:before { content: "\f10a"; }
-.flaticon-delete:before { content: "\f10b"; }
-.flaticon-add:before { content: "\f10c"; }
-.flaticon-broken-link:before { content: "\f10d"; }
+.flaticon-left-arrow:before { content: "\f100"; }
+.flaticon-right-arrow:before { content: "\f101"; }
+.flaticon-cancel:before { content: "\f102"; }
+.flaticon-technology:before { content: "\f103"; }
+.flaticon-email:before { content: "\f104"; }
+.flaticon-book:before { content: "\f105"; }
+.flaticon-cuisine:before { content: "\f106"; }
+.flaticon-preptime:before { content: "\f107"; }
+.flaticon-edit:before { content: "\f108"; }
+.flaticon-maintenance:before { content: "\f109"; }
+.flaticon-like:before { content: "\f10a"; }
+.flaticon-broken-link:before { content: "\f10b"; }
+.flaticon-logout:before { content: "\f10c"; }
+.flaticon-recipes:before { content: "\f10d"; }
+.flaticon-category:before { content: "\f10e"; }
+.flaticon-delete:before { content: "\f10f"; }
+.flaticon-add:before { content: "\f110"; }
+.flaticon-level:before { content: "\f111"; }

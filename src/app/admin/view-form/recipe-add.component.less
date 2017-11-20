@@ -1,11 +1,14 @@
+@import "../../../../src/_base";
+@import "../../../../src/_settings";
+
 .ng-valid[required], .ng-valid.required  {
-  border-left: 5px solid #42A948; /* green */
+  border-left: 5px solid @green-vaild;
 }
 
 .ng-invalid:not(form)  {
-  border-left: 5px solid #a94442; /* red */
+  border-left: 5px solid @red-invalid;
 }
 
 .progress-bar {
-  background-color: #FFC000;
+  background-color: @yellow
 }
