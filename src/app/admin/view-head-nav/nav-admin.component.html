@@ -7,15 +7,35 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand navbar-admin__brand" [routerLink]="['/public']">{{title}}</a>
+      <a class="navbar-admin__brand" [routerLink]="['/public']">{{title}}</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li><a [routerLink]="['/public']" class="navbar-admin__link">Alle Rezepte</a></li>
-        <li [routerLinkActive]="['active']" *ngIf="(user | async)"><a [routerLink]="['/admin/recipes']" class="navbar-admin__link">Meine Rezepte</a></li>
-        <li [routerLinkActive]="['active']"><a [routerLink]="['/register']" class="navbar-admin__link">Registrieren</a></li>
-        <li><a [routerLink]="['/about']" class="navbar-admin__link">Über manducare</a></li>
-        <li><a [routerLink]="['/contact']" class="navbar-admin__link">Kontakt</a></li>
+        <li>
+          <a [routerLink]="['/public']" class="navbar-admin__link">
+            Alle Rezepte
+          </a>
+        </li>
+        <li [routerLinkActive]="['active']" *ngIf="(user | async)">
+          <a [routerLink]="['/admin/recipes']" class="navbar-admin__link">
+            Meine Rezepte
+          </a>
+        </li>
+        <li [routerLinkActive]="['active']">
+          <a [routerLink]="['/register']" class="navbar-admin__link">
+            Registrieren
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="['/about']" class="navbar-admin__link">
+            Über {{ title }}
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="['/contact']" class="navbar-admin__link">
+            Kontakt
+          </a>
+        </li>
       </ul>
     </div>
   </div>

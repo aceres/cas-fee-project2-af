@@ -1,21 +1,36 @@
-/* TODO: Clean up CSS */
+@import "../../../_base";
+@import "../../../_settings";
+
 .navbar-admin {
-  background-color: #BAC64A;
+  background-color: @green;
   text-transform: uppercase;
+
+  &__brand {
+    color: @white;
+    float: left;
+    font-size: 18px;
+    height: 50px;
+    line-height: 20px;
+    padding: 15px 15px;
+    text-decoration: none;
+  }
+
+  &__link {
+    color: @white;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active{
+      background-color: @yellow;
+    }
+  }
 }
 
-.navbar-admin__brand {
-  color: #fff;
+.active {
+  background-color: @yellow;
 }
 
-.navbar-admin__link {
-  color: #fff;
-}
-
-
-.active,
-.navbar-admin__link:hover,
-.navbar-admin__link:focus,
-.navbar-admin__link:active {
-  background-color: #ffc000;
+.icon-bar {
+  background-color: @white;
 }
