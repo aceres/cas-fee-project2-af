@@ -83,7 +83,7 @@
     <label></label>
     <button (click)="addIngredient(recipeQuantity.value, recipeUnit.value, recipeIngredient.value); this.ingredient.recipeQuantity=''; this.ingredient.recipeIngredient=''"
             [disabled]="!ingredientForm.form.valid" class="btn btn-default">
-      <i class="flaticon-technology"></i> Hinzufügen
+      <i class="fa fa-floppy-o"></i> Hinzufügen
     </button>
   </div>
 </form>
@@ -133,7 +133,7 @@
     </div>
   </div>
   <div class="form-group">
-    <label></label>
+    <label></label>git s
     <button (click)="addStep(stepDescription.value); this.step.stepDescription=''" [disabled]="!stepForm.form.valid" class="btn btn-default">
       <i class="flaticon-technology"></i> Hinzufügen
     </button>
@@ -188,10 +188,10 @@
 <app-alert #childAlert></app-alert>
 
 <button class="btn btn-default" [disabled]="!recipeForm.form.valid" (click)="add(recipeName.value, recipeDescription.value, recipePortion.value, recipePrepTime.value, recipeLevel.value, recipeCategory.value, recipeCuisine.value, steps, ingredients); recipeName.value=''; recipeDescription.value=''; recipePortion.value=''; recipePrepTime.value=''; recipeLevel.value=''; recipeCategory.value=''; recipeCuisine.value='';">
-  <i class="flaticon-technology"></i> Speichern
+  <i class="fa fa-floppy-o"></i> Speichern
 </button>
 <button [routerLink]="'/admin/recipes'" class="btn btn-default">
-  <i class="flaticon-cancel"></i> Abbrechen
+  <i class="fa fa-ban"></i> Abbrechen
 </button>
 
 

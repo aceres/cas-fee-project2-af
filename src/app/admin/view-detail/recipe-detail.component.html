@@ -64,9 +64,6 @@
         </td>
       </tr>
       </tbody>
-      <!--<tbody *ngIf="recipe?.steps.length === 0">-->
-      <!--Keine Einträge vorhanden.-->
-      <!--</tbody>-->
     </table>
 
   <h1 class="page-header">Zubereitungsschritte</h1>
@@ -74,7 +71,6 @@
       <thead>
       <th>Schritt</th>
       <th>Beschreibung</th>
-      <th>Foto</th>
       </thead>
       <tbody>
       <tr *ngFor="let step of (recipe)?.steps; let i = index;">
@@ -84,14 +80,8 @@
         <td>
           {{ step.stepDescription }}
         </td>
-        <td>
-          {{ step.photo }}
-        </td>
       </tr>
       </tbody>
-      <!--<tbody *ngIf="recipe?.steps.length === 0">-->
-        <!--Keine Einträge vorhanden.-->
-      <!--</tbody>-->
     </table>
 
     <hr>
@@ -102,7 +92,6 @@
       <img src="{{ (recipe)?.image.url }}" alt="{{ (recipe)?.receipt }}" />
     </div>
 
-    <!-- TODO: Restyle it when we can manage uploaded photos (edit / remove) -->
     <br />
     <br />
 

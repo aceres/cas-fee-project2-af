@@ -47,9 +47,6 @@ export class RecipeAddComponent implements OnInit {
     recipeQuantity: '',
     recipeIngredient: ''
   };
-  step = {
-    description: ''
-  };
 
   constructor(
     private recipeService: RecipeService,
