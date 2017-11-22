@@ -3,7 +3,7 @@ import { Subject } from 'rxjs/Subject';
 import { Observable } from 'rxjs/Observable';
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
-import { AuthService } from '../../services/auth.service';
+import { AuthService } from './auth.service';
 
 
 const userAuthMethods = [
