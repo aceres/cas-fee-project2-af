@@ -6,8 +6,8 @@
     <div class="col-sm-3 col-md-2 sidebar">
 
       <div class="form-group welcome" *ngIf="authService.user | async">
-        <p>Willkommen {{ (authService.user | async)?.email }}!</p>
-        <a class="logout" (click)="logout()" *ngIf="authService.user | async">
+        <p class="welcome__text">Willkommen {{ (authService.user | async)?.email }}!</p>
+        <a class="welcome__logout" (click)="logout()" *ngIf="authService.user | async">
           <i class="flaticon-logout"></i> Abmelden
         </a>
       </div>
@@ -15,21 +15,18 @@
       <div *ngIf="!(authService.user | async)">
         <div class="form-group">
           <label for="inputEmail">E-Mail</label>
-          <input type="text" class="form-control" id="inputEmail" [(ngModel)]="email" placeholder="E-Mail">
+          <input type="text" class="form-control login__email" id="inputEmail" [(ngModel)]="email" placeholder="E-Mail">
         </div>
         <div class="form-group">
           <label for="inputPassword">Passwort</label>
-          <input type="password" class="form-control" id="inputPassword" [(ngModel)]="password" placeholder="Passwort">
-        </div>
-        <div class="form-group">
-          <label></label>
-          <p class="help-block">
-            <a [routerLink]="['/register']">Noch nicht registriert?</a>
-          </p>
+          <input type="password" class="form-control login__password" id="inputPassword" [(ngModel)]="password" placeholder="Passwort">
         </div>
         <button type="button" class="btn btn-default" (click)="login()" [disabled]="!email || !password">
-          <i class="fa fa-sign-in"></i> Anmelden
+          <i class="flaticon-right-arrow"></i> Anmelden
         </button>
+        <div class="form-group help-block">
+          <a class="help-block__link" [routerLink]="['/register']">Noch nicht registriert?</a>
+        </div>
       </div>
 
       <ul *ngIf="(authService.user | async)" class="nav nav-sidebar">
@@ -82,7 +79,7 @@
     </div>
 
     <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-      <router-outlet style="padding-top: 40px"></router-outlet>
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>
