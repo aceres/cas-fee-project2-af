@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFireDatabase, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2/database';
-import { environment } from '../../environments/environment';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import * as firebase from 'firebase';
 
 import { Upload } from './models/upload';
@@ -8,12 +7,9 @@ import { Upload } from './models/upload';
 @Injectable()
 export class UploadService {
 
-  // private basePath: string = '/uploads';
   private basePath: string = '/recipes';
-  uploads: FirebaseListObservable<Upload[]>;
 
   constructor(
-    // private af: AngularFire,
     private db: AngularFireDatabase) { }
 
   pushUpload(upload: Upload, key) {
@@ -23,16 +19,16 @@ export class UploadService {
 
     uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED,
       (snapshot) =>  {
-        // upload in progress
+        // Upload in progress
         const snap = snapshot as firebase.storage.UploadTaskSnapshot;
         upload.progress = (snap.bytesTransferred / snap.totalBytes) * 100
       },
       (error) => {
-        // upload failed
+        // Upload failed
         console.log(error)
       },
       () => {
-        // upload success
+        // Upload success
         upload.url = uploadTask.snapshot.downloadURL;
         upload.name = upload.file.name;
         upload.key = key;
@@ -44,7 +40,6 @@ export class UploadService {
   // Writes the file details to the realtime db
   private saveFileData(upload: Upload, key) {
     const refRecipe =  firebase.database().ref('recipes/' + key);
-    // this.db.list(`${this.basePath}/${key}`).set(upload);
     refRecipe.child('image').set(upload);
   }
 

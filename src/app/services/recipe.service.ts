@@ -6,11 +6,9 @@ import { environment } from '../../environments/environment';
 import 'rxjs/add/operator/toPromise';
 
 import { Recipe } from './models/recipe';
-import { Upload } from './models/upload';
 
 @Injectable()
 export class RecipeService {
-  // recipe: FirebaseObjectObservable<any>;
   image: FirebaseObjectObservable<any>;
 
   private headers = new Headers({'Content-Type': 'application/json'});

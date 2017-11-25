@@ -1,5 +1,5 @@
 import { TestBed, async, inject } from '@angular/core/testing';
-import { Headers, Http, HttpModule } from '@angular/http';
+import { Http, HttpModule } from '@angular/http';
 
 import { AngularFireDatabase } from 'angularfire2/database';
 import { FirebaseApp } from 'angularfire2';

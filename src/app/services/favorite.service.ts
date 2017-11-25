@@ -5,8 +5,6 @@ import { environment } from '../../environments/environment';
 
 import 'rxjs/add/operator/toPromise';
 
-import { Favorite } from './models/favorite';
-
 @Injectable()
 export class FavoriteService {
   recipe: FirebaseObjectObservable<any>;
@@ -31,7 +29,7 @@ export class FavoriteService {
       recipeId: recipeId,
       recipeName: recipeName
     }).then(resolve => {
-      console.log('Resolve:', resolve);
+      console.log('Resolve: ', resolve);
     })
     .catch(error => {
       console.log('Error: ', error);
@@ -48,7 +46,8 @@ export class FavoriteService {
   }
 
   private handleError(error: any): Promise<any> {
-    console.error('An error occurred', error);
+
+    console.error('An error occurred: ', error);
     return Promise.reject(error.message || error);
   }
 }

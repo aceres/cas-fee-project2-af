@@ -3,8 +3,7 @@ import {environment} from '../environments/environment.prod'
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.less']
+  templateUrl: './app.component.html'
 })
 export class AppComponent implements OnInit {
   title = 'Manducare';

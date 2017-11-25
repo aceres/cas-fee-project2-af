@@ -41,20 +41,4 @@ export class UserAuthGuardService {
             return this.authService.isAuthenticated();
         }
     }
-
-    // constructor(private _data: AuthService) { }
-    //
-    // canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> | boolean {
-    //     return this._data.isAuthenticated();
-    // }
-
-    // canActivate() {
-    //     console.log("OnlyLoggedInUsers");
-    //     if (this._data.isAuthenticated()) {
-    //         return true;
-    //     } else {
-    //         window.alert("You don't have permission to view this page");
-    //         return false;
-    //     }
-    // }
 }

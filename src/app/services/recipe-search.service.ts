@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Headers, Http } from '@angular/http';
+import { Http } from '@angular/http';
 import { environment } from '../../environments/environment';
 
 import { Observable } from 'rxjs/Observable';
@@ -10,7 +10,6 @@ import { Recipe } from './models/recipe';
 @Injectable()
 export class RecipeSearchService {
 
-  private headers = new Headers({'Content-Type': 'application/json;charset=utf-8'});
   private recipesUrl = environment.apiUrl + 'recipes';
 
   constructor(
