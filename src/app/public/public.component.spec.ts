@@ -44,15 +44,11 @@ describe('PublicComponent', () => {
         }).compileComponents();
     }));
 
-    it('It should create the app', async(() => {
-
-    }));
-
-    it('It should create the app', async(() => {
-        // const fixture = TestBed.createComponent(PublicComponent);
-        // const app = fixture.debugElement.componentInstance;
-        // expect(app).toBeTruthy();
-    }));
+    // it('It should create the app', async(() => {
+    //     const fixture = TestBed.createComponent(PublicComponent);
+    //     const app = fixture.debugElement.componentInstance;
+    //     expect(app).toBeTruthy();
+    // }));
 
     // it(`It shhould have as title 'Manducare'`, async(() => {
     //     const fixture = TestBed.createComponent(PublicComponent);

@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {environment} from '../environments/environment.prod'
 
 @Component({
   selector: 'app-root',
@@ -8,5 +9,7 @@ import {Component, OnInit} from '@angular/core';
 export class AppComponent implements OnInit {
   title = 'Manducare';
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+      console.log('Environment state is: ', environment)
+  }
 }

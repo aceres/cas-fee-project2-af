@@ -12,6 +12,10 @@ Highlights:
 - AngularFire / Angular - Firebase (Vermischung) - Services
 - Testing - parallel schreiben und nicht am Schluss
 - AOT spät entdeckt
+- Screenshots machen
+- ngModule nutzen / Emitter
+- .md (Install Manual schreiben)
+- Ping -> IP -> Like Favorite
 
 Problem beim 2. Crash
 =====================
@@ -35,3 +39,11 @@ Ausprobieren:
 - Ev. Login Prozess beschreiben (Login)? - mit XMind App?
 - env --prod (aot)
 - Responsive Image - SRCSET - Upload - 2 Bilder erzeugen lassen
+
+- https://github.com/angular/angular-cli/issues/7118 (Switch to prod)
+- https://github.com/angular/angular-cli/issues/7113
+- https://github.com/angular/angular-cli/issues/7138
+
+Manually solution:
+
+Documentation: ...
