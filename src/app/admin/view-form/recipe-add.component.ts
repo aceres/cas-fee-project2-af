@@ -19,8 +19,7 @@ import { AlertComponent } from '../../ngx/alert/alert.component';
 
 @Component({
   selector: 'app-recipes-add',
-  templateUrl: './recipe-add.component.html',
-  styleUrls: ['./recipe-add.component.less']
+  templateUrl: './recipe-add.component.html'
 })
 export class RecipeAddComponent implements OnInit {
 
