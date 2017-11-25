@@ -1,12 +1,16 @@
-.search-result {
-  background-color: #EEE;
-  display: table;
-  border-bottom: 1px solid #CCC;
-  width: 100%;
-  padding: 3px 12px;
-}
+@import "../../../_base";
+@import "../../../_settings";
 
-.search-result:hover {
-  background-color: #CCC;
-  cursor: pointer;
+.search-result {
+  background-color: @white;
+  border-bottom: 1px solid @dark-grey;
+  display: table;
+  padding: 3px 12px;
+  width: 100%;
+
+
+  &:hover {
+    background-color: @dark-grey;
+    cursor: pointer;
+  }
 }
