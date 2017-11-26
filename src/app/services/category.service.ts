@@ -10,12 +10,4 @@ export class CategoryService {
   getCategories(): Promise<Category[]> {
       return Promise.resolve(listCategories);
   }
-
-  // TODO: See the "Take it slow" appendix
-  getCategoriesSlowly(): Promise<Category[]> {
-    return new Promise(resolve => {
-      // Simulate server latency with 2 second delay
-      setTimeout(() => resolve(this.getCategories()), 2000);
-    });
-  }
 }

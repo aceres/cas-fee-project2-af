@@ -9,8 +9,6 @@ export class CustomErrorHandler extends ErrorHandler {
 
     public handleError(error: any): void {
 
-        // You can add your own logic here.
-        // It is not required to delegate to the original implementation
         if (error.originalError instanceof MyError) {
             console.log('MyError!');
             console.log(`[CUSTOM ERROR]:::${error.originalError.toString()}`);

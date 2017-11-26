@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import * as firebase from 'firebase';
 
 import { Upload } from './models/upload';
@@ -9,8 +8,7 @@ export class UploadService {
 
   private basePath: string = '/recipes';
 
-  constructor(
-    private db: AngularFireDatabase) { }
+  constructor() {}
 
   pushUpload(upload: Upload, key) {
 
