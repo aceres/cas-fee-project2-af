@@ -5,18 +5,17 @@
   padding: 0 0 20px 0;
 
   &__wrapper {
-    background-color: @grey;
     padding-bottom: 56.25%;
     position: relative;
     width: 100%;
   }
 
   &__image {
-    height: 100%;
     left: 0;
     position: absolute;
     top: 0;
-    width: 100%;
+    width: 70%;
+    object-fit: cover;
 
     &:hover {
       cursor: pointer;
@@ -34,5 +33,11 @@
       position: absolute;
       width: 100%;
     }
+  }
+}
+
+@media (max-width: 568px) {
+  &__image {
+    width: 100%;
   }
 }
