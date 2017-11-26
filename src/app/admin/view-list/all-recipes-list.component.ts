@@ -1,10 +1,8 @@
 import { Component, ViewChild, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import { Router } from '@angular/router';
-
 import { Recipe } from '../../services/models/recipe';
 import { RecipeService } from '../../services/recipe.service';
-
 import { AlertComponent } from '../../ngx/alert/alert.component';
 
 @Component({

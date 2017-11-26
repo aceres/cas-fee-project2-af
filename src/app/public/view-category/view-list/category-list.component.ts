@@ -1,9 +1,9 @@
-import 'rxjs/add/operator/switchMap';
 import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { listCategories } from '../../../global/list.categories';
+import 'rxjs/add/operator/switchMap';
 
 @Component({
   selector: 'app-category-list',

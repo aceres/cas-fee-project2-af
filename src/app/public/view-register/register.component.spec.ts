@@ -7,10 +7,8 @@ import { AlertComponent } from '../../ngx/alert/alert.component';
 import { ModalComponent } from '../../ngx/modal/modal.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AngularFireDatabase } from 'angularfire2/database';
 import { FirebaseApp } from 'angularfire2';
-
 import { AuthService } from '../../services/auth.service'
 
 describe('RegisterComponent', () => {

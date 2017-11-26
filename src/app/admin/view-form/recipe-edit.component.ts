@@ -1,24 +1,19 @@
-import 'rxjs/add/operator/switchMap';
-
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Location } from '@angular/common';
-
+import 'rxjs/add/operator/switchMap';
 import { listCategories } from '../../global/list.categories';
 import { listPortions } from '../../global/list.portions';
 import { listLevels } from '../../global/list.levels';
 import { listCuisines } from '../../global/list.cuisines';
 import { listUnits } from '../../global/list.units';
-
 import { Recipe } from '../../services/models/recipe';
 import { Upload } from '../../services/models/upload';
 import { Ingredient } from '../../services/models/ingredient';
 import { Step } from '../../services/models/step';
-
 import { RecipeService } from '../../services/recipe.service';
 import { UploadService } from '../../services/upload.service';
 import { AuthService } from '../../services/auth.service';
-
 import { AlertComponent } from '../../ngx/alert/alert.component';
 
 @Component({

@@ -2,7 +2,6 @@ import { Component, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import { RegisterService } from '../../services/register.service';
-
 import { AlertComponent } from '../../ngx/alert/alert.component';
 
 @Component({

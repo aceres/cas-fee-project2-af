@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 import { Cuisine } from '../../services/models/cuisine';
 import { CuisineService } from '../../services/cuisine.service';
 

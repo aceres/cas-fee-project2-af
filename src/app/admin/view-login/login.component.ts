@@ -1,9 +1,7 @@
 import { Component, ViewChild, OnInit } from '@angular/core';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { Router } from '@angular/router';
-
 import { AuthService } from '../../services/auth.service';
-
 import { AlertComponent } from '../../ngx/alert/alert.component';
 
 @Component({

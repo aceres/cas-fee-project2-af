@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import { Router } from '@angular/router';
-
 import 'rxjs/add/operator/map';
 
 @Component({

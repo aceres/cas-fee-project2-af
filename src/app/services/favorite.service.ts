@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { Headers, Http } from '@angular/http';
 import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
 import { environment } from '../../environments/environment';
-
 import 'rxjs/add/operator/toPromise';
 
 @Injectable()

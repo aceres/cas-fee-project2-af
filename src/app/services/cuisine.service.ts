@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/toPromise';
-
 import { Cuisine } from '../services/models/cuisine';
 import { listCuisines } from '../global/list.cuisines';
 

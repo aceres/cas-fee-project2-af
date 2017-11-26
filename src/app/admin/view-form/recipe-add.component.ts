@@ -1,20 +1,16 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-
 import { listCategories } from '../../global/list.categories';
 import { listPortions } from '../../global/list.portions';
 import { listLevels } from '../../global/list.levels';
 import { listCuisines } from '../../global/list.cuisines';
 import { listUnits } from '../../global/list.units';
-
 import { Recipe } from '../../services/models/recipe';
 import { RecipeService } from '../../services/recipe.service';
 import { AuthService } from '../../services/auth.service';
-
 import { UploadService } from '../../services/upload.service';
 import { Upload } from '../../services/models/upload';
 import { Step } from '../../services/models/step';
 import { Ingredient } from '../../services/models/ingredient';
-
 import { AlertComponent } from '../../ngx/alert/alert.component';
 
 @Component({

@@ -3,7 +3,6 @@ import { Subject } from 'rxjs/Subject';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AuthService } from '../../services/auth.service';
 
-
 const userAuthMethods = [
     'subscribe'
 ];

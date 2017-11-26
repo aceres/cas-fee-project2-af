@@ -4,9 +4,7 @@ import { Location } from '@angular/common';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/switchMap';
-
 import { AlertComponent } from '../../ngx/alert/alert.component';
-
 import { RecipeService } from '../../services/recipe.service';
 import { FavoriteService } from '../../services/favorite.service';
 import { AuthService } from '../../services/auth.service';

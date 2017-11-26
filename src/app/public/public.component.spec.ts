@@ -5,10 +5,8 @@ import { CoverComponent } from '../public/view-detail/view-cover/cover.component
 import { FooterComponent } from '../public/view-footer/footer.component';
 import { SearchComponent } from '../public/view-search/search.component';
 import { RouterTestingModule } from '@angular/router/testing';
-
 import { AngularFireDatabase } from 'angularfire2/database';
 import { FirebaseApp } from 'angularfire2';
-
 import { AuthService } from '../services/auth.service'
 
 describe('1st tests', () => {

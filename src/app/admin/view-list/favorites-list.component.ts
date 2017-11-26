@@ -1,10 +1,8 @@
 import { Component, ViewChild, OnInit } from '@angular/core';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import { Router } from '@angular/router';
-
 import { AuthService } from '../../services/auth.service';
 import { FavoriteService } from '../../services/favorite.service';
-
 import { AlertComponent } from '../../ngx/alert/alert.component';
 
 @Component({

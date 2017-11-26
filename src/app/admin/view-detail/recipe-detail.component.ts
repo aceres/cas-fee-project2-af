@@ -1,9 +1,7 @@
-import 'rxjs/add/operator/switchMap';
-
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Location } from '@angular/common';
-
+import 'rxjs/add/operator/switchMap';
 import { Recipe } from '../../services/models/recipe';
 import { RecipeService } from '../../services/recipe.service';
 

@@ -1,16 +1,12 @@
 import { TestBed, async } from '@angular/core/testing';
-
 import { RouterTestingModule } from '@angular/router/testing';
-
 import { AboutComponent } from './about.component';
 import { NavComponent } from '../../public/view-nav/nav.component';
 import { FooterComponent } from '../../public/view-footer/footer.component';
-
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AuthService } from '../../services/auth.service';
-
 import { environment } from '../../../environments/environment';
 
 describe('1st tests', () => {
