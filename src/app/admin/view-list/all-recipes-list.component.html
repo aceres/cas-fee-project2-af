@@ -5,7 +5,7 @@
 </div>
 
 <div class="row">
-  <div class="col-xs-12 col-sm-6 col-md-3" *ngFor="let recipe of allRecipes | async | filter:searchTerm" (click)="detail(recipe)">
+  <div class="col-xs-12 col-sm-6 col-md-3" *ngFor="let recipe of allRecipes | async | filter:searchTerm  | paginate: { itemsPerPage: 10, currentPage: page }" (click)="detail(recipe)">
     <div class="recipe-list">
       <div class="recipe-list__wrapper">
         <img class="recipe-list__image" src="{{ recipe.image?.url }}" alt="{{ recipe.receipt}}" />
@@ -30,12 +30,8 @@
   </div>
 </div>
 
-  <div class="row">
-    <div class="custom-pagination">
-      <pagination [totalItems]="bigTotalItems" [(ngModel)]="bigCurrentPage" [maxSize]="maxSize" class="pagination-sm"
-                  [boundaryLinks]="true" [rotate]="false" (pageChanged)="pageChanged($event)" (numPages)="numPages = $event"></pagination>
-      <div class="pagination-sites">Seite: {{bigCurrentPage}} / {{numPages}}</div>
-    </div>
-  </div>
+<div class="row">
+  <pagination-controls (pageChange)="page = $event"></pagination-controls>
+</div>
 
 <app-alert #childAlert></app-alert>

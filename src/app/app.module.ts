@@ -69,6 +69,7 @@ import { UsersListComponent } from './admin/view-list/users-list.component';
 import { AlertComponent } from './ngx/alert/alert.component';
 import { PaginationLimitComponent } from './ngx/pagination/pagination.component';
 import { ModalComponent } from './ngx/modal/modal.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 // Pipes
 import { FilterPipe } from './pipes/search-filter.pipe';
@@ -88,7 +89,8 @@ import { FilterPipe } from './pipes/search-filter.pipe';
     // ngx-bootstrap
     AlertModule.forRoot(),
     ModalModule.forRoot(),
-    PaginationModule.forRoot()
+    PaginationModule.forRoot(),
+    NgxPaginationModule
   ],
   declarations: [
     // App

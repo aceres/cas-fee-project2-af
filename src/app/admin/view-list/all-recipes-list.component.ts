@@ -1,4 +1,4 @@
-import { Component, ViewChild, OnInit } from '@angular/core';
+import { Component, ViewChild, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import { Router } from '@angular/router';
 
@@ -10,16 +10,15 @@ import { AlertComponent } from '../../ngx/alert/alert.component';
 @Component({
   selector: 'app-all-recipes-list',
   templateUrl: './all-recipes-list.component.html',
-  styleUrls: ['./all-recipes-list.component.less']
+  styleUrls: ['./all-recipes-list.component.less'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AllRecipesListComponent implements OnInit {
   recipes: Recipe[];
   allRecipes: FirebaseListObservable<any[]>;
 
-  public maxSize : number = 5;
-  public bigTotalItems : number = 175;
-  public bigCurrentPage : number = 1;
-  public numPages : number = 0;
+  @Input('data') meals: string[] = [];
+  page: number = 1;
 
   // Alert
   @ViewChild('childAlert') public childAlert: AlertComponent;
