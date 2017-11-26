@@ -67,7 +67,6 @@ import { UsersListComponent } from './admin/view-list/users-list.component';
 
 // ngx-bootstrap
 import { AlertComponent } from './ngx/alert/alert.component';
-import { PaginationLimitComponent } from './ngx/pagination/pagination.component';
 import { ModalComponent } from './ngx/modal/modal.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 
@@ -89,7 +88,6 @@ import { FilterPipe } from './pipes/search-filter.pipe';
     // ngx-bootstrap
     AlertModule.forRoot(),
     ModalModule.forRoot(),
-    PaginationModule.forRoot(),
     NgxPaginationModule
   ],
   declarations: [
@@ -127,7 +125,6 @@ import { FilterPipe } from './pipes/search-filter.pipe';
     CuisineComponent,
     // ngx-bootstrap
     AlertComponent,
-    PaginationLimitComponent,
     ModalComponent,
     // Pipes
     FilterPipe
