@@ -1,10 +1,15 @@
-.impressum__subtitle {
-  color: #BAC64A;
-  font-size: 24px;
-}
+@import "../../../_base";
+@import "../../../_settings";
 
-address,
-p,
-.impressum__heading {
-  margin: 0 0 50px 0;
+.impressum {
+  &__subtitle {
+    color: @green;
+    font-size: 24px;
+  }
+
+  &__heading,
+  &__address,
+  &__content {
+    margin: 0 0 50px 0;
+  }
 }
