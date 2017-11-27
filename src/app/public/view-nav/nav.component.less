@@ -1,15 +1,12 @@
+@import "../../../_base";
+@import "../../../_settings";
+
 .navbar-default {
   border-color: transparent;
   border-radius: 0;
   box-shadow: none;
-  font-family: "Merriweather Sans", Arial, sans-serif;
-  margin-top: 20px;
+  font-family: @merri-weather;
   text-transform: uppercase;
-}
-
-.navbar-wrapper {
-  border-radius: initial;
-  margin-top: 0 !important;
 }
 
 .nav .open > a,
@@ -18,30 +15,22 @@
   background-color: transparent;
 }
 
-@media (max-width: 768px) {
-
-  .navbar-default {
-    margin-top: 0;
-  }
-}
-
 @media (min-width: 992px) {
-
   .navbar-default {
-
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: fade(@white, 70%);
     border: transparent;
+    margin: 20px 0 0 0;
 
     ul.navbar-nav {
 
       > .active {
-        color: #FFF;
+        color: @white;
 
         a,
         a:focus,
         a:hover {
-          color: #FFF;
-          background-color: #ffc000;
+          background-color: @yellow;
+          color: @white;
         }
       }
 
@@ -49,9 +38,8 @@
         color: inherit;
 
         &:hover {
-          color: #FFF;
-          background: rgb(255, 192, 0); /* Fall-back for browsers that don't support rgba */
-          background: rgbargba(255, 192, 0, 0.5);
+          background-color: @yellow;
+          color: @white;
         }
       }
     }
