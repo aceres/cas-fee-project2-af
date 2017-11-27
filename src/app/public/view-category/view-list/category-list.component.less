@@ -1,65 +1,128 @@
-.category-list-heading {
-  color: #FFC000;
-  margin-bottom: 50px;
-}
+@import "../../../../_base";
+@import "../../../../_settings";
 
-.category-list-item {
-  padding-bottom: 18px;
-}
+.category-list {
+  padding: 0 0 20px 0;
 
-.category-list-item-image {
-  position: relative;
-}
+  &__wrapper {
+    background-color: @grey;
+    padding-bottom: 56.25%;
+    position: relative;
+    width: 100%;
+  }
 
-.category-list-item-image-card,
-.category-list-item-image-img {
-  height: 151.5px;
-}
+  &__image {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    object-fit: cover;
 
-.category-list-item-image-card {
-  background: #F4F2EE;
-  display: block;
-  overflow: hidden;
-}
+    &:hover {
+      cursor: pointer;
+      opacity: 0.7;
+    }
 
-.category-list-item-image-img {
-  background-position: center;
-  background-size: cover;
-  cursor: pointer;
-  width: 100%;
-}
+    &:before {
+      background-color: @grey;
+      border: 2px dotted @dark-grey;
+      border-radius: 5px;
+      content: "";
+      display: block;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      width: 100%;
+    }
 
+    &:after {
+      content: "\f10b" " Broken Image of " attr(alt);
+      display: block;
+      font-size: 16px;
+      font-style: normal;
+      font-family: Flaticon;
+      color: @black;
+      position: absolute;
+      top: 5px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+    }
+  }
 
-.category-list-item-meta-container {
-  display: none;
-}
-
-.category-list-item-meta-info {
-  flex: auto;
-  line-height: 16px;
-}
-
-.category-list-item-image {
-  position: relative;
-}
-
-.category-list-item-image img {
-  min-height: 50px;
-}
-
-.category-list-item-image img:hover {
-  opacity: 0.7;
-}
-
-@media (min-width: 768px) {
-  .category-list-item-meta-container {
+  &__buttons {
+    bottom: 0;
     display: flex;
+    flex-basis: 100%;
+    font-size: 20px;
+    margin: 10px 0;
+    position: absolute;
+    right: 0;
+    width: auto;
+    z-index: 1;
+  }
+
+  &__title {
+    height: 30px;
+    hyphens: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+    &:after {
+      .overflow-gradient();
+      bottom: 0;
+      content: "";
+      height: 16px;
+      position: absolute;
+      right: 0;
+      text-align: right;
+      width: 50%;
+    }
+  }
+
+  &__meta-container {
+    display: none;
+    font-size: 14px;
     padding: 6px 0 0 0;
+  }
+
+  &__meta-info {
+    flex: auto;
+    line-height: 16px;
+
+    &:nth-child(3) > span {
+      float: right
+    }
   }
 }
 
-@media (min-width: 992px) {
-  .category-list-item-title {
-    font-size: 18px;
+@media (min-width: 768px) {
+  .category-list {
+    padding: 0 0 10px 0;
+
+    &__title {
+      font-size: 16px;
+      height: 35px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .category-list {
+
+    &__title {
+      font-size: 18px;
+      height: 39px;
+
+      &:after {
+        height: 19px;
+      }
+    }
+
+    &__meta-container {
+      display: flex;
+    }
   }
 }
