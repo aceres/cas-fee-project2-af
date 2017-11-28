@@ -1,82 +1,88 @@
-.search {
-  display: flex;
-  flex-flow: row wrap;
-  width: 100%;
-  color: inherit;
-  padding: 20px;
-}
-
-/* Chrome / Opera / Safari */
-::-webkit-input-placeholder {
-  color: inherit;
-}
+@import "../../../_base";
+@import "../../../_settings";
 
 .form-control {
   box-shadow: none;
 }
 
-.resultDropDown {
-  width: 100%;
-  flex: 1;
-  height: 200px;
-  overflow: auto;
-  position: absolute;
-  left: 0;
-}
-
-.foundResult {
+.search {
+  color: @light-grey;
   display: flex;
-  opacity: 0.7;
-  flex: 1;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-flow: row wrap;
   flex-flow: row wrap;
+  padding: 20px 0;
   width: 100%;
-  background-color: #FFF;
-  border-bottom: 1px solid #EEE;
-  color: #000000;
 
-  &:hover {
-    background-color: #EEE;
-    cursor: pointer;
+  &__field {
+    color: @green;
+    flex: 1;
+    position: relative;
   }
 
-  a:hover {
-    text-decoration: none;
+  &__input {
+    background-color: @light-grey;
+    border: 2px solid @white;
+    border-radius: 5px;
+    display: flex;
+    flex: 1;
+    flex-flow: row wrap;
+    font-size: 18px;
+    padding: 20px 30px 20px 20px;
+    width: 100%;
+
+    /* Chrome / Opera / Safari */
+    &::-webkit-input-placeholder {
+      color: inherit;
+    }
+  }
+
+  &__icon {
+    padding: 15px;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
   }
 }
 
-input[type="search"] {
-  background-color: #F4F2EE;
-  border: 2px solid #FFF;
-  border-radius: 5px;
-  width: 100%;
-  padding: 20px;
-  display: flex;
-  flex: 1;
-  flex-flow: row wrap;
-  font-size: 18px;
-}
+.search-result {
+  &__drop-down {
+    flex: 1;
+    height: 200px;
+    left: 0;
+    overflow: auto;
+    position: absolute;
+    width: 100%;
+  }
 
-.right-inner-addon {
-  color: #BAC64A;
-  position: relative;
-  flex: 1;
-}
-.right-inner-addon input {
-  padding-right: 30px;
-}
-.right-inner-addon i {
-  position: absolute;
-  right: 0px;
-  padding: 15px;
-  pointer-events: none;
-}
+  &__text {
+    font-family: @happy-monkey;
+    text-shadow: none;
+    padding: 10px;
+  }
 
-p {
-  color: #000;
-  font-family: "Happy Monkey", Arial, sans-serif;
-  text-shadow: none;
-  padding: 10px;
+  &__link {
+    color: @black;
+    z-index: 1;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &--found {
+    background-color: @white;
+    border-bottom: 1px solid @light-grey;
+    color: @black;
+    display: flex;
+    flex: 1;
+    flex-flow: row wrap;
+    width: 100%;
+
+    &:hover {
+      .search-result__link {
+        color: @white;
+      }
+      background-color: @green;
+      cursor: pointer;
+    }
+  }
 }
