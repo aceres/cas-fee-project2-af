@@ -6,8 +6,7 @@ import { RegisterService } from '../../services/register.service';
 
 @Component({
   selector: 'app-recipes-list',
-  templateUrl: './users-list.component.html',
-  styleUrls: ['./users-list.component.less']
+  templateUrl: './users-list.component.html'
 })
 export class UsersListComponent implements OnInit {
 
