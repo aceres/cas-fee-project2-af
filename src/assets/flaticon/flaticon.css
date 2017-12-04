@@ -1,6 +1,6 @@
 	/*
   	Flaticon icon font: Flaticon
-  	Creation date: 28/11/2017 22:06
+  	Creation date: 04/12/2017 18:51
   	*/
 
 @font-face {
@@ -22,29 +22,30 @@
 }
 
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
-[class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
   font-family: Flaticon;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.flaticon-magnifying-glass:before { content: "\f100"; }
-.flaticon-book:before { content: "\f101"; }
-.flaticon-cuisine:before { content: "\f102"; }
-.flaticon-right-arrow:before { content: "\f103"; }
-.flaticon-left-arrow:before { content: "\f104"; }
-.flaticon-preptime:before { content: "\f105"; }
-.flaticon-edit:before { content: "\f106"; }
-.flaticon-maintenance:before { content: "\f107"; }
-.flaticon-cancel:before { content: "\f108"; }
-.flaticon-technology:before { content: "\f109"; }
-.flaticon-broken-link:before { content: "\f10a"; }
-.flaticon-logout:before { content: "\f10b"; }
-.flaticon-recipes:before { content: "\f10c"; }
-.flaticon-category:before { content: "\f10d"; }
-.flaticon-delete:before { content: "\f10e"; }
-.flaticon-like:before { content: "\f10f"; }
-.flaticon-email:before { content: "\f110"; }
-.flaticon-level:before { content: "\f111"; }
-.flaticon-add:before { content: "\f112"; }
+.flaticon-view:before { content: "\f100"; }
+.flaticon-magnifying-glass:before { content: "\f101"; }
+.flaticon-book:before { content: "\f102"; }
+.flaticon-cuisine:before { content: "\f103"; }
+.flaticon-right-arrow:before { content: "\f104"; }
+.flaticon-left-arrow:before { content: "\f105"; }
+.flaticon-preptime:before { content: "\f106"; }
+.flaticon-edit:before { content: "\f107"; }
+.flaticon-maintenance:before { content: "\f108"; }
+.flaticon-cancel:before { content: "\f109"; }
+.flaticon-technology:before { content: "\f10a"; }
+.flaticon-broken-link:before { content: "\f10b"; }
+.flaticon-logout:before { content: "\f10c"; }
+.flaticon-recipes:before { content: "\f10d"; }
+.flaticon-category:before { content: "\f10e"; }
+.flaticon-delete:before { content: "\f10f"; }
+.flaticon-like:before { content: "\f110"; }
+.flaticon-email:before { content: "\f111"; }
+.flaticon-level:before { content: "\f112"; }
+.flaticon-add:before { content: "\f113"; }
