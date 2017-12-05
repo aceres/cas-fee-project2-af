@@ -88,12 +88,15 @@
   margin-bottom: 30px;
   text-align: center;
 }
+
 .placeholders h4 {
   margin-bottom: 0;
 }
+
 .placeholder {
   margin-bottom: 20px;
 }
+
 .placeholder img {
   display: inline-block;
   border-radius: 50%;
@@ -101,8 +104,25 @@
 
 /* Pagination
 -------------------------------------------------- */
-.recipePagination /deep/ .ngx-pagination .current {
-  background: @green;
+.recipePagination {
+  .ngx-pagination {
+    margin: 30px auto 10px auto;
+    padding: 0;
+    width: 300px;
+    
+    & a {
+      color: @black;
+      text-decoration: none;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+
+    .current {
+      background: @green;
+    }
+  }
 }
 
 /* Initialize App (Waiting animation)
