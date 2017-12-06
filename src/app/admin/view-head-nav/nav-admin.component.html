@@ -21,7 +21,7 @@
             Meine Rezepte
           </a>
         </li>
-        <li [routerLinkActive]="['active']">
+        <li [routerLinkActive]="['active']" *ngIf="!(user | async)">
           <a [routerLink]="['/register']" class="navbar-admin__link">
             Registrieren
           </a>

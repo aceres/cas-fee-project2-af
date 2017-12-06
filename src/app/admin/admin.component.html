@@ -28,20 +28,18 @@
 
       <ul *ngIf="(authService.user | async)" class="nav nav-sidebar">
         <li [routerLinkActive]="['active']">
+          <a [routerLink]="['/admin/recipe-add']" class="admin__nav admin__nav--link">
+            <i class="icon flaticon-add"></i>
+            Neues Rezept
+          </a>
+        </li>
+        <li [routerLinkActive]="['active']">
           <a [routerLink]="['/admin/recipes']" class="admin__nav admin__nav--link">
             <i class="icon flaticon-recipes"></i>
             Meine Rezepte
           <span class="sr-only">(Aktuell)</span>
           </a>
         </li>
-        <li [routerLinkActive]="['active']">
-          <a [routerLink]="['/admin/recipe-add']" class="admin__nav admin__nav--link">
-            <i class="icon flaticon-add"></i>
-            Neues Rezept
-          </a>
-        </li>
-      </ul>
-      <ul *ngIf="(authService.user | async)" class="nav nav-sidebar">
         <li [routerLinkActive]="['active']">
           <a [routerLink]="['/admin/favorites']" class="admin__nav admin__nav--link">
             <i class="icon flaticon-like"></i>
