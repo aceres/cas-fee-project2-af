@@ -18,6 +18,7 @@ Highlights:
 - Ping -> IP -> Like Favorite
 - SEO Analytics
 - Polyfills IE11
+- package-lock.json (https://github.com/npm/npm/issues/16866)
 
 Problem beim 2. Crash
 =====================
@@ -52,4 +53,4 @@ ng build --prod (mode)
 
 Manually solution:
 
-Documentation: ...
+Documentation: "/environments/environment.ts" anpassen
