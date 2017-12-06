@@ -76,7 +76,7 @@ Therefore we need to change the setting manually for deploying to the production
 
 Use this configuration for this file below:
 
-export const environment = {
+`export const environment = {
   production: true,
   firebase: {
     apiKey: 'AIzaSyBfCNtrWk37h4lqm28Toes6e5efVY1eJyQ',
@@ -87,7 +87,7 @@ export const environment = {
     messagingSenderId: '391938033267'
   },
   apiUrl: 'https://manducare-v1.firebaseio.com/'
-};
+};`
 
 See reasons in the file: experience.md:
 
