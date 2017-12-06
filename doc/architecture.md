@@ -1,3 +1,0 @@
-# Overview and Architecture (Backend, Frontend, Firebase, Server, Interface, ...)
-
-...

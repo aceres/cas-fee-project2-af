@@ -2,7 +2,7 @@
 
 ## Generelles
 
-### Rezept finden, sortieren
+### Rezept finden, blättern
 ### Rezept detailliert anzeigen
 
 ## Verwalten von Rezepte
@@ -14,20 +14,23 @@
 ### Rezept kategorisieren (Admin, Member)
 ### Bilder für ein Rezept hochladen (Admin, Member)
 
-### Stammdatenverwaltung z.B. Kategorie oder Land, hier: Italienische Küche, Japanische Küche, ... / Hauptgerichte: Fisch, Fleisch / Richtung: Vegetarisch, Fleisch, Dessert
+### Stammdatenverwaltung z.B. Länderküche, Schwierigkeitsgrad, hier als Beispiel für die Länderküche: Italienische Küche, Japanische Küche, ... / Hauptgericht, Frühstück, ...
 
 ## Rating
-### Rezept bewerten (Admin, Member)
+### Rezept bewerten
 
-### (Ev. Kommentar hinschreiben)
+## Notificaton
+### Mitteilungsbestätigung anzeigen für das Löschen eines Rezeptes als Beispiel
 
 ## Security (Login)
 
 ### Login für das Verwalten der Rezepte
 ### Registration (Member)
-### User Management (Admin, Member)
+### User Management - See the list of registered users (for users with role admin only)
 
-### Einkaufsliste / Rezept ausdrucken
-### Rezept kalkulieren (Menge der Personen zum Kochen - frontendmässig)
+# Falls Zeit (Optional)
 
-(Falls Zeit (Optional): Rezept als E-Mail weiterleiten / weiterempfehlen)
+# Rezept als E-Mail weiterleiten / weiterempfehlen
+# Kommentar hinschreiben
+# Einkaufsliste / Rezept ausdrucken
+# Rezept kalkulieren (Menge der Personen zum Kochen - frontendmässig)

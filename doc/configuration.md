@@ -3,6 +3,7 @@
 ## GitHub to project 2
 
 https://github.com/aceres/cas-fee-project2
+https://github.com/aceres/cas-fee-project2-af
 
 (Tanja und André)
 
@@ -239,6 +240,10 @@ for the mock data, warm up for beginning Angular 4.
    }
 }
 
+#### Config of Realtime-Database Rules
+
+...
+
 ### Installation LESS (Styling)
 
 npm install less --save
@@ -246,7 +251,7 @@ npm install less --save
 Config: .angular-cli.json
 
 "styles": [
-        "../node_modules/font-awesome/css/font-awesome.min.css",
+        ...,
         "styles.less"
       ],
 
