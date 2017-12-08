@@ -199,10 +199,10 @@
 
 <app-alert #childAlert></app-alert>
 
-<button class="btn btn-default" [disabled]="!recipeForm.form.valid" (click)="update(recipeName.value, recipeDescription.value, recipePortion.value, recipePrepTime.value, recipeRating.value, recipeLevel.value, recipeCategory.value, recipeCuisine.value, recipeSteps, recipeIngredients)">
+<button type="button" class="btn btn-default" [disabled]="!recipeForm.form.valid" (click)="update(recipeName.value, recipeDescription.value, recipePortion.value, recipePrepTime.value, recipeRating.value, recipeLevel.value, recipeCategory.value, recipeCuisine.value, recipeSteps, recipeIngredients)">
   <i class="flaticon-technology"></i> Speichern
 </button>
-<button (click)="goBack()" class="btn btn-default">
+<button type="button" (click)="goBack()" class="btn btn-default">
   <i class="flaticon-left-arrow"></i> Zurück
 </button>
 </div>

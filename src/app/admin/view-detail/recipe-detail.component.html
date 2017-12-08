@@ -95,10 +95,10 @@
     <br />
     <br />
 
-    <button class="btn btn-default" [routerLink]="['/admin/recipe-edit/' + id]">
+    <button type="button" class="btn btn-default" [routerLink]="['/admin/recipe-edit/' + id]">
       <i class="fa fa-pencil"></i> Bearbeiten
     </button>
-    <button (click)="goBack()" class="btn btn-default">
+    <button type="button" (click)="goBack()" class="btn btn-default">
       <i class="flaticon-left-arrow"></i> Zurück
     </button>
 </form>

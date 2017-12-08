@@ -38,7 +38,6 @@ Andere Optionen:
 Ausprobieren / Weiteres Vorgehen:
 
 - JWT Token
-- Was würden wir gernen noch ausbauen? Ionic?
 
 ng build --prod (mode)
 - https://github.com/angular/angular-cli/issues/7118 (Switch to prod)
@@ -46,6 +45,7 @@ ng build --prod (mode)
 - https://github.com/angular/angular-cli/issues/7138
 
 - This did work: "enhanced-resolve": "^3.3.0"
+- Ev. versuchen mit der höhere Version von Angular CLI
 
 Manually solution:
 

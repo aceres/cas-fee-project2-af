@@ -1,13 +1,9 @@
 # Configuration
 
-## GitHub to project 2
+## GitHub for the project 2
 
-https://github.com/aceres/cas-fee-project2
-https://github.com/aceres/cas-fee-project2-af
-
-(Tanja und André)
-
-The user: Tanja should be added!
+https://github.com/aceres/cas-fee-project2 (from June 2017)
+https://github.com/aceres/cas-fee-project2-af (from November 2017)
 
 ## Angular CLI
 
@@ -71,7 +67,7 @@ Administration GUI: https://console.firebase.google.com/project/project2-60db1/o
 
 URL: https://project2-60db1.firebaseio.com/
 
-#### Setup Hosting
+#### Setup Hosting for the Development
 
 npm install -g firebase-tools
 
@@ -82,7 +78,6 @@ Go to the directory: project2/
 (/Users/andre.ceres/Projects/project2)
 
 ng build
-(ng build -prod)
 
 Go to the directory: project2/dist/
 
@@ -101,8 +96,6 @@ a) Writing configuration info to firebase.json...
 b) Writing project information to .firebaserc...
 
 (Firebase initialization complete!)
-
-I still haven't to start with these step:
 
 The CLI will ask what folder to use as the public directory. For our project we want to use the dist/ directory instead of Firebase's default public/ directory. So type in the command line dist.
 
@@ -142,10 +135,6 @@ PRODUCTION
 
 b) firebase use --add
 
-Created (OLD):
-Project: what-to-cook-1
-Alias project: production
-
 Created (NEW):
 Project: manducare-v1
 Alias project: manducare
@@ -159,16 +148,11 @@ ng build --prod
 
 firebase deploy
 
-TODO: Still not working - AOT problem -> Errors korrigieren nach ng build --prod!
+AOT problem -> Errors korrigieren nach ng build --prod!
 
 Otherwise you can use: ng build --prod --aot=false
 ng build --env=prod --aot=false
 
-OLD:
-URL Web App: https://what-to-cook-1.firebaseapp.com
-URL Firebase Console Admin: https://console.firebase.google.com/project/what-to-cook-1/overview
-
-NEW:
 URL Web App: https://manducare-v1.firebaseapp.com
 URL Firebase Console Admin: https://console.firebase.google.com/project/manducare-v1/overview
 
@@ -178,8 +162,6 @@ a) https://firebase.googleblog.com/2016/07/deploy-to-multiple-environments-with.
 b) https://github.com/angular/angular-cli/issues/5429
 
 #### Firebase: Permissions for project
-
-The user: Tanja should be added!
 
 https://console.cloud.google.com/iam-admin/iam/project?project=project2-60db1&authuser=0&consoleReturnUrl=https:%2F%2Fconsole.firebase.google.com%2Fproject%2Fproject2-60db1%2Fanalytics&consoleUI=FIREBASE
 
@@ -221,6 +203,8 @@ FontAwesome is needed for the PrimeNG
 
 npm install font-awesome --save
 
+We have uninstalled Awesome because we decided to use FlatIcon for now.
+
 ### Installation
 
 https://www.npmjs.com/package/angular2-in-memory-web-api
@@ -242,7 +226,26 @@ for the mock data, warm up for beginning Angular 4.
 
 #### Config of Realtime-Database Rules
 
-...
+```javascript
+{
+	"rules": {
+     ".read": true,
+     ".write": true,
+    
+     "recipes": {
+       ".indexOn": ["receipt", "uid", "category", "rating"]
+     },
+       
+     "users": {
+			 ".indexOn": ["uid"]
+     },
+    
+     "favorites": {
+			 ".indexOn": ["uid"]
+     }
+   }
+}
+```
 
 ### Installation LESS (Styling)
 
