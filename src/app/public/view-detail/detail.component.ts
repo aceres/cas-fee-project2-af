@@ -8,6 +8,8 @@ import { AlertComponent } from '../../ngx/alert/alert.component';
 import { RecipeService } from '../../services/recipe.service';
 import { FavoriteService } from '../../services/favorite.service';
 import { AuthService } from '../../services/auth.service';
+import { listLevels } from '../../global/list.levels';
+import { listCuisines } from '../../global/list.cuisines';
 
 @Component({
   selector: 'app-public-recipe-detail',
@@ -26,6 +28,8 @@ export class PublicReceiptDetailComponent implements OnInit {
   public showAddFavorite;
 
   recipeName;
+  levelFullName;
+  cuisineFullName;
 
   // Alert
   @ViewChild('childAlert') public childAlert: AlertComponent;
@@ -73,7 +77,20 @@ export class PublicReceiptDetailComponent implements OnInit {
 
   getRecipe() {
     this.recipeService.getRecipe(this.key)
-        .then(data => this.recipe = data)
+        .then(data =>  {
+            this.recipe = data
+            for (let i = 0; i < listLevels.length; i++) {
+                if (listLevels[i].value === this.recipe.level) {
+                    this.levelFullName = listLevels[i].display;
+                }
+            }
+            for (let i = 0; i < listCuisines.length; i++) {
+                if (listCuisines[i].value === this.recipe.cuisine) {
+                    this.cuisineFullName = listCuisines[i].name;
+                }
+            }
+        }
+        )
         .catch( error => {
             this.childAlert.showAlert('danger', `Keine Verbindung! ` + error);
         })
