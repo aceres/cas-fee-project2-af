@@ -3,6 +3,7 @@
 
 .details {
   background-color: @white;
+  display: flex;
   font-family: inherit;
 
   &__image {
@@ -12,7 +13,7 @@
   &__heading {
     color: @yellow;
     margin-top: 0;
-    padding: 48px 0 0 0;
+    padding: @block-spacer 0 0 0;
     text-align: center;
   }
 
@@ -22,12 +23,10 @@
 }
 
 .meta {
-
   &__container {
+    margin: 0 auto;
     max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 20px;
+    padding: @block-spacer-small;
   }
 
   &__list {
@@ -37,7 +36,7 @@
   }
 
   &__info {
-    margin-left: 10px;
+    margin: 0 0 0 @block-spacer-small;
     min-width: 200px;
   }
 
@@ -61,7 +60,10 @@
 .like {
 
   &-group {
-    padding: 10px 0 50px;
+
+    & ul {
+      padding-left: 0;
+    }
 
     & li {
       display: inline-block;
@@ -88,7 +90,7 @@
     &--favorite {
       &:before {
         font-size: 18px;
-        margin: 0 5px 0 0;
+        margin: 0 0.5*@block-spacer-small 0 0;
       }
     }
   }
@@ -100,9 +102,8 @@
   z-index: 0;
 
   &__heading {
+    .fluid-type(font-size, @min-vw, @max-vw, 30px, 50px);
     color: @green;
-    font-size: 30px;
-    padding: 24px 0;
     text-align: center;
   }
 }
@@ -110,7 +111,7 @@
 .ingredients {
   background: @white;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  margin: 26px auto;
+  margin: @block-spacer auto;
   max-width: 550px;
   min-height: 300px;
   padding: 24px 50px 50px 50px;
@@ -143,17 +144,16 @@
 
   &__heading {
     color: inherit;
-    padding-bottom: 20px;
     text-align: center;
   }
 
   &__item {
     line-height: 25px;
-    padding: 0 20px;
+    padding: 0 @block-spacer;
   }
 
   &__quantity {
-    padding: 0 10px 0 0;
+    padding: 0 @block-spacer-small 0 0;
     text-align: right;
     width: 50px;
   }
@@ -168,7 +168,7 @@
 }
 
 .step {
-  margin: 20px;
+  margin: @block-spacer;
 
   &__number {
     background: transparent;
@@ -180,14 +180,14 @@
     font-size: 32px;
     height: 40px;
     line-height: 34px;
-    margin: 10px 0;
+    margin: @block-spacer-small 0;
     text-align: center;
     width: 40px;
   }
 }
 
 .back {
-  padding: 20px;
+  padding: @block-spacer;
 }
 
 @media (min-width: 568px) {
@@ -203,7 +203,7 @@
   }
 
   .steps {
-    padding: 20px 0;
+    padding: @block-spacer 0;
   }
 }
 
@@ -224,10 +224,6 @@
 
   .meta__container {
     margin: 50px auto;
-  }
-
-  .preparation__heading {
-    padding: 0 0 50px 0;
   }
 
   .ingredients {

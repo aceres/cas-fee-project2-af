@@ -10,13 +10,23 @@ body {
 }
 
 section {
-  padding: 50px 0;
+  .fluid-type(padding-top, @min-vw, @max-vw, 30px, 50px);
+  .fluid-type(padding-bottom, @min-vw, @max-vw, 30px, 50px);
 }
 
 
 h1, h2, h4, h5, h6 {
   color: #5A5A5A;
   font-family: @happy-monkey
+}
+
+h1 {
+  .fluid-type(font-size, @min-vw, @max-vw, 24px, 40px);
+  margin: @block-spacer 0;
+}
+
+h2 {
+  margin: @block-spacer 0 2*@block-spacer 0;
 }
 
 h3 {

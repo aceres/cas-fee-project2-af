@@ -12,12 +12,34 @@
 @sidebar-grey: #f5f5f5;
 
 
+/* Spacer Settings
+-------------------------------------------------- */
+@block-spacer: 25px;
+@block-spacer-small: 10px;
+
+
 /* Font Settings
 -------------------------------------------------- */
 @merri-weather: "Merriweather Sans", Arial, sans-serif;
 @happy-monkey: "Happy Monkey", Arial, sans-serif;
 @baseFontSize: 14px;
 @desktopBaseFontSize: 16px;
+
+@min-vw:		320px;
+@max-vw:		1900px;
+
+.fluid-type(@property, @min-vw, @max-vw, @min-size, @max-size) {
+
+    @{property}: @min-size;
+
+  @media screen and (min-width: @min-vw) {
+      @{property}: calc( @min-size ~" + " unit(@max-size - @min-size) ~" * ((100vw - " @min-vw ~") /" unit(@max-vw - @min-vw) ~")" );
+  }
+
+  @media screen and (min-width: @max-vw) {
+      @{property}: @max-size;
+  }
+}
 
 
 /* Mixins
@@ -32,3 +54,4 @@
   text-align: right;
   width: 50%;
 }
+
