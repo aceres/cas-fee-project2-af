@@ -19,9 +19,13 @@
 
   <div class="form-group">
     <label>Anzahl Personen:</label>
-    <select name="portion" class="form-control" ngModel #recipePortion="ngModel">
+    <select name="portion" class="form-control" ngModel #recipePortion="ngModel" required>
+      <option [ngValue]="null" disabled>Wähle Anzahl Personen</option>
       <option *ngFor="let portion of listPortions" [value]="portion.value">{{portion.display}}</option>
     </select>
+    <div [hidden]="!null" class="alert alert-danger">
+      Anzahl der Personen ist verlangt.
+    </div>
   </div>
 
   <div class="form-group">
@@ -34,23 +38,35 @@
 
   <div class="form-group">
     <label>Schwierigkeitsgrad:</label>
-    <select name="level" class="form-control" ngModel #recipeLevel="ngModel">
-      <option *ngFor="let level of listLevels" [value]="level.value">{{level.display}}</option>
+    <select name="level" class="form-control" ngModel #recipeLevel="ngModel" required>
+      <option [ngValue]="null" disabled>Wähle die Schwierigkeitsgrad</option>
+      <option *ngFor="let level of listLevels" selected="{{this.listLevels[2]}}" [value]="level.value">{{level.display}}</option>
     </select>
+    <div [hidden]="!null" class="alert alert-danger">
+      Schwierigkeitsgrad ist verlangt.
+    </div>
   </div>
 
   <div class="form-group">
     <label>Kategorie:</label>
-    <select name="category" class="form-control" ngModel #recipeCategory="ngModel">
+    <select name="category" class="form-control" ngModel #recipeCategory="ngModel" required>
+      <option [ngValue]="null" disabled>Wähle die Kategorie</option>
       <option *ngFor="let category of listCategories" [value]="category.value">{{category.name}}</option>
     </select>
+    <div [hidden]="!null" class="alert alert-danger">
+      Kategorie ist verlangt.
+    </div>
   </div>
 
   <div class="form-group">
     <label>Länderküche:</label>
-    <select name="cuisine" class="form-control" ngModel #recipeCuisine="ngModel">
+    <select name="cuisine" class="form-control" ngModel #recipeCuisine="ngModel" required>
+      <option [ngValue]="null" disabled>Wähle die Länderküche</option>
       <option *ngFor="let cuisine of listCuisines" [value]="cuisine.value">{{cuisine.name}}</option>
     </select>
+    <div [hidden]="!null" class="alert alert-danger">
+      Länderküche ist verlangt.
+    </div>
   </div>
 </form>
 
