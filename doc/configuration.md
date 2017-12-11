@@ -2,8 +2,8 @@
 
 ## GitHub for the project 2
 
-https://github.com/aceres/cas-fee-project2 (from June 2017)
-https://github.com/aceres/cas-fee-project2-af (from November 2017)
+[https://github.com/aceres/cas-fee-project2 (from June 2017)]
+[https://github.com/aceres/cas-fee-project2-af (from November 2017)]
 
 ## Angular CLI
 
@@ -25,7 +25,7 @@ Navigate to http://localhost:4200/.
 
 ## The official Angular library for Firebase
 
-* https://github.com/angular/angularfire2
+[https://github.com/angular/angularfire2]
 
 ### Installation (local)
 
@@ -37,7 +37,7 @@ npm install firebase angularfire2 --save
 
 #### NO primeNG Anymore!!! We use ngx-bootstrap
 
-* https://www.primefaces.org/primeng/#/
+[https://www.primefaces.org/primeng/#/]
 
 ### Installation (local)
 
@@ -55,13 +55,13 @@ npm install ngx-bootstrap --save
 
 ## Firebase
 
-https://firebase.google.com
+https://firebase.google.com]
 
 ### Firebase Console
 
-* https://firebase.google.com
+[https://firebase.google.com]
 
-* ttps://console.firebase.google.com/?pli=1
+[https://console.firebase.google.com/?pli=1]
 
 ### Configuration
 
@@ -69,11 +69,11 @@ Project name: project2
 
 Country: Switzerland
 
-Administration GUI: https://console.firebase.google.com/project/project2-60db1/overview
+Administration GUI: [https://console.firebase.google.com/project/project2-60db1/overview]
 
 #### Real Database
 
-URL: https://project2-60db1.firebaseio.com/
+URL: [https://project2-60db1.firebaseio.com/]
 
 #### Setup Hosting for the Development
 
@@ -81,7 +81,7 @@ URL: https://project2-60db1.firebaseio.com/
 npm install -g firebase-tools
 `
 
-Domain: https://project2-60db1.firebaseapp.com/ (Type: Default)
+Domain: [https://project2-60db1.firebaseapp.com/] (Type: Default)
 
 Go to the directory: project2/
 

@@ -33,7 +33,7 @@ Mockups for our web application
 #### configuration
 `/doc/configuration.md`
 
-Configuration and Setting for this web application
+Configurations and Settings for this web application
 
 #### experience
 `/doc/experience.md`
@@ -50,24 +50,30 @@ Must have and optional tasks for our applications (requirements)
 ## Installation (on your local machine)
 
 Note: Make sure that you are connected with Internet.
-Be aware that you also have NodeJS on your machine installed.
+Be aware that you also have Git and NodeJS on your machine installed.
 
 ### Clone the web application from the Repo
 
+`
 git clone https://github.com/aceres/cas-fee-project2-af
+`
 
 ### Change the directory for starting the web application
 
+`
 cd cas-fee-project2-af
+`
 
 ### Run the web application
-
+`
 npm run start
+`
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ### Run the unit tests
-
+`
 npm run test
+`
 
 ## Development server (Address Information)
 
@@ -149,7 +155,7 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 ## Running end-to-end tests
 
-It is not implementet yet.
+It is not implemented yet.
 Run: 
 `
 npm run e2e
