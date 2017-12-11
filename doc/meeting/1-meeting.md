@@ -1,15 +1,8 @@
 # 1. Meeting
 
-## 12. August 2017
+## 12. August 2017 (Statusaustausch)
 
-- Projekt 2 - Projektaufstellung nochmals anschauen
-- Projektumfang anschauen und besprechen
-- Milestones setzen
-- Wireframes - Tanja wird dies umsetzen
-- 1. Prototyp mit Angular 4 fortfahren
-- Authentification (Login) auseinandersetzen
-- REST-API definieren
-- SASS anschauen
+- ...
 
 ## Weiteres Vorgehen
 
@@ -27,8 +20,11 @@
 
 #### TODO bei André
 
-- ...
+- LESS für Loginseite implementieren
+- DONE 👌 Kontaktseite erstellen
 
 ## Pendenzen oder Probleme
 
 - ...
+
+## Nächste Meeting am: 14. Oktober 2017

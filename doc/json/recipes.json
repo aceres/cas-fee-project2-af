@@ -1,88 +1,89 @@
-[
-  {
-    "receipt": "Spaghetti Bolognese",
-    "description": "Zauberhaft wie in Tessin...",
-    "user": "Tanja Sennhauser",
-    "insertedDate": 1471865163,
-    "dauer": "200 Minjten",
-    "cuisine": "Italienisch",
-    "menge": "4 Personen",
-    "category": "Hauptspeise",
-    "difficulty": "einfach",
-    "rating": 100,
-    "einkaufsliste": [
-      {
-        "name": "Karotten",
-        "amount": "2"
+{
+  "recipes" : {
+    "-L-fEdTpAOtX2zhtinxM": {
+      "category": "mainCourse",
+      "createdAt": "2017-12-06T09:53:29.677Z",
+      "cuisine": "german",
+      "description": "Nussige Maronen machen aus dem klassischen Semmelknödel etwas ganz Besonderes.",
+      "image": {
+        "key": "-L-fEdTpAOtX2zhtinxM",
+        "name": "knoedelmaronen.jpg",
+        "progress": 100,
+        "url": "https://firebasestorage.googleapis.com/v0/b/manducare-v1.appspot.com/o/recipes%2F-L-fEdTpAOtX2zhtinxM?alt=media&token=77fd4f18-9647-49c1-b664-a87c16231042"
       },
-      {
-        "name": "Pfeffer",
-        "amount": "1 Prise"
-      },
-      {
-        "name": "Hackfleisch",
-        "amount": "400 g"
-      }
-    ],
-    "zubereitenUndKochen": [
-      {
-        "step": 1,
-        "photo": "bild1.svg",
-        "memo": "Zuerst musst man die Pfanne ..."
-      },
-      {
-        "step": 2,
-        "photo": "bild2.svg",
-        "memo": "Danach Zwiebeln dünsten ..."
-      },
-      {
-        "step": 3,
-        "photo": "",
-        "memo": "Achtung ..."
-      }
-    ]
-  },
-  {
-    "receipt": "Spaghetti Carbonara",
-    "description": "Zauberhaft wie in Tessin...",
-    "user": "Tanja Sennhauser",
-    "insertedDate": 1471865163,
-    "dauer": "200 Minjten",
-    "cuisine": "Italienisch",
-    "menge": "4 Personen",
-    "category": "Hauptspeise",
-    "difficulty": "einfach",
-    "rating": 100,
-    "einkaufsliste": [
-      {
-        "name": "Karotten",
-        "amount": "2"
-      },
-      {
-        "name": "Pfeffer",
-        "amount": "1 Prise"
-      },
-      {
-        "name": "Hackfleisch",
-        "amount": "400 g"
-      }
-    ],
-    "zubereitenUndKochen": [
-      {
-        "step": 1,
-        "photo": "bild1.svg",
-        "memo": "Zuerst musst man die Pfanne ..."
-      },
-      {
-        "step": 2,
-        "photo": "bild2.svg",
-        "memo": "Danach Zwiebeln dünsten ..."
-      },
-      {
-        "step": 3,
-        "photo": "",
-        "memo": "Achtung ..."
-      }
-    ]
+      "ingredients": [
+        {
+          "ingredient": " Brötchen (vom Vortag)",
+          "quantity": 250,
+          "unit": "Gramm"
+        },
+        {
+          "ingredient": "Milch",
+          "quantity": 200,
+          "unit": "Milliliter"
+        },
+        {
+          "ingredient": "Maronen (vorgegart, vakuumverpackt)",
+          "quantity": 100,
+          "unit": "Gramm"
+        },
+        {
+          "ingredient": "Petersilie",
+          "quantity": 1,
+          "unit": "Packung"
+        },
+        {
+          "ingredient": "Zwiebel",
+          "quantity": 1,
+          "unit": "Stück"
+        },
+        {
+          "ingredient": "Butter",
+          "quantity": 2,
+          "unit": "Esslöffel"
+        },
+        {
+          "ingredient": "Puderzucker",
+          "quantity": 1.5,
+          "unit": "Esslöffel"
+        },
+        {
+          "ingredient": "Zimt",
+          "quantity": 1,
+          "unit": "Prise"
+        },
+        {
+          "ingredient": " Eier (Grösse M)",
+          "quantity": 2,
+          "unit": "Stück"
+        },
+        {
+          "ingredient": "Salz und Pfeffer",
+          "quantity": 1,
+          "unit": "Prise"
+        }
+      ],
+      "level": "simple",
+      "portion": "6",
+      "prepTime": 45,
+      "rating": 1,
+      "receipt": "Maronen-Semmelknödel",
+      "steps": [
+        {
+          "stepDescription": "Petersilie abzupfen und in den Mixtopf geben, 15 Sekunden / Stufe 5 zerkleinern, herausgeben und Mixtopf säubern. Brötchen vierteln und in den Mixtopf geben, 8 Sekunden / Stufe 5 zerkleinern, umfüllen. Wer es stückiger mag, schneidet sie von Hand in Würfel."
+        },
+        {
+          "stepDescription": "Zwiebel schälen, vierteln und mit den Maronen in den Mixtopf geben, 5 Sekunden / Stufe 5 zerkleinern, runterschieben. Butter zufügen, 3 Minuten / Varoma / Stufe 1 erhitzen, währenddessen mit Puderzucker und 1 Prise Zimt bestäuben."
+        },
+        {
+          "stepDescription": "Milch zufügen und 2 Minuten / 60 Grad erhitzen, zerkleinerte Brötchen, Eier, Salz, Pfeffer und etwas Zimt zugeben und verkneten, 40 Sekunden / Teigstufe. Aus der Masse etwa 6-8 Knödel formen, in den eingefetteten Varoma legen. 600 g Wasser und ½ TL Salz zufügen 40 Minuten / Varoma / Stufe 1 garen."
+        },
+        {
+          "stepDescription": "Herausnehmen, abtropfen lassen und servieren. Knödel evtl. mit Petersilienblättchen, Maronen und geschmolzener Butter garnieren."
+        }
+      ],
+      "uid": "pzt5pwgxFKdC6Qh8oYTJoRsUYRD3",
+      "user": "andre@hsr.ch"
+    }
   }
-]
+}

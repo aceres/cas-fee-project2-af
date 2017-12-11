@@ -1,125 +1,112 @@
-# CURL Documentation and Example
+# CURL - Dokumentaiton und Beispiele
 
-- http://blog.scottlowe.org/2014/02/19/using-curl-to-interact-with-a-restful-api/
-- https://erichonorez.wordpress.com/2013/02/10/how-create-a-rest-api-with-node-js-and-express/
-- http://coenraets.org/blog/2012/10/creating-a-rest-api-using-node-js-express-and-mongodb/
+a) http://blog.scottlowe.org/2014/02/19/using-curl-to-interact-with-a-restful-api/
+b) https://erichonorez.wordpress.com/2013/02/10/how-create-a-rest-api-with-node-js-and-express/
+c) http://coenraets.org/blog/2012/10/creating-a-rest-api-using-node-js-express-and-mongodb/
 
-## Idea of the Sample Data
+## Idee für ein Rezept (Daten)
 
 Rezept: Spaghetti Bolognese
 
 ### Einkaufsliste
 
-500g Hackfleisch
-1 Karotten
+500 Gramm Hackfleisch
+1 Karotte
 1 Flasche Tomatensaft
-Pfeffer
-Salt
+1 Prise Pfeffer
+Etwas Salz
 3 Zwiebeln
 1 Knoblauch
-Oregano
-1kg Spaghetti (Barilla)
+1 Blatt Oregano
+1 Kilogramm Spaghetti (Barilla)
 
 ### Zubereiten und Kochen
 
 Schritt 1
-Foto hochladen
-Memo erfassen
+Zuerst schneiden wir Zwiebeln...
 
 Schritt 2
-Foto hochladen (optional)
-Memo erfassen
+Zwiebeln leicht andunsten
 
-...
+## JSON (Vorstellung für unser Projekt)
 
-## JSON
-
+`
 {
   {
-    "receipt": "Spaghetti Bolognese",
+    "recipe": "Spaghetti Bolognese",
     "description": "Zauberhaft wie in Tessin...",
     "user": "Tanja Sennhauser",
-    "insertedDate": 1471865163,
-    "dauer": "200 Minjten",
+    "createdAt": 1471865163,
+    "prepTime": "200 Minjten",
     "cuisine": "Italienisch",
-    "menge": "4 Personen",
+    "portion": 4,
     "category": "Hauptspeise",
-    "difficulty": "einfach"
+    "level": "einfach"
     "rating": 100,
-    "einkaufsliste": [
+    "ingredients": [
       {
-        "name": "Karotten",
-        "amount": "2"
-      },
-      {
-        "name": "Pfeffer",
-        "amount": "1 Prise"
-      },
-      {
-        "name": "Hackfleisch",
-        "amount": "400 g"
+        "ingredient": "Karotten",
+        "quantity": 2,
+        "unit": "Kilogramm"
       },
       ...
     ],
-    "zubereitenUndKochen": [
+    "steps": [
       {
-        "step": 1,
-        "photo": "bild1.svg",
-        "memo": "Zuerst musst man die Pfanne ..."
-      },
-      {
-        "step": 2,
-        "photo": "bild2.svg",
-        "memo": "Danach Zwiebeln dünsten ..."
-      },
-      {
-        "step": 3,
-        "photo": "",
-        "memo": "Achtung ..."
+        "stepDescription": "Bla bla"
       },
       ...
     ]
   }
 }
+`
 
-## Registration und Login
+## Registration und Login (Vorstellung für unser Projekt)
 
+`
 {
   [
     {
-      "id" "#1",
+      "uid": 1,
       "email": "tanja@hsr.ch",
       "user": "tanja",
       "password": "sdzfi.werudsf.sdfjsd",
-      "vorname": "Tanja",
+      "surname": "Tanja",
       "name": "Sennhauser",
-      "strasse": "Hauptstrasse 23",
-      "plz": "8000",
-      "ort": "Rapperswil"
+      "street": "Hauptstrasse 23",
+      "zip": "8000",
+      "city": "Rapperswil"
     }
   ]
 }
+`
 
-## Menu Art
+## Kategorie
 
+`
 {
-  menuArt: [
+  categories: [
     "Vorspeise", "Hauptspeise", "Dessert", "Beilage", "Frühstück", "Kleine Gerichte"
   ]
 }
+`
 
-## Grade
+## Schwierigkeitsgrad
 
+`
 {
-  schwierigkeitsgrad: [
+  levels: [
     "einfach", "mittel", "schwer"
   ]
 }
+`
 
-## Cuisine
+## Länderküche
 
+`
 {
   cuisine: [
     "Schweizerisch", "Italienisch", "Französisch", "Thailändich"
   ]
 }
+`

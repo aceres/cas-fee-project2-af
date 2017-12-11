@@ -2,10 +2,13 @@ Check JSON via Online whether this JSON is valid: https://jsonformatter.curiousc
 
 ## POST method (create a new object)
 
+`
 curl -H "Accept: application/json" -H "Content-type: application/json" -X POST -d '{"id":10, "receipt": "Test"}' 'https://project2-60db1.firebaseio.com/recipes.json'
+`
 
 ## POST method
 
+`
 curl -X POST -d '{
     "id": 1,
     "receipt": "Spaghetti Bolognese",
@@ -50,7 +53,9 @@ curl -X POST -d '{
       }
     ]
   }' 'https://project2-60db1.firebaseio.com/recipes.json'
+`
   
+`
 curl -X POST -d '{
     "id": 2,
     "receipt": "Spiegelei",
@@ -95,7 +100,9 @@ curl -X POST -d '{
       }
     ]
   }' 'https://project2-60db1.firebaseio.com/recipes.json'
+`
 
+`
 curl -X POST -d '{
    "id": 3,
    "receipt": "Pierogi",
@@ -140,7 +147,9 @@ curl -X POST -d '{
      }
    ]
  }' 'https://project2-60db1.firebaseio.com/recipes.json'
+`
 
+`
 curl -X POST -d '{
   "id": 4,
   "receipt": "Fisch mit Gemüse",
@@ -185,23 +194,34 @@ curl -X POST -d '{
     }
   ]
 }' 'https://project2-60db1.firebaseio.com/recipes.json'
+`
 
 ## DELETE ALL RECIPES method
 
+`
 curl -X DELETE https://project2-60db1.firebaseio.com/recipes.json
+`
 
 ## DELETE ID method
 
+`
 curl -X DELETE https://project2-60db1.firebaseio.com/recipes/-KsQ0GjUlF7ABCu2cIaM.json
+`
 
 ## GET ALL method
 
+`
 curl -i -H "Accept: application/json" -H "Content-Type: application/json" -X GET https://project2-60db1.firebaseio.com/recipes.json
+`
 
 ## GET ID method
 
+`
 curl -i -H "Accept: application/json" -H "Content-Type: application/json" -X GET https://project2-60db1.firebaseio.com/recipes/-Kt1ZtJKSz3liYR3vvev.json
+`
 
 ## PUT method
 
+`
 curl -X PUT -d '{"receipt":"Pierogi"}' https://project2-60db1.firebaseio.com/recipes/-Kt1ZtJKSz3liYR3vvev.json
+`

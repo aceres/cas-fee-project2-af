@@ -2,31 +2,55 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.0.
 
-## Intro
+## Manual
 
-We have doc for the documentation
+We have the folder structure for the documentation, see the folder:
+
+`
+/doc/..
+`
 
 #### json
+`/doc/json`
 
 Analysis for the JSON, Testing with CURLs (POST, PUT)
 
+#### meeting
+`/doc/meeting`
+
+Our meeting protocols - all 2 - 3 weeks.
+
+#### screenshots
+`/doc/screenshots`
+
+Screenshots of our current web application.
+
 #### wireframes
+`/doc/wireframes`
 
 Mockups for our web application
 
 #### configuration
+`/doc/configuration.md`
 
 Configuration and Setting for this web application
 
 #### experience
+`/doc/experience.md`
 
 Experience and reasons for the problem with links
 
+#### todos
+`/doc/todo.md`
+
+Must have and optional tasks for our applications (requirements)
+
 ###
 
-## Installation
+## Installation (on your local machine)
 
 Note: Make sure that you are connected with Internet.
+Be aware that you also have NodeJS on your machine installed.
 
 ### Clone the web application from the Repo
 
@@ -39,18 +63,33 @@ cd cas-fee-project2-af
 ### Run the web application
 
 npm run start
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ### Run the unit tests
 
 npm run test
 
-## Development server
+## Development server (Address Information)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Firebase (Real Database and Hosting)
+`
+https://console.firebase.google.com/project/project2-60db1/overview
+`
+Web
+`
+https://project2-60db1.firebaseapp.com/public
+`
 
-## Development production
+## Production server (Address Information)
 
-...
+Firebase (Real Database and Hosting)
+`
+https://console.firebase.google.com/project/manducare-v1/overview
+`
+Web
+`
+https://manducare-v1.firebaseapp.com/public
+`
 
 ## Code scaffolding
 
@@ -72,7 +111,9 @@ firebase host, the setting is not oriented to the production.
 
 Therefore we need to change the setting manually for deploying to the production host:
 
+`
 /src/environment/environment.ts
+`
 
 Use this configuration for this file below:
 
@@ -91,20 +132,28 @@ Use this configuration for this file below:
 
 See reasons in the file: experience.md:
 
+`
 ng build --prod (mode)
-- https://github.com/angular/angular-cli/issues/7118 (Switch to prod)
-- https://github.com/angular/angular-cli/issues/7113
-- https://github.com/angular/angular-cli/issues/7138
+`
+* https://github.com/angular/angular-cli/issues/7118 (Switch to prod)
+* https://github.com/angular/angular-cli/issues/7113
+* https://github.com/angular/angular-cli/issues/7138
 
 ## Running unit tests
 
-Run: npm run test
+Run:
+`
+npm run test
+`
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
 ## Running end-to-end tests
 
-Not used for now.
-Run: npm run e2e
+It is not implementet yet.
+Run: 
+`
+npm run e2e
+`
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 Before running the tests make sure you are serving the app via `ng serve`.
 
