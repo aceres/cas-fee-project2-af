@@ -13,7 +13,7 @@ We have the folder structure for the documentation, see the folder:
 #### json
 `/doc/json`
 
-Analysis for the JSON, Testing with CURLs (POST, PUT)
+Analysis for the JSON, Testing with CURLs (POST, PUT, ...).
 
 #### meeting
 `/doc/meeting`
@@ -28,22 +28,22 @@ Screenshots of our current web application.
 #### wireframes
 `/doc/wireframes`
 
-Mockups for our web application
+Mockups for our web application.
 
 #### configuration
 `/doc/configuration.md`
 
-Configurations and Settings for this web application
+Configurations and Settings for this web application.
 
 #### experience
 `/doc/experience.md`
 
-Experience and reasons for the problem with links
+Experience and reasons for the problem with links.
 
 #### todos
 `/doc/todo.md`
 
-Must have and optional tasks for our applications (requirements)
+Must have and optional tasks for our applications (requirements).
 
 ###
 
@@ -52,7 +52,7 @@ Must have and optional tasks for our applications (requirements)
 Note: Make sure that you are connected with Internet.
 Be aware that you also have Git and NodeJS on your machine installed.
 
-### Clone the web application from the Repo
+### Clone the web application from the repository
 
 `
 git clone https://github.com/aceres/cas-fee-project2-af
@@ -96,10 +96,6 @@ Web
 `
 https://manducare-v1.firebaseapp.com/public
 `
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
 
 ## Build for the development on firebase host
 
@@ -162,6 +158,10 @@ npm run e2e
 `
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 Before running the tests make sure you are serving the app via `ng serve`.
+
+## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
 
 ## Further help
 
