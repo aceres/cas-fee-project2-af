@@ -9,6 +9,7 @@ import { AlertComponent } from '../../ngx/alert/alert.component';
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { BsModalRef } from 'ngx-bootstrap/modal/modal-options.class';
 import { ModalComponent } from '../../ngx/modal/modal.component';
+import { listLevels } from '../../global/list.levels';
 
 @Component({
   selector: 'app-recipes-list',

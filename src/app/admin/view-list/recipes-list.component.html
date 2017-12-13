@@ -4,8 +4,13 @@
   <input name="searchRecipe" class="form-control" placeholder="Rezept suchen..." [(ngModel)]="searchTerm" id="search-box" />
 </div>
 
+<div *ngIf="(allRecipes | async)?.length==0">
+  No records found. Here the welcome picture
+</div>
+
 <div class="row">
   <div class="col-xs-12 col-sm-6 col-md-3" *ngFor="let recipe of allRecipes | async | filter:searchTerm" (click)="detail(recipe)">
+
     <div class="recipe-list">
       <div class="recipe-list__wrapper">
         <img class="recipe-list__image" src="{{ recipe.image?.url }}" alt="{{ recipe.receipt}}" />
@@ -19,7 +24,10 @@
           <i class="icon flaticon-preptime"></i>{{recipe.prepTime}} min.
         </div>
         <div class="recipe-list__meta-info">
-          <i class="icon flaticon-level"></i>{{recipe.level}}
+          <i class="icon flaticon-level"></i>
+          <span *ngIf="recipe.level === 'simple'">Einfach</span>
+          <span *ngIf="recipe.level === 'medium'">Mittel</span>
+          <span *ngIf="recipe.level === 'difficult'">Schwer</span>
         </div>
         <div class="recipe-list__meta-info">
           <span class="icon flaticon-like">{{recipe.rating}}</span>
