@@ -1,4 +1,4 @@
-# Schulprojekt: Projekt 2 (Manducare Web Application)
+# Schulprojekt: Projekt 2 (Manducare Web Application - www.manducare.ch)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.0.
 
@@ -103,6 +103,12 @@ Web App on Production Modus
 
 `
 https://manducare-v1.firebaseapp.com/public
+`
+
+or
+
+`
+https://www.manducare.ch
 `
 
 ## Build for the development modus on firebase host
