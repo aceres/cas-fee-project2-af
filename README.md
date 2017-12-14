@@ -102,13 +102,13 @@ https://console.firebase.google.com/project/manducare-v1/overview
 Web App on Production Modus
 
 `
-http://manducare-v1.firebaseapp.com/public
+https://manducare-v1.firebaseapp.com/public
 `
 
 or
 
 `
-https://www.manducare.ch
+http://www.manducare.ch
 `
 
 ## Build for the development modus on firebase host
