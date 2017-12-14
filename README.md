@@ -1,4 +1,4 @@
-# Schulprojekt: Projekt 2
+# Schulprojekt: Projekt 2 (Manducare Web Application)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.0.
 
@@ -18,12 +18,12 @@ Analysis for the JSON, Testing with CURLs (POST, PUT, ...).
 #### meeting
 `/doc/meeting`
 
-Our meeting protocols - all 2 - 3 weeks.
+Our meeting protocols were all 2 - 3 weeks (shared status).
 
 #### screenshots
 `/doc/screenshots`
 
-Screenshots of our current web application.
+Screenshots of our current web application (Desktop and mobile version).
 
 #### wireframes
 `/doc/wireframes`
@@ -65,12 +65,24 @@ cd cas-fee-project2-af
 `
 
 ### Run the web application
+
 `
 npm run start
 `
+
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+## Demo
+
+User: demo@hsr.ch
+Password: *********
+
+(Write us for the demo login password)
+
+## Do more with our Web Application
+
 ### Run the unit tests
+
 `
 npm run test
 `
@@ -78,10 +90,13 @@ npm run test
 ## Development server (Address Information)
 
 Firebase (Real Database and Hosting)
+
 `
 https://console.firebase.google.com/project/project2-60db1/overview
 `
+
 Web
+
 `
 https://project2-60db1.firebaseapp.com/public
 `
@@ -89,10 +104,13 @@ https://project2-60db1.firebaseapp.com/public
 ## Production server (Address Information)
 
 Firebase (Real Database and Hosting)
+
 `
 https://console.firebase.google.com/project/manducare-v1/overview
 `
+
 Web
+
 `
 https://manducare-v1.firebaseapp.com/public
 `
@@ -101,15 +119,13 @@ https://manducare-v1.firebaseapp.com/public
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Build for the development on firebase host
+## Build for the production on firebase host
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-Use the `-prod` flag for a production build.
+Run `ng build -prod --aot=false` to build the project. The build artifacts will be stored in the `dist/` directory.
 
 Note: 
 
-After running this command: `ng build -prod --aot=false` and deploying the build `dist` directory to the
-firebase host, the setting is not oriented to the production.
+After running this command: `ng build -prod --aot=false` the environment setting will not be oriented for the production.
 
 Therefore we need to change the setting manually for deploying to the production host:
 
@@ -117,7 +133,7 @@ Therefore we need to change the setting manually for deploying to the production
 /src/environment/environment.ts
 `
 
-Use this configuration for this file below:
+Use this configuration for the file above manually:
 
 `export const environment = {
   production: true,
@@ -132,30 +148,31 @@ Use this configuration for this file below:
   apiUrl: 'https://manducare-v1.firebaseio.com/'
 };`
 
-See reasons in the file: experience.md:
 
-`
-ng build --prod (mode)
-`
-* https://github.com/angular/angular-cli/issues/7118 (Switch to prod)
-* https://github.com/angular/angular-cli/issues/7113
-* https://github.com/angular/angular-cli/issues/7138
+Problem: Switching to prod with `ng build --prod`
+
+See reasons for the bug in the file: experience.md:
+
+* [Issue 1](https://github.com/angular/angular-cli/issues/7118)
+* [Issue 2](https://github.com/angular/angular-cli/issues/7113)
+* [Issue 3](https://github.com/angular/angular-cli/issues/7138)
 
 ## Running unit tests
 
-Run:
 `
 npm run test
 `
+
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
 ## Running end-to-end tests
 
 It is not implemented yet.
-Run: 
+
 `
 npm run e2e
 `
+
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 Before running the tests make sure you are serving the app via `ng serve`.
 
@@ -166,3 +183,51 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Web Application structure
+
+### admin
+
+...
+
+### global
+
+...
+
+### ngx
+
+...
+
+### pipes
+
+...
+
+### public
+
+...
+
+### services
+
+...
+
+### assets
+
+#### flaticon
+
+...
+
+#### img
+
+...
+
+#### javascript
+
+...
+
+#### js
+
+...
+
+#### stylesheets
+
+...
