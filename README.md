@@ -30,17 +30,17 @@ Screenshots of our current web application (Desktop and mobile version).
 
 Mockups for our web application.
 
-#### configuration
+##### configuration
 `/doc/configuration.md`
 
 Configurations and Settings for this web application.
 
-#### experience
+##### experience
 `/doc/experience.md`
 
 Experience and reasons for the problem with links.
 
-#### todos
+##### todos
 `/doc/todo.md`
 
 Must have and optional tasks for our applications (requirements).
