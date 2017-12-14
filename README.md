@@ -102,7 +102,7 @@ https://console.firebase.google.com/project/manducare-v1/overview
 Web App on Production Modus
 
 `
-https://manducare-v1.firebaseapp.com/public
+http://manducare-v1.firebaseapp.com/public
 `
 
 or
