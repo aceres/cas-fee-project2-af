@@ -42,11 +42,6 @@ export class AllRecipesListComponent implements OnInit {
       this.allRecipes = this.db.list('/recipes');
   }
 
-  public pageChanged(event: any): void {
-    console.log('Page changed to: ' + event.page);
-    console.log('Number items per page: ' + event.itemsPerPage);
-  }
-
   detail(recipe): void {
     this.router.navigate(['/admin/recipe-detail', recipe.$key]);
   }

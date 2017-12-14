@@ -18,11 +18,9 @@ export class AuthService {
       .auth
       .createUserWithEmailAndPassword(email, password)
       .then(response => {
-        console.log('Success!', response);
         return response;
       })
       .catch(error => {
-        console.log('Something went wrong:', error.message);
         return error;
       });
   }
@@ -37,11 +35,9 @@ export class AuthService {
       .auth
       .signInWithEmailAndPassword(email, password)
       .then(response => {
-        console.log('Nice, it worked!');
         return response;
       })
       .catch(error => {
-        console.log('Something went wrong:', error.message);
         return error;
       });
   }

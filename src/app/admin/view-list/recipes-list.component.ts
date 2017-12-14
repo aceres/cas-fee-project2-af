@@ -9,7 +9,6 @@ import { AlertComponent } from '../../ngx/alert/alert.component';
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { BsModalRef } from 'ngx-bootstrap/modal/modal-options.class';
 import { ModalComponent } from '../../ngx/modal/modal.component';
-import { listLevels } from '../../global/list.levels';
 
 @Component({
   selector: 'app-recipes-list',
@@ -70,11 +69,6 @@ export class RecipesListComponent implements OnInit {
               equalTo: this.authService.getUid().uid
           }
       });
-  }
-
-  public pageChanged(event: any): void {
-    console.log('Page changed to: ' + event.page);
-    console.log('Number items per page: ' + event.itemsPerPage);
   }
 
   detail(recipe): void {

@@ -33,7 +33,6 @@ export class PublicComponent {
         })
         .subscribe(item => {
             this.randomRecipe = item[0];
-            console.log('randomRecipe: ', this.randomRecipe);
         })
     }
 

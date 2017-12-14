@@ -4,61 +4,49 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Manual
 
-We have the folder structure for the documentation, see the folder:
+We have the folder structure for the documentation, see the folder `/doc/..`:
 
-`
-/doc/..
-`
-
-#### json
-`/doc/json`
+`/doc/json/..`
 
 Analysis for the JSON, Testing with CURLs (POST, PUT, ...).
 
-#### meeting
-`/doc/meeting`
+`/doc/meeting/..`
 
 Our meeting protocols were all 2 - 3 weeks (shared status).
 
-#### screenshots
-`/doc/screenshots`
+`/doc/screenshots/..`
 
 Screenshots of our current web application (Desktop and mobile version).
 
-#### wireframes
-`/doc/wireframes`
+`/doc/wireframes/..`
 
 Mockups for our web application.
 
-##### configuration
 `/doc/configuration.md`
 
 Configurations and Settings for this web application.
 
-##### experience
 `/doc/experience.md`
 
 Experience and reasons for the problem with links.
 
-##### todos
 `/doc/todo.md`
 
-Must have and optional tasks for our applications (requirements).
+Must have requirement and optional tasks for our web applications.
 
 ###
 
-## Installation (on your local machine)
+## Installation for local use and development
 
-Note: Make sure that you are connected with Internet.
-Be aware that you also have Git and NodeJS on your machine installed.
+Note: Make sure that you are connected with Internet. You also need [Git](https://git-scm.com/downloads) and [NodeJS](https://nodejs.org/en/download/) on your machine installed.
 
-### Clone the web application from the repository
+### Clone the repository from the GitHub
 
 `
 git clone https://github.com/aceres/cas-fee-project2-af
 `
 
-### Change the directory for starting the web application
+### Switch the directory for starting the web application
 
 `
 cd cas-fee-project2-af
@@ -72,20 +60,22 @@ npm run start
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Demo
+## Demo (Login)
 
 User: demo@hsr.ch
 Password: *********
 
-(Write us for the demo login password)
+(Write us via e-mail: info@manducare.ch for getting the demo login and password)
 
-## Do more with our Web Application
+## Development
 
 ### Run the unit tests
 
 `
 npm run test
 `
+
+## Deployment
 
 ## Development server (Address Information)
 
@@ -95,7 +85,7 @@ Firebase (Real Database and Hosting)
 https://console.firebase.google.com/project/project2-60db1/overview
 `
 
-Web
+Web App on Development Modus
 
 `
 https://project2-60db1.firebaseapp.com/public
@@ -109,17 +99,17 @@ Firebase (Real Database and Hosting)
 https://console.firebase.google.com/project/manducare-v1/overview
 `
 
-Web
+Web App on Production Modus
 
 `
 https://manducare-v1.firebaseapp.com/public
 `
 
-## Build for the development on firebase host
+## Build for the development modus on firebase host
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Build for the production on firebase host
+## Build for the production modus on firebase host
 
 Run `ng build -prod --aot=false` to build the project. The build artifacts will be stored in the `dist/` directory.
 
@@ -127,7 +117,7 @@ Note:
 
 After running this command: `ng build -prod --aot=false` the environment setting will not be oriented for the production.
 
-Therefore we need to change the setting manually for deploying to the production host:
+Therefore we need to change the setting manually for deploying with correct setting to the production host:
 
 `
 /src/environment/environment.ts
@@ -156,6 +146,8 @@ See reasons for the bug in the file: experience.md:
 * [Issue 1](https://github.com/angular/angular-cli/issues/7118)
 * [Issue 2](https://github.com/angular/angular-cli/issues/7113)
 * [Issue 3](https://github.com/angular/angular-cli/issues/7138)
+
+See also our experience in the file: experience.md
 
 ## Running unit tests
 
@@ -188,46 +180,46 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ### admin
 
-...
+The scope for the admin like: view-login, view-list, view-search, ...
 
 ### global
 
-...
+The scope for getting the static list like 'simple', 'medium' and 'difficult' of the cooking level.
 
 ### ngx
 
-...
+The scope of [ngx-bootstrap](https://valor-software.com/ngx-bootstrap/#/getting-started). We use alert and modal components.
 
 ### pipes
 
-...
+The scope of collected pipes.
 
 ### public
 
-...
+The scope for the public like: view-search, view-register, view-page, view-footer, view-detail...
 
 ### services
 
-...
+The scope for services, models and global error.
 
 ### assets
 
-#### flaticon
+`/assets/flaticon/..`
 
-...
+We use FlatIcon for this project.
 
-#### img
+`/assets/img/..`
 
-...
+There are collected images to see.
 
-#### javascript
+`/assets/javascript/..`
 
-...
+All JavaScript files are to see in this folder
 
-#### js
+`/assets/js/..`
 
-...
+Speical JavaScript files for IE10 bugs.
 
-#### stylesheets
+`/assets/stylesheet/..`
 
-...
+All stylesheet files.

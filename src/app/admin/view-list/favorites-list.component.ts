@@ -28,7 +28,6 @@ export class FavoritesListComponent implements OnInit {
   ) {}
 
   remove(id): void {
-    console.log('id: ', id);
     this.favoriteService
       .remove(id)
       .then(() => {

@@ -127,7 +127,6 @@ export class RecipeService {
   }
 
   remove(recipe): Promise<void> {
-    console.log('Remove' , recipe.$key);
     const url = `${this.recipesUrl}/${recipe.$key}.json`;
     return this.http.delete(url, {headers: this.headers})
       .toPromise()

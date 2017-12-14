@@ -109,7 +109,6 @@ export class PublicReceiptDetailComponent implements OnInit {
   rateRecipe() {
     const databaseRef = this.db.object('recipes').$ref.child(this.key).child('rating');
     databaseRef.transaction(function(rating) {
-      console.log('clicked');
       if (rating || (rating === 0)) {
         rating++;
       }
