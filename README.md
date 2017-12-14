@@ -24,7 +24,7 @@ Mockups for our web application.
 
 `/doc/configuration.md`
 
-Configurations and Settings for this web application.
+Configurations, Deployments and Settings for the Development of this web application.
 
 `/doc/experience.md`
 
