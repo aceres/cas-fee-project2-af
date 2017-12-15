@@ -12,9 +12,7 @@
 
 ### Installation
 
-`
-npm install -g @angular/cli
-`
+`npm install -g @angular/cli`
 
 `
 ng new project2
@@ -30,9 +28,7 @@ Navigate to http://localhost:4200/.
 
 ### Installation (local)
 
-`
-npm install firebase angularfire2 --save
-`
+`npm install firebase angularfire2 --save`
 
 ## Style Framework
 
@@ -42,20 +38,14 @@ npm install firebase angularfire2 --save
 
 ### Installation (local)
 
-`
-npm install primeng --save
-`
+`npm install primeng --save`
 
 Note: This has been uninstalled!
-`
-npm uninstall primeng -S --save
-`
+`npm uninstall primeng -S --save`
 
-#### ngx-bootstap
+#### ngx-bootstrap
 
-`
-npm install ngx-bootstrap --save
-`
+`npm install ngx-bootstrap --save`
 
 ## Firebase
 
@@ -79,9 +69,7 @@ URL: [https://project2-60db1.firebaseio.com/]
 
 #### Setup Hosting for the Development
 
-`
-npm install -g firebase-tools
-`
+`npm install -g firebase-tools`
 
 Domain: [https://project2-60db1.firebaseapp.com/] (Type: Default)
 
@@ -89,24 +77,18 @@ Go to the directory: project2/
 
 `/Users/andre.ceres/Projects/project2`
 
-`
-ng build
-`
+`ng build`
 
 Go to the directory: project2/dist/
 
 Login to your Firebase account:
 
-`
-firebase login
-`
+`firebase login`
 
 (Allow Firebase to collect anonymous CLI usage information? Yes)
 (Firebase CLI Login Successful)
 
-`
-firebase init
-`
+`firebase init`
 
 Default Firebase project for this directory: project2/ (project2-60db1)
 
@@ -122,9 +104,8 @@ b) Configure as a single-page app (rewrite all urls to /index.html)? Yes
 c) File dist//index.html already exists. Overwrite? No
 d) Skipping write of dist//index.html
 
-`
-firebase deploy
-`
+`firebase deploy`
+
 (firebase deploy --only hosting)
 
 Deploying to 'project2-60db1'...
@@ -139,10 +120,9 @@ Google Cloud Platform (Dashboard): https://console.cloud.google.com/home/dashboa
 
 #### Firebase: Deployment
 
-DEVELOPMENT
-***********
+##### DEVELOPMENT
 
-a) firebase use
+`firebase use`
 
 Active Project: default (project2-60db1)
 
@@ -150,19 +130,16 @@ firebase use default or firebase use project2-60db1
 
 From 15th November: We have a new name: development (project2-60db1)
 
-PRODUCTION
-**********
+##### PRODUCTION
 
-b) firebase use --add
+`firebase use --add`
 
 Created new project:
 
 Project: manducare-v1
 Alias project: manducare
 
-`
-firebase use
-`
+`firebase use`
 
 (Note: environment.prod.ts is configured)
 
@@ -171,13 +148,10 @@ We also can serve in the production environment
 ng build --prod
 `
 
-`
-firebase deploy
-`
+`firebase deploy`
 
-AOT problem -> Errors korrigieren nach ng build --prod!
+If AOT errors after building is to see, you can use:
 
-Otherwise you can use: 
 `
 ng build --prod --aot=false
 ng build --env=prod --aot=false
@@ -193,21 +167,19 @@ More information:
 
 #### Firebase: Permissions for project
 
-* https://console.cloud.google.com/iam-admin/iam/project?project=project2-60db1&authuser=0&consoleReturnUrl=https:%2F%2Fconsole.firebase.google.com%2Fproject%2Fproject2-60db1%2Fanalytics&consoleUI=FIREBASE
+[https://console.cloud.google.com/iam-admin/iam/project?project=project2-60db1&authuser=0&consoleReturnUrl=https:%2F%2Fconsole.firebase.google.com%2Fproject%2Fproject2-60db1%2Fanalytics&consoleUI=FIREBASE](Permission)
 
 ### More dependencies for this project
 
 For the authentication:
 
-`
-npm install promise-polyfill --save-exact
-`
+`npm install promise-polyfill --save-exact`
 
-* https://alligator.io/angular/firebase-authentication-angularfire2/
+[https://alligator.io/angular/firebase-authentication-angularfire2/](Firebase Auth AngularFire2)
 
 ### Style with primeNG
 
-#### NO primeNG Anymore!!! We use ngx-bootstrap
+Note: No primeNG anymore! We use ngx-bootstrap for our project
 
 The file: angular-cli.json
 
@@ -221,25 +193,20 @@ Add these lines:
 ]
 ```
 
-Rebuild and reserve the web application then!
+Rebuild and reserve the web application then.
 
-(npm uninstall primeng -S --save)
+`npm uninstall primeng -S --save`
 
-#### ngx-bootstap
+#### ngx-bootstrap
 
-`
-npm install ngx-bootstrap --save
-`
+`npm install ngx-bootstrap --save`
 
-### Installation: font-aewsome (locally and not globally)
+### Installation: font-awesome (locally and not globally)
 
-FontAwesome is needed for the PrimeNG
+FontAwesome was needed for the PrimeNG.
+Note: We have uninstalled Awesome because we decided to use FlatIcon for now.
 
-`
-npm install font-awesome --save
-`
-
-We have uninstalled Awesome because we decided to use FlatIcon for now.
+`npm install font-awesome --save`
 
 ### Installation
 
@@ -253,7 +220,6 @@ for the mock data, warm up for beginning Angular 4.
 
 ### Realtime-Database Rules (Original Version) - Firebase
 
-
 ```
 	"rules": {
      ".read": "auth != null",
@@ -261,7 +227,7 @@ for the mock data, warm up for beginning Angular 4.
    }
 ```
 
-#### Config of Realtime-Database Rules
+#### Realtime-Database - Our rules
 
 ```
 {
@@ -283,9 +249,7 @@ for the mock data, warm up for beginning Angular 4.
 
 ### Installation LESS (Styling)
 
-`
-npm install less --save
-`
+`npm install less --save`
 
 In the config file: `.angular-cli.json`
 
@@ -302,8 +266,6 @@ In the config file: `.angular-cli.json`
 
 ### Installation of ng2-file-upload (Upload images)
 
-`
-npm install ng2-file-upload --save
-`
+`npm install ng2-file-upload --save`
 
 [https://github.com/valor-software/ng2-file-upload](ng2-file-upload)
