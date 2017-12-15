@@ -7,15 +7,15 @@ Highlights / Leistungen:
 * Schritte (in etappenweise, Proof of Concept, Einrichtung, Firebase, ...)
 * AuthGuard / Registration (Login) / Rollen
 * Registration Überlegung
+* Polyfills IE11
+
+* Screenshots machen
+
 * AngularFire / Angular - Firebase (Vermischung) - Services
 * Testing - parallel schreiben und nicht am Schluss
 * AOT spät entdeckt
-* Screenshots machen
 * Ping -> IP -> Like Favorite
-* SEO Analytics
-* Polyfills IE11
 * package-lock.json (https://github.com/npm/npm/issues/16866)
-* List of problems (with Tutor)
 
 Problem beim 2. Crash
 =====================
@@ -49,7 +49,3 @@ ng build --prod (mode)
 
 * This did work: "enhanced-resolve": "^3.3.0"
 * Ev. versuchen mit der höhere Version von Angular CLI
-
-Manually solution:
-
-Documentation: "/environments/environment.ts" anpassen
