@@ -38,7 +38,7 @@ Must have requirements and optional tasks for our project.
 
 ## Installation for local use and development
 
-Note: Make sure that you are connected with Internet. You also need [Git](https://git-scm.com/downloads) and [NodeJS](https://nodejs.org/en/download/) on your machine installed.
+:exclamation: Note: Make sure that you are connected with Internet. You also need [Git](https://git-scm.com/downloads) and [NodeJS](https://nodejs.org/en/download/) on your machine installed.
 
 ### Clone the repository from the GitHub
 
