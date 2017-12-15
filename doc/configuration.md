@@ -2,12 +2,13 @@
 
 ## GitHub for the project 2
 
-[https://github.com/aceres/cas-fee-project2 (from June 2017)]
-[https://github.com/aceres/cas-fee-project2-af (from November 2017)]
+[https://github.com/aceres/cas-fee-project2](GitHub Project 2) (from June 2017)
+
+[https://github.com/aceres/cas-fee-project2-af](GitHub Project 2) (from November 2017)
 
 ## Angular CLI
 
-[https://github.com/angular/angular-cli]
+[https://github.com/angular/angular-cli](Angular CLI)
 
 ### Installation
 
@@ -25,7 +26,7 @@ Navigate to http://localhost:4200/.
 
 ## The official Angular library for Firebase
 
-[https://github.com/angular/angularfire2]
+[https://github.com/angular/angularfire2](AngularFire2)
 
 ### Installation (local)
 
@@ -37,7 +38,7 @@ npm install firebase angularfire2 --save
 
 #### NO primeNG Anymore!!! We use ngx-bootstrap
 
-[https://www.primefaces.org/primeng/#/]
+[https://www.primefaces.org/primeng/#/](PrimeNG)
 
 ### Installation (local)
 
@@ -45,7 +46,10 @@ npm install firebase angularfire2 --save
 npm install primeng --save
 `
 
-(npm uninstall primeng -S --save)
+Note: This has been uninstalled!
+`
+npm uninstall primeng -S --save
+`
 
 #### ngx-bootstap
 
@@ -55,13 +59,11 @@ npm install ngx-bootstrap --save
 
 ## Firebase
 
-[https://firebase.google.com]
+[https://firebase.google.com](Firebase)
 
 ### Firebase Console
 
-[https://firebase.google.com]
-
-[https://console.firebase.google.com/?pli=1]
+[https://console.firebase.google.com/?pli=1](Firebase Console)
 
 ### Configuration
 
@@ -69,7 +71,7 @@ Project name: project2
 
 Country: Switzerland
 
-Administration GUI: [https://console.firebase.google.com/project/project2-60db1/overview]
+Administration GUI: [https://console.firebase.google.com/project/project2-60db1/overview](Firebase Admin GUI)
 
 #### Real Database
 
@@ -241,7 +243,7 @@ We have uninstalled Awesome because we decided to use FlatIcon for now.
 
 ### Installation
 
-[https://www.npmjs.com/package/angular2-in-memory-web-api]
+[https://www.npmjs.com/package/angular2-in-memory-web-api](Angular-In-Memory-Web-API)
 
 For the temporary solution. An in-memory web api for Angular demos and tests.
 It will intercept HTTP requests that would otherwise go to the remote server via the Angular XHRBackend service.
@@ -298,10 +300,10 @@ In the config file: `.angular-cli.json`
   }
 ```
 
-### Installation of ng2-file-upload (upload images for example)
+### Installation of ng2-file-upload (Upload images)
 
 `
 npm install ng2-file-upload --save
 `
 
-[https://github.com/valor-software/ng2-file-upload]
+[https://github.com/valor-software/ng2-file-upload](ng2-file-upload)
