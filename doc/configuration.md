@@ -55,7 +55,7 @@ npm install ngx-bootstrap --save
 
 ## Firebase
 
-https://firebase.google.com]
+[https://firebase.google.com]
 
 ### Firebase Console
 

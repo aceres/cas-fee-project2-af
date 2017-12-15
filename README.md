@@ -76,8 +76,6 @@ Password: :fu:
 npm run test
 `
 
-## Deployment
-
 ## Development server (Address Information)
 
 Firebase (Real Database and Hosting)
@@ -155,7 +153,7 @@ and run this before to deploy on the firebase production host:
 
 Problem: Switching to prod with `ng build --prod`
 
-See also reasons for the bug in the file: experience.md:
+See also reasons for the bug in the file: `/doc/experience.md`
 
 * [Issue 1](https://github.com/angular/angular-cli/issues/7118)
 * [Issue 2](https://github.com/angular/angular-cli/issues/7113)
