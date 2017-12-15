@@ -85,7 +85,7 @@ Domain: [https://project2-60db1.firebaseapp.com/] (Type: Default)
 
 Go to the directory: project2/
 
-(/Users/andre.ceres/Projects/project2)
+`/Users/andre.ceres/Projects/project2`
 
 `
 ng build
@@ -153,7 +153,8 @@ PRODUCTION
 
 b) firebase use --add
 
-Created (NEW):
+Created new project:
+
 Project: manducare-v1
 Alias project: manducare
 
@@ -180,8 +181,8 @@ ng build --prod --aot=false
 ng build --env=prod --aot=false
 `
 
-URL Web App: https://manducare-v1.firebaseapp.com
-URL Firebase Console Admin: https://console.firebase.google.com/project/manducare-v1/overview
+Web App: https://manducare-v1.firebaseapp.com
+Firebase Console Admin: https://console.firebase.google.com/project/manducare-v1/overview
 
 More information:
 
@@ -200,7 +201,7 @@ For the authentication:
 npm install promise-polyfill --save-exact
 `
 
-URL: https://alligator.io/angular/firebase-authentication-angularfire2/
+* https://alligator.io/angular/firebase-authentication-angularfire2/
 
 ### Style with primeNG
 
@@ -210,17 +211,15 @@ The file: angular-cli.json
 
 Add these lines:
 
-`
+```
 "styles": [
   "../node_modules/primeng/resources/primeng.min.css",
   "../node_modules/primeng/resources/themes/omega/theme.css",
   "styles.css"
 ]
-`
+```
 
 Rebuild and reserve the web application then!
-
---
 
 (npm uninstall primeng -S --save)
 
@@ -242,7 +241,7 @@ We have uninstalled Awesome because we decided to use FlatIcon for now.
 
 ### Installation
 
-https://www.npmjs.com/package/angular2-in-memory-web-api
+[https://www.npmjs.com/package/angular2-in-memory-web-api]
 
 For the temporary solution. An in-memory web api for Angular demos and tests.
 It will intercept HTTP requests that would otherwise go to the remote server via the Angular XHRBackend service.
@@ -252,18 +251,17 @@ for the mock data, warm up for beginning Angular 4.
 
 ### Realtime-Database Rules (Original Version) - Firebase
 
-`
-{
+
+```
 	"rules": {
      ".read": "auth != null",
      ".write": "auth != null"
    }
-}
-`
+```
 
 #### Config of Realtime-Database Rules
 
-`
+```
 {
 	"rules": {
      ".read": true,
@@ -279,7 +277,7 @@ for the mock data, warm up for beginning Angular 4.
      }
    }
 }
-`
+```
 
 ### Installation LESS (Styling)
 
@@ -287,9 +285,9 @@ for the mock data, warm up for beginning Angular 4.
 npm install less --save
 `
 
-Config: .angular-cli.json
+In the config file: `.angular-cli.json`
 
-`
+```
 "styles": [
         ...,
         "styles.less"
@@ -298,7 +296,7 @@ Config: .angular-cli.json
     "styleExt": "less",
     "component": {}
   }
-`
+```
 
 ### Installation of ng2-file-upload (upload images for example)
 
@@ -306,4 +304,4 @@ Config: .angular-cli.json
 npm install ng2-file-upload --save
 `
 
-https://github.com/valor-software/ng2-file-upload
+[https://github.com/valor-software/ng2-file-upload]
