@@ -1,4 +1,4 @@
-# Schulprojekt: Projekt 2 (www.manducare.ch :fork_and_knife:)
+# Schulprojekt: Projekt 2 (www.manducare.ch) :yum:
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.0.
 
@@ -118,11 +118,11 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Build for the production modus on firebase host
 
-Run `ng build -prod --aot=false` to build the project. The build artifacts will be stored in the `dist/` directory. :flushed:
+Run `ng build -prod --aot=false` to build the project. The build artifacts will be stored in the `dist/` directory. 
 
 Note: 
 
-After running this command: `ng build -prod --aot=false` the environment setting will not be oriented for the production.
+After running this command: `ng build -prod --aot=false` the environment setting will not be oriented for the production. :flushed:
 
 Therefore we need to change the setting manually for deploying with correct setting to the production host:
 
@@ -146,6 +146,10 @@ export const environment = {
   apiUrl: 'https://manducare-v1.firebaseio.com/'
 };
 ```
+
+and run this before to deploy on the firebase production host:
+
+`ng build -prod --aot=false`
 
 :thumbsup:
 
