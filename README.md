@@ -1,4 +1,4 @@
-# Schulprojekt: Projekt 2 (Manducare Web Application - www.manducare.ch)
+# Schulprojekt: Projekt 2 (Web Application - www.manducare.ch)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.0.
 
@@ -20,19 +20,19 @@ Screenshots of our current web application (Desktop and mobile version).
 
 `/doc/wireframes/..`
 
-Mockups for our web application.
+Wireframes (Mockups) for our web application.
 
 `/doc/configuration.md`
 
-Configurations, Deployments and Settings for the Development of this web application.
+Configurations, deployments and settings for the development of this project.
 
 `/doc/experience.md`
 
-Experience and reasons for the problem with links.
+Experience and reasons for the problem including links.
 
 `/doc/todo.md`
 
-Must have requirement and optional tasks for our web applications.
+Must have requirements and optional tasks for our project.
 
 ###
 
@@ -63,9 +63,10 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 ## Demo (Login)
 
 User: demo@hsr.ch
-Password: *********
 
-(Write us via e-mail: info@manducare.ch for getting the demo login and password)
+Password: ****
+
+(Write us via e-mail: info@manducare.ch for getting the password of the demo login)
 
 ## Development
 
