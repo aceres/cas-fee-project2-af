@@ -32,7 +32,7 @@ Navigate to http://localhost:4200/.
 
 ## Style Framework
 
-#### NO primeNG Anymore!!! We use ngx-bootstrap
+#### No primeNG anymore! We use ngx-bootstrap instead.
 
 [PrimeNG](https://www.primefaces.org/primeng/#/)
 
@@ -73,13 +73,13 @@ URL: [https://project2-60db1.firebaseio.com/]
 
 Domain: [https://project2-60db1.firebaseapp.com/] (Type: Default)
 
-Go to the directory: project2/
+Go to the local workspace directory: project2/
 
-`/Users/andre.ceres/Projects/project2`
+`../projects/project2`
 
 `ng build`
 
-Go to the directory: project2/dist/
+Find the directory then: `../project2/dist/`
 
 Login to your Firebase account:
 
@@ -90,7 +90,7 @@ Login to your Firebase account:
 
 `firebase init`
 
-Default Firebase project for this directory: project2/ (project2-60db1)
+Default Firebase project for this directory: `../project2/` (project2-60db1)
 
 a) Writing configuration info to firebase.json...
 b) Writing project information to .firebaserc...
@@ -114,9 +114,9 @@ i  hosting: preparing dist/ directory for upload...
 ✔  hosting: 8 files uploaded successfully
 i  starting release process (may take several minutes)...
 
-Project Console: https://console.firebase.google.com/project/project2-60db1/overview
-Hosting URL: https://project2-60db1.firebaseapp.com
-Google Cloud Platform (Dashboard): https://console.cloud.google.com/home/dashboard?project=project2-60db1
+* Project Console: https://console.firebase.google.com/project/project2-60db1/overview
+* Hosting URL: https://project2-60db1.firebaseapp.com
+* Google Cloud Platform (Dashboard): https://console.cloud.google.com/home/dashboard?project=project2-60db1
 
 #### Firebase: Deployment
 
@@ -144,6 +144,7 @@ Alias project: manducare
 (Note: environment.prod.ts is configured)
 
 We also can serve in the production environment
+
 `
 ng build --prod
 `
@@ -210,7 +211,7 @@ Note: We have uninstalled Awesome because we decided to use FlatIcon for now.
 
 ### Installation
 
-[Angular-In-Memory-Web-API]()https://www.npmjs.com/package/angular2-in-memory-web-api)
+[Angular-In-Memory-Web-API](https://www.npmjs.com/package/angular2-in-memory-web-api)
 
 For the temporary solution. An in-memory web api for Angular demos and tests.
 It will intercept HTTP requests that would otherwise go to the remote server via the Angular XHRBackend service.
