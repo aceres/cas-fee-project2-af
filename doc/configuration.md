@@ -222,7 +222,7 @@ for the mock data, warm up for beginning Angular 4.
 ### Realtime-Database Rules (Original Version) - Firebase
 
 ```
-	"rules": {
+   "rules": {
      ".read": "auth != null",
      ".write": "auth != null"
    }
@@ -232,7 +232,7 @@ for the mock data, warm up for beginning Angular 4.
 
 ```
 {
-	"rules": {
+   "rules": {
      ".read": true,
      ".write": true,
      "recipes": {
