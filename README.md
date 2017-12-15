@@ -155,13 +155,13 @@ and run this before to deploy on the firebase production host:
 
 Problem: Switching to prod with `ng build --prod`
 
-See reasons for the bug in the file: experience.md:
+See also reasons for the bug in the file: experience.md:
 
 * [Issue 1](https://github.com/angular/angular-cli/issues/7118)
 * [Issue 2](https://github.com/angular/angular-cli/issues/7113)
 * [Issue 3](https://github.com/angular/angular-cli/issues/7138)
 
-:exclamation: See also our experience in the file: experience.md
+:exclamation: See also our experience in the file: `/doc/experience.md`
 
 ## Running unit tests
 
