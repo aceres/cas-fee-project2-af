@@ -1,4 +1,4 @@
-# Schulprojekt: Projekt 2 (Web Application - www.manducare.ch)
+# Schulprojekt: Projekt 2 (Web Application - www.manducare.ch) :+1:
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.0.
 
@@ -132,7 +132,8 @@ Therefore we need to change the setting manually for deploying with correct sett
 
 Use this configuration for the file above manually:
 
-`export const environment = {
+```
+export const environment = {
   production: true,
   firebase: {
     apiKey: 'AIzaSyBfCNtrWk37h4lqm28Toes6e5efVY1eJyQ',
@@ -143,8 +144,8 @@ Use this configuration for the file above manually:
     messagingSenderId: '391938033267'
   },
   apiUrl: 'https://manducare-v1.firebaseio.com/'
-};`
-
+};
+```
 
 Problem: Switching to prod with `ng build --prod`
 
