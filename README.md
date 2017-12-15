@@ -1,4 +1,4 @@
-# Schulprojekt: Projekt 2 (Web Application - www.manducare.ch) :+1:
+# Schulprojekt: Projekt 2 (www.manducare.ch :fork_and_knife:)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.0.
 
@@ -6,31 +6,31 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 We have the folder structure for the documentation, see the folder `/doc/..`:
 
-`/doc/json/..`
+:open_file_folder: `/doc/json/..`
 
 Analysis for the JSON, Testing with CURLs (POST, PUT, ...).
 
-`/doc/meeting/..`
+:open_file_folder: `/doc/meeting/..`
 
 Our meeting protocols were all 2 - 3 weeks (shared status).
 
-`/doc/screenshots/..`
+:open_file_folder: `/doc/screenshots/..`
 
 Screenshots of our current web application (Desktop and mobile version).
 
-`/doc/wireframes/..`
+:open_file_folder: `/doc/wireframes/..`
 
 Wireframes (Mockups) for our web application.
 
-`/doc/configuration.md`
+:open_file_folder: `/doc/configuration.md`
 
 Configurations, deployments and settings for the development of this project.
 
-`/doc/experience.md`
+:open_file_folder: `/doc/experience.md`
 
 Experience and reasons for the problem including links.
 
-`/doc/todo.md`
+:open_file_folder: `/doc/todo.md`
 
 Must have requirements and optional tasks for our project.
 
@@ -64,7 +64,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 User: demo@hsr.ch
 
-Password: ****
+Password: :fu:
 
 (Write us via e-mail: info@manducare.ch for getting the password of the demo login)
 
@@ -118,7 +118,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Build for the production modus on firebase host
 
-Run `ng build -prod --aot=false` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `ng build -prod --aot=false` to build the project. The build artifacts will be stored in the `dist/` directory. :flushed:
 
 Note: 
 
@@ -147,6 +147,8 @@ export const environment = {
 };
 ```
 
+:thumbsup:
+
 Problem: Switching to prod with `ng build --prod`
 
 See reasons for the bug in the file: experience.md:
@@ -155,7 +157,7 @@ See reasons for the bug in the file: experience.md:
 * [Issue 2](https://github.com/angular/angular-cli/issues/7113)
 * [Issue 3](https://github.com/angular/angular-cli/issues/7138)
 
-See also our experience in the file: experience.md
+:exclamation: See also our experience in the file: experience.md
 
 ## Running unit tests
 
@@ -167,7 +169,7 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 ## Running end-to-end tests
 
-It is not implemented yet.
+:exclamation: It is not implemented yet.
 
 `
 npm run e2e
@@ -212,22 +214,22 @@ The scope for services, models and global error.
 
 ### assets
 
-`/assets/flaticon/..`
+:open_file_folder: `/assets/flaticon/..`
 
 We use FlatIcon for this project.
 
-`/assets/img/..`
+:open_file_folder: `/assets/img/..`
 
 There are collected images to see.
 
-`/assets/javascript/..`
+:open_file_folder: `/assets/javascript/..`
 
 All JavaScript files are to see in this folder
 
-`/assets/js/..`
+:open_file_folder: `/assets/js/..`
 
 Speical JavaScript files for IE10 bugs.
 
-`/assets/stylesheet/..`
+:open_file_folder: `/assets/stylesheet/..`
 
 All stylesheet files.
