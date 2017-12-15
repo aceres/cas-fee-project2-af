@@ -8,6 +8,7 @@ Highlights / Leistungen:
 * AuthGuard / Registration (Login) / Rollen
 * Registration Überlegung
 * Polyfills IE11
+* Doumentation (Readme)
 
 * Screenshots machen
 
