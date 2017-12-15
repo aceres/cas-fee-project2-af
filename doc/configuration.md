@@ -2,9 +2,9 @@
 
 ## GitHub for the project 2
 
-[https://github.com/aceres/cas-fee-project2](GitHub Project 2) (from June 2017)
+[https://github.com/aceres/cas-fee-project2](GitHub-Project-2) (from June 2017)
 
-[https://github.com/aceres/cas-fee-project2-af](GitHub Project 2) (from November 2017)
+[https://github.com/aceres/cas-fee-project2-af](GitHub-Project-2) (from November 2017)
 
 ## Angular CLI
 
