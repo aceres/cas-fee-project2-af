@@ -2,13 +2,13 @@
 
 ## GitHub for the project 2
 
-[https://github.com/aceres/cas-fee-project2](GitHub-Project-2) (from June 2017)
+[GitHub-Project-2](https://github.com/aceres/cas-fee-project2) (from June 2017)
 
-[https://github.com/aceres/cas-fee-project2-af](GitHub-Project-2) (from November 2017)
+[GitHub-Project-2](https://github.com/aceres/cas-fee-project2-af) (from November 2017)
 
 ## Angular CLI
 
-[https://github.com/angular/angular-cli](Angular CLI)
+[Angular CLI](https://github.com/angular/angular-cli)
 
 ### Installation
 
@@ -24,7 +24,7 @@ Navigate to http://localhost:4200/.
 
 ## The official Angular library for Firebase
 
-[https://github.com/angular/angularfire2](AngularFire2)
+[AngularFire2](https://github.com/angular/angularfire2)
 
 ### Installation (local)
 
@@ -34,7 +34,7 @@ Navigate to http://localhost:4200/.
 
 #### NO primeNG Anymore!!! We use ngx-bootstrap
 
-[https://www.primefaces.org/primeng/#/](PrimeNG)
+[PrimeNG](https://www.primefaces.org/primeng/#/)
 
 ### Installation (local)
 
@@ -49,11 +49,11 @@ Note: This has been uninstalled!
 
 ## Firebase
 
-[https://firebase.google.com](Firebase)
+[Firebase](https://firebase.google.com)
 
 ### Firebase Console
 
-[https://console.firebase.google.com/?pli=1](Firebase Console)
+[Firebase Console](https://console.firebase.google.com/?pli=1)
 
 ### Configuration
 
@@ -61,7 +61,7 @@ Project name: project2
 
 Country: Switzerland
 
-Administration GUI: [https://console.firebase.google.com/project/project2-60db1/overview](Firebase Admin GUI)
+Administration GUI: [Firebase Admin GUI](https://console.firebase.google.com/project/project2-60db1/overview)
 
 #### Real Database
 
@@ -165,17 +165,17 @@ More information:
 * https://firebase.googleblog.com/2016/07/deploy-to-multiple-environments-with.html
 * https://github.com/angular/angular-cli/issues/5429
 
-#### Firebase: Permissions for project
+#### Firebase: Permissions for the project
 
-[https://console.cloud.google.com/iam-admin/iam/project?project=project2-60db1&authuser=0&consoleReturnUrl=https:%2F%2Fconsole.firebase.google.com%2Fproject%2Fproject2-60db1%2Fanalytics&consoleUI=FIREBASE](Permission)
+[Permission](https://console.cloud.google.com/iam-admin/iam/project?project=project2-60db1&authuser=0&consoleReturnUrl=https:%2F%2Fconsole.firebase.google.com%2Fproject%2Fproject2-60db1%2Fanalytics&consoleUI=FIREBASE)
 
-### More dependencies for this project
+### More dependencies for the project
 
 For the authentication:
 
 `npm install promise-polyfill --save-exact`
 
-[https://alligator.io/angular/firebase-authentication-angularfire2/](Firebase Auth AngularFire2)
+[Firebase Auth AngularFire2](https://alligator.io/angular/firebase-authentication-angularfire2/)
 
 ### Style with primeNG
 
@@ -210,7 +210,7 @@ Note: We have uninstalled Awesome because we decided to use FlatIcon for now.
 
 ### Installation
 
-[https://www.npmjs.com/package/angular2-in-memory-web-api](Angular-In-Memory-Web-API)
+[Angular-In-Memory-Web-API]()https://www.npmjs.com/package/angular2-in-memory-web-api)
 
 For the temporary solution. An in-memory web api for Angular demos and tests.
 It will intercept HTTP requests that would otherwise go to the remote server via the Angular XHRBackend service.
@@ -268,4 +268,4 @@ In the config file: `.angular-cli.json`
 
 `npm install ng2-file-upload --save`
 
-[https://github.com/valor-software/ng2-file-upload](ng2-file-upload)
+[ng2-file-upload](https://github.com/valor-software/ng2-file-upload)
