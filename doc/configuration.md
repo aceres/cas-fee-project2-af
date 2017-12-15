@@ -106,7 +106,7 @@ d) Skipping write of dist//index.html
 
 `firebase deploy`
 
-(firebase deploy --only hosting)
+or (`firebase deploy --only hosting`)
 
 Deploying to 'project2-60db1'...
 i  deploying hosting
@@ -151,7 +151,7 @@ ng build --prod
 
 `firebase deploy`
 
-If AOT errors after building is to see, you can use:
+If AOT errors after building are invoked, you can use:
 
 `
 ng build --prod --aot=false
