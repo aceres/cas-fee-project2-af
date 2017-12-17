@@ -1,4 +1,4 @@
-# Schulprojekt: Projekt 2 (www.manducare.ch) :yum:
+# Projekt 2: www.manducare.ch :yum:
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.0.
 
@@ -33,6 +33,10 @@ Experience and reasons for the problem including links.
 :open_file_folder: `/doc/todo.md`
 
 Must have requirements and optional tasks for our project.
+
+:open_file_folder: `/doc/testing/usability/test-cases.pdf`
+
+Test cases for our web application.
 
 ###
 
@@ -153,13 +157,11 @@ and run this before to deploy on the firebase production host:
 
 Problem: Switching to prod with `ng build --prod`
 
-See also reasons for the bug in the file: `/doc/experience.md`
+:exclamation: See also reasons for the bug in the file: `/doc/experience.md`
 
 * [Issue 1](https://github.com/angular/angular-cli/issues/7118)
 * [Issue 2](https://github.com/angular/angular-cli/issues/7113)
 * [Issue 3](https://github.com/angular/angular-cli/issues/7138)
-
-:exclamation: See also our experience in the file: `/doc/experience.md`
 
 ## Running unit tests
 
