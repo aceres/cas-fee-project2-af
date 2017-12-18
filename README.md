@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Manual
 
-We have the folder structure for the documentation, see the folder `/doc/..`:
+There is a folder: `/doc/..` for the documentation.
 
 :open_file_folder: `/doc/json/..`
 
@@ -245,28 +245,28 @@ Notification will appears:
 
 ### Register
 
-* A user has been successful registered
+* When a user has been successful registered
 * When the register has been failed
-* Login user already exists!
+* When a user identification already exists
 
 ### Login
 
-* Login password is not correct
-* Login user is not exists
+* When a login password is not correct
+* When a login user does not exists
 * When the network request problem occurs
-* User has been logged in
-* User has logged out
+* When a user has been logged in
+* Wheh a user has logged out
 
 ### Recipe
 
-* When a recipe has been created
-* When a recipe has been updated
-* When a recipe has been deleted
+* When a recipe has been created by a user
+* When a recipe has been updated by a user
+* When a recipe has been deleted by a user
 
 ### Favorite
 
 * When a favorite has been added by a user
-* Whe a favorite has been removed by a user
+* When a favorite has been removed by a user
 
 ### Voting
 
