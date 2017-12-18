@@ -5,7 +5,12 @@
 </div>
 
 <div *ngIf="(allRecipes | async)?.length==0">
-  No records found. Here the welcome picture
+  <div class="blank-slate">
+    <img class="blank-slate__image" src="../../../assets/img/recipe-book.svg" alt="Rezeptbuch">
+    <p class="blank-slate__text">Du hast aktuell noch keine Rezepte in deiner Sammlung.<br>
+      Erfasse jetzt dein erstes Rezept.</p>
+    <button [routerLink]="['/admin/recipe-add']" class="blank-slate__button btn btn--green flaticon-add">Rezept erfassen</button>
+  </div>
 </div>
 
 <div class="row">

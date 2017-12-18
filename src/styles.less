@@ -8,13 +8,25 @@
 
   &-default {
     background-color: @yellow;
-    border: 2px solid @yellow !important;
+    border: 2px solid @yellow;
     color: @white;
 
     &:hover {
       background-color: @white;
       border: 2px solid @yellow;
       color: @yellow;
+    }
+  }
+
+  &--green {
+    background-color: @green;
+    border: 2px solid @green;
+    color: @white;
+
+    &:hover {
+      background-color: @white;
+      border: 2px solid @green;
+      color: @green;
     }
   }
 
@@ -216,3 +228,47 @@ app-root div.overlay {
     -webkit-transform: rotate(-360deg);
   }
 }
+
+/* Blank Slate
+-------------------------------------------------- */
+
+.blank-slate {
+  color: @dark-grey;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: inherit;
+  justify-content: center;
+  padding: 20px 0 50px 0;
+
+  &__image {
+    align-self: flex-start;
+    display: flex;
+    padding: 0 0 20px 0;
+    width: 150px;
+  }
+
+  &__text {
+    color: @dark-grey !important;
+    padding: 0 0 20px 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  &__button {
+    &:before {
+      margin: 0 5px 0 0;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .blank-slate {
+    padding: 100px 0 50px 0;
+
+    &__image {
+      padding: 0 0 50px 0;
+      width: 200px;
+    }
+  }
+}
+
