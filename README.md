@@ -21,7 +21,7 @@ Flow for the login process (pdf).
 
 :open_file_folder: `/doc/wireframes/..`
 
-Wireframes (Mockups) for our web application.
+Wireframes (Mockups) for our web application and the Manduare Style Guide.
 
 :open_file_folder: `/doc/configuration.md`
 
