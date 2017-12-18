@@ -5,7 +5,7 @@
     <label for="recipeName">Rezeptname:</label>
     <input name="recipeName" id="recipeName" class="form-control" placeholder="Feldsalat mit Balsamico-Vinaigrette" ngModel #recipeName="ngModel" required />
     <div [hidden]="recipeName.valid || recipeName.pristine" class="alert alert-danger">
-      Rezeptname ist verlangt.
+      Rezeptname ist ein Pflichtfeld.
     </div>
   </div>
 
@@ -13,7 +13,7 @@
     <label for="recipeDescription">Beschreibung:</label>
     <textarea rows="2" name="recipeDescription" id="recipeDescription" class="form-control" placeholder="Feldsalat ist der beliebteste Wintersalat." ngModel #recipeDescription="ngModel" required></textarea>
     <div [hidden]="recipeDescription.valid || recipeDescription.pristine" class="alert alert-danger">
-      Beschreibung ist verlangt.
+      Beschreibung ist ein Pflichtfeld.
     </div>
   </div>
 
@@ -24,7 +24,7 @@
       <option *ngFor="let portion of listPortions" [value]="portion.value">{{portion.display}}</option>
     </select>
     <div [hidden]="!null" class="alert alert-danger">
-      Anzahl der Personen ist verlangt.
+      Anzahl Personen ist ein Pflichtfeld.
     </div>
   </div>
 
@@ -32,7 +32,7 @@
     <label for="recipePrepTime">Zubereitungszeit in Minuten:</label>
     <input type="number" name="recipePrepTime" id="recipePrepTime" class="form-control" placeholder="90" min="0" ngModel #recipePrepTime="ngModel" required />
     <div [hidden]="recipePrepTime.valid || recipePrepTime.pristine" class="alert alert-danger">
-      Zubereitungszeit in Minuten ist verlangt.
+      Zubereitungszeit in Minuten ein Pflichtfeld.
     </div>
   </div>
 
@@ -43,7 +43,7 @@
       <option *ngFor="let level of listLevels" selected="{{this.listLevels[2]}}" [value]="level.value">{{level.display}}</option>
     </select>
     <div [hidden]="!null" class="alert alert-danger">
-      Schwierigkeitsgrad ist verlangt.
+      Schwierigkeitsgrad ist ein Pflichtfeld.
     </div>
   </div>
 
@@ -54,7 +54,7 @@
       <option *ngFor="let category of listCategories" [value]="category.value">{{category.name}}</option>
     </select>
     <div [hidden]="!null" class="alert alert-danger">
-      Kategorie ist verlangt.
+      Kategorie ist ein Pflichtfeld.
     </div>
   </div>
 
@@ -65,7 +65,7 @@
       <option *ngFor="let cuisine of listCuisines" [value]="cuisine.value">{{cuisine.name}}</option>
     </select>
     <div [hidden]="!null" class="alert alert-danger">
-      Länderküche ist verlangt.
+      Länderküche ist ein Pflichtfeld.
     </div>
   </div>
 </form>
@@ -79,7 +79,7 @@
     <label for="recipeQuantity">Menge</label>
     <input type="number" placeholder="1" min="0" name="recipeQuantity" id="recipeQuantity" class="form-control" [(ngModel)]="ingredient.recipeQuantity" #recipeQuantity="ngModel" required>
     <div [hidden]="recipeQuantity.valid || recipeQuantity.pristine" class="alert alert-danger">
-      Menge ist verlangt.
+      Menge ist ein Pflichtfeld.
     </div>
   </div>
   <div class="form-group">
@@ -92,7 +92,7 @@
     <label for="recipeIngredient">Zutat</label>
     <input type="text" name="recipeIngredient" id="recipeIngredient" class="form-control" placeholder="Gelatine" [(ngModel)]="ingredient.recipeIngredient" #recipeIngredient="ngModel" required>
     <div [hidden]="recipeIngredient.valid || recipeIngredient.pristine" class="alert alert-danger">
-      Zutat ist verlangt.
+      Zutat ist ein Pflichtfeld.
     </div>
   </div>
   <div class="form-group">
@@ -145,7 +145,7 @@
     <label for="stepDescription">Schrittbeschreibung</label>
     <input class="form-control" id="stepDescription" name="stepDescription" placeholder="..." required [(ngModel)]="step.stepDescription" #stepDescription="ngModel">
     <div [hidden]="stepDescription.valid || stepDescription.pristine" class="alert alert-danger">
-      Beschreibung ist verlangt.
+      Beschreibung ist ein Pflichtfeld.
     </div>
   </div>
   <div class="form-group">

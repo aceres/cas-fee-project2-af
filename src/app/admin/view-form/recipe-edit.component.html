@@ -6,7 +6,7 @@
     <label for="recipeName">Name:</label>
     <input name="recipeName" id="recipeName" class="form-control" [(ngModel)]="recipe.receipt" #recipeName="ngModel" placeholder="Rezept" required />
     <div [hidden]="recipeName.valid || recipeName.pristine" class="alert alert-danger">
-      Rezeptname ist verlangt.
+      Rezeptname ist ein Pflichtfeld.
     </div>
   </div>
 
@@ -14,7 +14,7 @@
     <label for="description">Beschreibung:</label>
     <input name="description" id="description" class="form-control" [(ngModel)]="recipe.description" placeholder="Beschreibung" #recipeDescription="ngModel" required />
     <div [hidden]="recipeDescription.valid || recipeDescription.pristine" class="alert alert-danger">
-      Beschreibung ist verlangt.
+      Beschreibung ist ein Pflichtfeld.
     </div>
   </div>
   <div class="form-group">
@@ -28,7 +28,7 @@
     <label for="prepTime">Zubereitungszeit in Minuten:</label>
     <input type="number" name="prepTime" id="prepTime" class="form-control" placeholder="90" min="0" [(ngModel)]="recipe.prepTime" #recipePrepTime="ngModel" required />
     <div [hidden]="recipePrepTime.valid || recipePrepTime.pristine" class="alert alert-danger">
-      Zubereitungszeit in Minuten ist verlangt.
+      Zubereitungszeit in Minuten ist ein Pflichtfeld.
     </div>
   </div>
 
@@ -68,7 +68,7 @@
     <label for="recipeQuantity">Menge</label>
     <input type="number" placeholder="1" min="0" name="recipeQuantity" id="recipeQuantity" class="form-control" [(ngModel)]="ingredient.recipeQuantity" #recipeQuantity="ngModel" required>
     <div [hidden]="recipeQuantity.valid || recipeQuantity.pristine" class="alert alert-danger">
-      Menge ist verlangt.
+      Menge ist ein Pflichtfeld.
     </div>
   </div>
   <div class="form-group">
@@ -81,7 +81,7 @@
     <label for="recipeIngredient">Zutat</label>
     <input type="text" name="recipeIngredient" id="recipeIngredient" class="form-control" placeholder="Gelatine" [(ngModel)]="ingredient.recipeIngredient" #recipeIngredient="ngModel" required>
     <div [hidden]="recipeIngredient.valid || recipeIngredient.pristine" class="alert alert-danger">
-      Zutat ist verlangt.
+      Zutat ist ein Pflichtfeld.
     </div>
   </div>
   <div class="form-group">
@@ -131,7 +131,7 @@
     <label for="stepDescription">Schrittbeschreibung</label>
     <input class="form-control" id="stepDescription" name="stepDescription" placeholder="..." required [(ngModel)]="step.stepDescription" #stepDescription="ngModel">
     <div [hidden]="stepDescription.valid || stepDescription.pristine" class="alert alert-danger">
-      Beschreibung ist verlangt.
+      Beschreibung ist ein Pflichtfeld.
     </div>
   </div>
   <div class="form-group">
