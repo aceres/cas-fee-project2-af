@@ -238,3 +238,32 @@ Speical JavaScript files for IE10 bugs.
 :open_file_folder: `/assets/stylesheet/..`
 
 All stylesheet files.
+
+## Notification (Growl)
+
+Notification will appears:
+
+### Register
+
+* A user has been successful registered
+
+### Login
+
+* Login has been failed
+* User has been logged in
+* User has logged out
+
+### Recipe
+
+* When a recipe has been created
+* When a recipe has been updated
+* When a recipe has been deleted
+
+### Favorite
+
+* When a favorite has been added by a user
+* Whe a favorite has been removed by a user
+
+### Voting
+
+* When a user has voted a recipe
