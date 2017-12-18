@@ -10,8 +10,6 @@ Highlights / Leistungen:
 * Polyfills IE11
 * Doumentation (Readme)
 
-* Screenshots machen
-
 * AngularFire / Angular - Firebase (Vermischung) - Services
 * Testing - parallel schreiben und nicht am Schluss
 * AOT spät entdeckt
