@@ -17,6 +17,7 @@ Our meeting protocols were all 2 - 3 weeks (shared status).
 :open_file_folder: `/doc/screenshots/..`
 
 Screenshots of our current web application (Desktop and mobile version).
+Flow for the login process (pdf).
 
 :open_file_folder: `/doc/wireframes/..`
 
