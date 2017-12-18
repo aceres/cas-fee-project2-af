@@ -246,10 +246,14 @@ Notification will appears:
 ### Register
 
 * A user has been successful registered
+* When the register has been failed
+* Login user already exists!
 
 ### Login
 
-* Login has been failed
+* Login password is not correct
+* Login user is not exists
+* When the network request problem occurs
 * User has been logged in
 * User has logged out
 
