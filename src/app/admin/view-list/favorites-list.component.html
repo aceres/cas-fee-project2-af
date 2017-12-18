@@ -27,4 +27,11 @@
         </tr>
   </table>
 
+<div *ngIf="(allFavorites | async)?.length==0">
+    <div class="blank-slate">
+        <img class="blank-slate__image" src="../../../assets/img/favorite.svg" alt="Rezeptbuch">
+        <p class="blank-slate__text">Du hast aktuell noch keine Favoriten.</p>
+    </div>
+</div>
+
 <app-alert #childAlert></app-alert>
