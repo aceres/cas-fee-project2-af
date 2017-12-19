@@ -1,12 +1,11 @@
 <h1>Meine Favoriten</h1>
-
 <table class="table table-striped table-hover">
     <thead>
         <tr>
-            <th>
+            <th class="favorite-list__heading">
              Rezept
             </th>
-            <th>
+            <th class="favorite-list__heading">
             </th>
         </tr>
     </thead>
@@ -16,22 +15,15 @@
           {{favorite.recipeName}}
         </td>
             <td class="favorite-list__buttons">
-                <button class="favorite-list__buttons--view btn btn-default flaticon-view" [routerLink]="['/recipe-detail', favorite.recipeId]">
-                    Zum Rezept
-                </button>
-
-                <button class="favorite-list__buttons--delete btn btn-default flaticon-delete" (click)="remove(favorite); $event.stopPropagation()">
-              Entfernen
-            </button>
+                <button class="favorite-list__buttons--view btn btn-default btn-circle flaticon-view" [routerLink]="['/recipe-detail', favorite.recipeId]"></button>
+                <button class="favorite-list__buttons--delete btn btn-default btn-circle flaticon-delete" (click)="remove(favorite); $event.stopPropagation()"></button>
           </td>
         </tr>
   </table>
-
 <div *ngIf="(allFavorites | async)?.length==0">
     <div class="blank-slate">
         <img class="blank-slate__image" src="../../../assets/img/favorite.svg" alt="Rezeptbuch">
         <p class="blank-slate__text">Du hast aktuell noch keine Favoriten.</p>
     </div>
 </div>
-
 <app-alert #childAlert></app-alert>
