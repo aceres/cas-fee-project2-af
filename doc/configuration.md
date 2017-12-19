@@ -17,9 +17,11 @@
 `
 ng new project2
 `
+
 `
 cd project2
 `
+
 `
 ng serve
 `
