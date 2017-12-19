@@ -2,7 +2,7 @@
 
 ## GitHub for the project 2
 
-[GitHub-Project-2](https://github.com/aceres/cas-fee-project2) (from June 2017) - Problem see `/doc/experience.md`
+[GitHub-Project-2](https://github.com/aceres/cas-fee-project2) (from June 2017) - Problem see: `/doc/experience.md`
 
 [GitHub-Project-2](https://github.com/aceres/cas-fee-project2-af) (from November 2017) - use this for the development
 
@@ -16,7 +16,11 @@
 
 `
 ng new project2
+`
+`
 cd project2
+`
+`
 ng serve
 `
 
