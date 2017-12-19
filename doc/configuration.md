@@ -32,8 +32,8 @@ Navigate to http://localhost:4200/.
 
 ## Style Framework / Component - Native Angular Directive
 
-We use bootstrap for the basis layout.
-No [PrimeNG](https://www.primefaces.org/primeng/#/) anymore!
+We use [Bootstrap 3.3](https://getbootstrap.com/docs/3.3/) for the basis layout.
+No [PrimeNG](https://www.primefaces.org/primeng/#/) anymore! We installed it. It was in the phase of PoC (Proof of concept).
 
 We use ngx-bootstrap as native Angular directive instead.
 
@@ -41,7 +41,7 @@ We use ngx-bootstrap as native Angular directive instead.
 
 `npm install primeng --save`
 
-Note: This has been uninstalled!
+:exclamation: Note: This has been uninstalled!
 `npm uninstall primeng -S --save`
 
 ### Installation of ngx-bootstrap
@@ -66,15 +66,15 @@ Administration GUI: [Firebase Admin GUI](https://console.firebase.google.com/pro
 
 #### Real Database
 
-URL: [https://project2-60db1.firebaseio.com/]
+URL: [RealDatabase](https://project2-60db1.firebaseio.com/)
 
 #### Setup Hosting for the Development
 
 `npm install -g firebase-tools`
 
-Domain: [https://project2-60db1.firebaseapp.com/] (Type: Default)
+Domain: [Domain](https://project2-60db1.firebaseapp.com/) (Type: Default)
 
-Go to the local workspace directory: project2/
+Go to the local workspace directory: `../project2/..`
 
 `../projects/project2`
 
@@ -115,9 +115,9 @@ i  hosting: preparing dist/ directory for upload...
 ✔  hosting: 8 files uploaded successfully
 i  starting release process (may take several minutes)...
 
-* Project Console: https://console.firebase.google.com/project/project2-60db1/overview
-* Hosting URL: https://project2-60db1.firebaseapp.com
-* Google Cloud Platform (Dashboard): https://console.cloud.google.com/home/dashboard?project=project2-60db1
+* [Project Console](https://console.firebase.google.com/project/project2-60db1/overview)
+* [Hosting URL](https://project2-60db1.firebaseapp.com)
+* [Google Cloud Platform (Dashboard)](https://console.cloud.google.com/home/dashboard?project=project2-60db1)
 
 #### Firebase: Hosting the web application
 
@@ -159,13 +159,13 @@ ng build --prod --aot=false
 ng build --env=prod --aot=false
 `
 
-Web App: https://manducare-v1.firebaseapp.com
-Firebase Console Admin: https://console.firebase.google.com/project/manducare-v1/overview
+[Web App](https://manducare-v1.firebaseapp.com)
+[Firebase Console Admin](https://console.firebase.google.com/project/manducare-v1/overview)
 
 More information to multiple environments:
 
-* https://firebase.googleblog.com/2016/07/deploy-to-multiple-environments-with.html
-* https://github.com/angular/angular-cli/issues/5429
+* [Multiple Environments](https://firebase.googleblog.com/2016/07/deploy-to-multiple-environments-with.html)
+* [Issue](https://github.com/angular/angular-cli/issues/5429)
 
 #### Firebase: Permissions for the project
 
