@@ -43,6 +43,7 @@
     &--link {
       color: inherit;
       cursor: pointer;
+      font-size: 14px;
       text-decoration: none;
     }
   }
@@ -73,17 +74,18 @@
   .main {
     padding: 50px 20px 0 40px;
   }
-
-  .sidebar {
-    width: auto;
-  }
 }
 
 @media (min-width: 1200px) {
   .main {
     padding: 50px 40px 0 40px;
   }
-  .sidebar {
-    width: 210px;
+
+  .admin {
+    &__nav {
+      &--link {
+        font-size: 16px;
+      }
+    }
   }
 }
