@@ -145,6 +145,9 @@ firebase use default or firebase use project2-60db1
 
 From 15th November: We have a new name for the deployment to firebase host: development (project2-60db1)
 
+* [Web App](https://project2-60db1.firebaseapp.com)
+* [Project Console](https://console.firebase.google.com/project/project2-60db1/overview)
+
 ##### Production
 
 `firebase use --add`
@@ -176,9 +179,8 @@ ng build --prod --aot=false
 ng build --env=prod --aot=false
 `
 
-[Web App](https://manducare-v1.firebaseapp.com)
-
-[Firebase Console Admin](https://console.firebase.google.com/project/manducare-v1/overview)
+* [Web App](https://manducare-v1.firebaseapp.com)
+* [Firebase Console Admin](https://console.firebase.google.com/project/manducare-v1/overview)
 
 More information about multiple environments:
 
