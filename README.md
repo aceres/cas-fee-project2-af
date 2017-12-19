@@ -115,11 +115,11 @@ or
 http://www.manducare.ch
 `
 
-## Build for the development modus on firebase host
+## Build it for the development modus on firebase host
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Build for the production modus on firebase host
+## Build it for the production modus on firebase host
 
 Run `ng build -prod --aot=false` to build the project. The build artifacts will be stored in the `dist/` directory. 
 

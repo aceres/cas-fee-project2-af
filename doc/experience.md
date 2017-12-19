@@ -1,8 +1,9 @@
-# Überlegung / Erfahrung (für die Präsentation):
+# Überlegung / Erfahrung (für die Präsentation gedacht - Slides noch machen):
 
 Highlights / Leistungen:
 
 * Organisieren von Templates (Public / Secure (Registered User / Admin))
+* Alle 2-3 Wochen Statusmeetings (Evernote, Trello, ...)
 * Ausprobieren und Evaluation ngPrime / ngx-bootstrap
 * Schritte (in etappenweise, Proof of Concept, Einrichtung, Firebase, ...)
 * AuthGuard / Registration (Login) / Rollen
@@ -15,6 +16,18 @@ Highlights / Leistungen:
 * AOT spät entdeckt
 * Ping -> IP -> Like Favorite
 * package-lock.json (https://github.com/npm/npm/issues/16866)
+
+* Alle Unit Tests abschliessen
+
+
+* Event Emitter
+* TypeScript
+* Entry Components
+* JWT / Custom Error Log
+
+- IP
+- 2x Crash
+- Ob wir es richtig bauen
 
 Problem beim 2. Crash
 =====================
