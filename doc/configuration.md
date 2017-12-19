@@ -30,6 +30,14 @@ Navigate to http://localhost:4200/.
 
 `npm install firebase angularfire2 --save`
 
+### More dependencies for the web app project with Firebase
+
+For the authentication:
+
+`npm install promise-polyfill --save-exact`
+
+[Firebase Auth AngularFire2](https://alligator.io/angular/firebase-authentication-angularfire2/)
+
 ## Style Framework / Component - Native Angular Directive
 
 We use [Bootstrap 3.3](https://getbootstrap.com/docs/3.3/) for the basis layout.
@@ -167,19 +175,11 @@ More information to multiple environments:
 * [Multiple Environments](https://firebase.googleblog.com/2016/07/deploy-to-multiple-environments-with.html)
 * [Issue](https://github.com/angular/angular-cli/issues/5429)
 
-#### Firebase: Permissions for the project
+##### Firebase: Permissions for the project
 
 [Permission](https://console.cloud.google.com/iam-admin/iam/project?project=project2-60db1&authuser=0&consoleReturnUrl=https:%2F%2Fconsole.firebase.google.com%2Fproject%2Fproject2-60db1%2Fanalytics&consoleUI=FIREBASE)
 
-### More dependencies for the web app project with Firebase
-
-For the authentication:
-
-`npm install promise-polyfill --save-exact`
-
-[Firebase Auth AngularFire2](https://alligator.io/angular/firebase-authentication-angularfire2/)
-
-#### Style with primeNG
+### Style Framework / UI library for Angular
 
 :exclamation: Note: No primeNG anymore! We use ngx-bootstrap for our project instead.
 
@@ -203,14 +203,14 @@ Rebuild and reserve the web application then.
 
 `npm install ngx-bootstrap --save`
 
-### Installation: font-awesome (locally)
+#### Installation: font-awesome (locally)
 
 FontAwesome was needed for the PrimeNG.
 :exclamation: Note: We have uninstalled Awesome because we decided to use FlatIcon for now.
 
 `npm install font-awesome --save`
 
-### Installation
+### Installation of Angular 2 In Memory Web API (Training) - Mock Data
 
 [Angular-In-Memory-Web-API](https://www.npmjs.com/package/angular2-in-memory-web-api)
 
@@ -219,6 +219,23 @@ It will intercept HTTP requests that would otherwise go to the remote server via
 
 This package has been de-installed on 10th October 2017. This was used
 for the mock data, warm up for beginning Angular 4.
+
+### Installation LESS (Styling)
+
+`npm install less --save`
+
+In the config file: `.angular-cli.json`
+
+```
+"styles": [
+        ...,
+        "styles.less"
+      ],
+"defaults": {
+    "styleExt": "less",
+    "component": {}
+  }
+```
 
 ### Realtime-Database Rules (Original Version) - Firebase
 
@@ -247,23 +264,6 @@ for the mock data, warm up for beginning Angular 4.
      }
    }
 }
-```
-
-### Installation LESS (Styling)
-
-`npm install less --save`
-
-In the config file: `.angular-cli.json`
-
-```
-"styles": [
-        ...,
-        "styles.less"
-      ],
-"defaults": {
-    "styleExt": "less",
-    "component": {}
-  }
 ```
 
 ### Installation of ng2-file-upload (Upload images)
