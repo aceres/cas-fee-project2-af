@@ -146,7 +146,7 @@ firebase use default or firebase use project2-60db1
 From 15th November: We have a new name for the deployment to firebase host: development (project2-60db1)
 
 * [Web App](https://project2-60db1.firebaseapp.com)
-* [Project Console](https://console.firebase.google.com/project/project2-60db1/overview)
+* [Project Console Admin](https://console.firebase.google.com/project/project2-60db1/overview)
 
 ##### Production
 
