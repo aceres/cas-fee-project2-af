@@ -1,4 +1,4 @@
-<h1 class="recipe-list__heading">Alle {{ (allRecipes | async)?.length }} Rezepte</h1>
+<h1>Alle {{ (allRecipes | async)?.length }} Rezepte</h1>
 
 <div class="form-group">
   <input name="searchRecipe" class="form-control" placeholder="Rezept suchen..." [(ngModel)]="searchTerm" id="search-box" />
