@@ -1,4 +1,4 @@
-# Configuration
+# Configuration (with documentation)
 
 ## GitHub for the project 2
 
@@ -10,7 +10,7 @@
 
 [Angular CLI](https://github.com/angular/angular-cli)
 
-### Installation
+### Installation of Angular CLI
 
 `npm install -g @angular/cli`
 
@@ -26,24 +26,25 @@ Navigate to http://localhost:4200/.
 
 [AngularFire2](https://github.com/angular/angularfire2)
 
-### Installation (local)
+### Installation of AngularFire2
 
 `npm install firebase angularfire2 --save`
 
-## Style Framework
+## Style Framework / Component - Native Angular Directive
 
-#### No primeNG anymore! We use ngx-bootstrap instead.
+We use bootstrap for the basis layout.
+No [PrimeNG](https://www.primefaces.org/primeng/#/) anymore!
 
-[PrimeNG](https://www.primefaces.org/primeng/#/)
+We use ngx-bootstrap as native Angular directive instead.
 
-### Installation (local)
+### Installation of PrimeNG
 
 `npm install primeng --save`
 
 Note: This has been uninstalled!
 `npm uninstall primeng -S --save`
 
-#### ngx-bootstrap
+### Installation of ngx-bootstrap
 
 `npm install ngx-bootstrap --save`
 
@@ -118,9 +119,9 @@ i  starting release process (may take several minutes)...
 * Hosting URL: https://project2-60db1.firebaseapp.com
 * Google Cloud Platform (Dashboard): https://console.cloud.google.com/home/dashboard?project=project2-60db1
 
-#### Firebase: Deployment
+#### Firebase: Hosting the web application
 
-##### DEVELOPMENT
+##### Development
 
 `firebase use`
 
@@ -130,7 +131,7 @@ firebase use default or firebase use project2-60db1
 
 From 15th November: We have a new name: development (project2-60db1)
 
-##### PRODUCTION
+##### Production
 
 `firebase use --add`
 
@@ -141,7 +142,7 @@ Alias project: manducare
 
 `firebase use`
 
-(Note: environment.prod.ts is configured)
+:exclamation: Note: environment.prod.ts is also configured by Angular CLI.
 
 We also can serve in the production environment
 
@@ -151,7 +152,7 @@ ng build --prod
 
 `firebase deploy`
 
-If AOT errors after building are invoked, you can use:
+If AOT errors after building are invoked, you can use instead:
 
 `
 ng build --prod --aot=false
@@ -161,7 +162,7 @@ ng build --env=prod --aot=false
 Web App: https://manducare-v1.firebaseapp.com
 Firebase Console Admin: https://console.firebase.google.com/project/manducare-v1/overview
 
-More information:
+More information to multiple environments:
 
 * https://firebase.googleblog.com/2016/07/deploy-to-multiple-environments-with.html
 * https://github.com/angular/angular-cli/issues/5429
@@ -170,7 +171,7 @@ More information:
 
 [Permission](https://console.cloud.google.com/iam-admin/iam/project?project=project2-60db1&authuser=0&consoleReturnUrl=https:%2F%2Fconsole.firebase.google.com%2Fproject%2Fproject2-60db1%2Fanalytics&consoleUI=FIREBASE)
 
-### More dependencies for the project
+### More dependencies for the web app project with Firebase
 
 For the authentication:
 
@@ -178,9 +179,9 @@ For the authentication:
 
 [Firebase Auth AngularFire2](https://alligator.io/angular/firebase-authentication-angularfire2/)
 
-### Style with primeNG
+#### Style with primeNG
 
-Note: No primeNG anymore! We use ngx-bootstrap for our project
+:exclamation: Note: No primeNG anymore! We use ngx-bootstrap for our project instead.
 
 The file: angular-cli.json
 
@@ -202,10 +203,10 @@ Rebuild and reserve the web application then.
 
 `npm install ngx-bootstrap --save`
 
-### Installation: font-awesome (locally and not globally)
+### Installation: font-awesome (locally)
 
 FontAwesome was needed for the PrimeNG.
-Note: We have uninstalled Awesome because we decided to use FlatIcon for now.
+:exclamation: Note: We have uninstalled Awesome because we decided to use FlatIcon for now.
 
 `npm install font-awesome --save`
 
