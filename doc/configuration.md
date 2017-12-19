@@ -33,9 +33,9 @@ Navigate to http://localhost:4200/.
 ## Style Framework / Component - Native Angular Directive
 
 We use [Bootstrap 3.3](https://getbootstrap.com/docs/3.3/) for the basis layout.
-No [PrimeNG](https://www.primefaces.org/primeng/#/) anymore! We installed it. It was in the phase of PoC (Proof of concept).
+No [PrimeNG](https://www.primefaces.org/primeng/#/) anymore! We uninstalled it. It was in the phase of PoC (Proof of concept).
 
-We use ngx-bootstrap as native Angular directive instead.
+We also use [ngx-bootstrap](https://valor-software.com/ngx-bootstrap/#/getting-started) as native Angular directive instead (Modals and Alerts).
 
 ### Installation of PrimeNG
 
