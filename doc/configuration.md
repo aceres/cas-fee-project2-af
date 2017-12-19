@@ -49,7 +49,7 @@ For the authentication:
 We use [Bootstrap 3.3](https://getbootstrap.com/docs/3.3/) for the basis layout.
 No [PrimeNG](https://www.primefaces.org/primeng/#/) anymore! We uninstalled it. It was in the phase of PoC (Proof of concept).
 
-We also use [ngx-bootstrap](https://valor-software.com/ngx-bootstrap/#/getting-started) as native Angular directive instead (Modals and Alerts).
+We use [ngx-bootstrap](https://valor-software.com/ngx-bootstrap/#/getting-started) as native Angular directive instead (Modals and Alerts).
 
 ### Installation of PrimeNG
 
@@ -143,7 +143,7 @@ Active Project: default (project2-60db1)
 
 firebase use default or firebase use project2-60db1
 
-From 15th November: We have a new name: development (project2-60db1)
+From 15th November: We have a new name for the deployment to firebase host: development (project2-60db1)
 
 ##### Production
 
@@ -170,13 +170,17 @@ If AOT errors after building are invoked, you can use instead:
 
 `
 ng build --prod --aot=false
+`
+
+`
 ng build --env=prod --aot=false
 `
 
 [Web App](https://manducare-v1.firebaseapp.com)
+
 [Firebase Console Admin](https://console.firebase.google.com/project/manducare-v1/overview)
 
-More information to multiple environments:
+More information about multiple environments:
 
 * [Multiple Environments](https://firebase.googleblog.com/2016/07/deploy-to-multiple-environments-with.html)
 * [Issue](https://github.com/angular/angular-cli/issues/5429)
@@ -191,7 +195,7 @@ More information to multiple environments:
 
 The file: angular-cli.json
 
-Add these lines:
+Adapt these lines:
 
 ```
 "styles": [
