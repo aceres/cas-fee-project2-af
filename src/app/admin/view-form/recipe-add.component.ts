@@ -30,6 +30,7 @@ export class RecipeAddComponent implements OnInit {
   image = [];
   selectedFiles: FileList;
   currentUpload: Upload;
+  statusSaved;
 
   // Alert
   @ViewChild('childAlert') public childAlert: AlertComponent;
@@ -55,6 +56,7 @@ export class RecipeAddComponent implements OnInit {
 
   detectFiles(event) {
     this.selectedFiles = event.target.files;
+    this.statusSaved = false;
   }
 
   add(name: string,
@@ -85,13 +87,15 @@ export class RecipeAddComponent implements OnInit {
             if (this.selectedFiles !== undefined) {
               this.recipeService.create(name, description, portion, prepTime, level, category, cuisine, steps, ingredients, image, uid, user)
                 .then(response => {
-                  const file = this.selectedFiles.item(0)
+                  const file = this.selectedFiles.item(0);
                   this.currentUpload = new Upload(file);
-                  this.upSvc.pushUpload(this.currentUpload, response.name)
+                  this.upSvc.pushUpload(this.currentUpload, response.name);
+                  this.statusSaved = true;
                   this.childAlert.showAlert('success', `Rezept wurde erfolgreich gespeichert! (Hinzugefügt am: ${(new Date()).toLocaleTimeString()})`);
                 });
             } else {
               this.childAlert.showAlert('danger', `Bitte wählen Sie ein Bild aus!`);
+                this.statusSaved = false;
             }
   }
 

@@ -206,11 +206,14 @@
 
 <app-alert #childAlert></app-alert>
 
-<button class="btn btn-default" [disabled]="!recipeForm.form.valid" (click)="add(recipeName.value, recipeDescription.value, recipePortion.value, recipePrepTime.value, recipeLevel.value, recipeCategory.value, recipeCuisine.value, steps, ingredients); recipeName.value=''; recipeDescription.value=''; recipePortion.value=''; recipePrepTime.value=''; recipeLevel.value=''; recipeCategory.value=''; recipeCuisine.value='';">
+<button *ngIf="!statusSaved" class="btn btn-default" [disabled]="!recipeForm.form.valid" (click)="add(recipeName.value, recipeDescription.value, recipePortion.value, recipePrepTime.value, recipeLevel.value, recipeCategory.value, recipeCuisine.value, steps, ingredients); recipeName.value=''; recipeDescription.value=''; recipePortion.value=''; recipePrepTime.value=''; recipeLevel.value=''; recipeCategory.value=''; recipeCuisine.value='';">
   <i class="flaticon-technology"></i> Speichern
 </button>
-<button [routerLink]="'/admin/recipes'" class="btn btn-default">
+<button *ngIf="!statusSaved" [routerLink]="'/admin/recipes'" class="btn btn-default">
   <i class="flaticon-cancel"></i> Abbrechen
+</button>
+<button *ngIf="statusSaved" [routerLink]="'/admin/recipes'" class="btn btn-default">
+  <i class="flaticon-cancel"></i> Schliessen
 </button>
 
 

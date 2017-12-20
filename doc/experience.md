@@ -26,6 +26,7 @@ Highlights / Leistungen:
 * JWT / Custom Error Log
 
 - IP
+- Rezept entfernt - Favorite???
 - 2x Crash
 - Ob wir es richtig bauen
 
