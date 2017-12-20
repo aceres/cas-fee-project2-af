@@ -262,6 +262,9 @@ Notification will appears:
 * When a recipe has been created by a user
 * When a recipe has been updated by a user
 * When a recipe has been deleted by a user
+* When the picture is missed after clicking saving new recipe in the add form
+
+:exclamation: Note: When a user change the picture in the edit form and after clicking saving in the edit form the old picture will be removed from the file storage (Firebase)
 
 ### Favorite
 

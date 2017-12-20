@@ -2,7 +2,7 @@
 
 ## GitHub for the project 2
 
-[GitHub-Project-2](https://github.com/aceres/cas-fee-project2) (from June 2017) - Problem see: `/doc/experience.md`
+[GitHub-Project-2](https://github.com/aceres/cas-fee-project2) (from June 2017) - See the problem into at: `/doc/experience.md`
 
 [GitHub-Project-2](https://github.com/aceres/cas-fee-project2-af) (from November 2017) - use this for the development
 
@@ -47,7 +47,7 @@ For the authentication:
 ## Style Framework / Component - Native Angular Directive
 
 We use [Bootstrap 3.3](https://getbootstrap.com/docs/3.3/) for the basis layout.
-No [PrimeNG](https://www.primefaces.org/primeng/#/) anymore! We uninstalled it. It was in the phase of PoC (Proof of concept).
+No [PrimeNG](https://www.primefaces.org/primeng/#/) anymore! We've uninstalled it. It was in the phase of PoC (Proof of concept).
 
 We use [ngx-bootstrap](https://valor-software.com/ngx-bootstrap/#/getting-started) as native Angular directive instead (Modals and Alerts).
 
@@ -197,7 +197,7 @@ More information about multiple environments:
 
 The file: angular-cli.json
 
-Adapt these lines:
+The adaption of these lines were:
 
 ```
 "styles": [
@@ -215,7 +215,7 @@ Rebuild and reserve the web application then.
 
 `npm install ngx-bootstrap --save`
 
-#### Installation: font-awesome (locally)
+#### Installation: font-awesome
 
 FontAwesome was needed for the PrimeNG.
 :exclamation: Note: We have uninstalled Awesome because we decided to use FlatIcon for now.
