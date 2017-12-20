@@ -283,3 +283,9 @@ In the config file: `.angular-cli.json`
 `npm install ng2-file-upload --save`
 
 [ng2-file-upload](https://github.com/valor-software/ng2-file-upload)
+
+### Installation of ngx-pagination (Pagination - for admin only)
+
+`npm install ngx-pagination --save`
+
+[ngx-pagination](https://github.com/michaelbromley/ngx-pagination)

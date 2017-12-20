@@ -2,17 +2,18 @@
 
 ## Generelles
 
-* Rezept finden, blättern
+* Rezept suchen / finden
 * Rezept detailliert anzeigen
 
 ## Verwalten von Rezepte
 
 * Rezept erfassen (Admin, Member)
-* Rezept anschauen (ev. blättern)
+* Rezept anschauen (Admin, Member), Alle Rezepte blättern (nur diejenige, die Admin Rechte haben)
 * Rezept bearbeiten (Admin, Member)
 * Rezept löschen (Admin, Member)
 * Rezept kategorisieren (Admin, Member)
 * Bilder für ein Rezept hochladen (Admin, Member)
+* Einkaufsliste / Rezept ausdrucken (Public, Admin, Member)
 
 ### Stammdatenverwaltung z.B. Länderküche, Schwierigkeitsgrad, hier als Beispiel für die Länderküche: Italienische Küche, Japanische Küche, ... / Hauptgericht, Frühstück, ...
 
@@ -24,13 +25,12 @@
 
 ## Security (Login)
 
-* Login für das Verwalten der Rezepte
-* Registration (Member)
+* Login für das Verwalten der Rezepte (Admin, Member)
+* Registration (Public)
 * User Management - See the list of registered users (for users with role admin only)
 
 # Falls Zeit (Optional)
 
 * Rezept als E-Mail weiterleiten / weiterempfehlen
 * Kommentar hinschreiben
-* Einkaufsliste / Rezept ausdrucken
 * Rezept kalkulieren (Menge der Personen zum Kochen - frontendmässig)

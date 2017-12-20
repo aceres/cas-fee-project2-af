@@ -10,6 +10,7 @@ Highlights / Leistungen:
 * Registration Überlegung
 * Polyfills IE11
 * Doumentation (Readme)
+* UX Testing
 
 * AngularFire / Angular - Firebase (Vermischung) - Services
 * Testing - parallel schreiben und nicht am Schluss
