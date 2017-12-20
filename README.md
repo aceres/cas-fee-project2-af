@@ -1,6 +1,13 @@
 # Projekt 2: www.manducare.ch :yum:
 
+This project for the final exam of CAS Frontend Engineering at the Hochschule in Rapperswil was implemented by
+Tanja Sennhauser and André Ceres.
+
+## CLI tool for Angular
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.0.
+
+The Angular CLI makes it easy to create an application that already works, right out of the box.
 
 ## Manual
 
