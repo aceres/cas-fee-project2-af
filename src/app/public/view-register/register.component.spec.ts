@@ -11,7 +11,7 @@ import { AngularFireDatabase } from 'angularfire2/database';
 import { FirebaseApp } from 'angularfire2';
 import { AuthService } from '../../services/auth.service'
 
-describe('RegisterComponent', () => {
+describe('RegisterComponent - Not tests yet!', () => {
 
     beforeEach(() => {
         TestBed.configureTestingModule({
@@ -42,7 +42,7 @@ describe('RegisterComponent', () => {
     //     }).compileComponents();
     // }));
 
-    it('It should create the register component', async(() => {
-
-    }));
+    // it('It should create the register component', async(() => {
+    //
+    // }));
 });

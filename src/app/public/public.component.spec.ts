@@ -9,11 +9,7 @@ import { AngularFireDatabase } from 'angularfire2/database';
 import { FirebaseApp } from 'angularfire2';
 import { AuthService } from '../services/auth.service'
 
-describe('1st tests', () => {
-    it('true is true', () => expect(true).toBe(true));
-});
-
-describe('PublicComponent', () => {
+describe('PublicComponent - Not tests yet!', () => {
 
     beforeEach(() => {
         TestBed.configureTestingModule({

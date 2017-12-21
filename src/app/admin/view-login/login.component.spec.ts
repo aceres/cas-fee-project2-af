@@ -7,7 +7,7 @@ const userAuthMethods = [
     'subscribe'
 ];
 
-describe('Service: AuthService (Authentication)', () => {
+describe('LoginComponent', () => {
     describe('AuthService', () => {
         let authService;
         let authSubject;

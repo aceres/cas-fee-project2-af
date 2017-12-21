@@ -9,11 +9,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AuthService } from '../../services/auth.service';
 import { environment } from '../../../environments/environment';
 
-describe('1st tests', () => {
-    it('true is true', () => expect(true).toBe(true));
-});
-
-describe('AboutComponent', () => {
+describe('AboutComponent - Not tests yet!', () => {
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({

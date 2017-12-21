@@ -33,7 +33,7 @@ describe('Service: AuthService (Authentication)', () => {
             })();
         });
 
-        it('The service: AuthService for the LoginComponent should be defined!', () => {
+        it('The service: AuthService should be defined!', () => {
             expect(authService).toBeDefined();
         });
 

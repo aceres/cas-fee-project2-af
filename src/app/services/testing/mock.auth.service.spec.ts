@@ -2,7 +2,7 @@
 import { TestBed, inject } from '@angular/core/testing';
 import { MockAuthService } from './mock.auth.service';
 
-describe('AuthServiceTest', () => {
+describe('MockAuthServiceTest - Login', () => {
     beforeEach(() => {
         TestBed.configureTestingModule({
             providers: [
@@ -15,7 +15,7 @@ describe('AuthServiceTest', () => {
         expect(service.isLoggedIn(false)).toBeFalsy();
     }));
 
-    it('#isLoggedIn should return false after creation', inject([MockAuthService], (service: MockAuthService) => {
+    it('#isLoggedIn should return true after creation', inject([MockAuthService], (service: MockAuthService) => {
         expect(service.isLoggedIn(true )).toBeTruthy();
     }));
 });
