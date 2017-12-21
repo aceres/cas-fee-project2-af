@@ -121,8 +121,8 @@ export class RecipeEditComponent implements OnInit {
     this.recipe.ingredients.push(new Ingredient(quantity, unit, ingredient));
   }
 
-  removeIngredient(index) {
-    this.recipe.ingredients.splice(index, 1);
+  removeIngredient(ingredient) {
+    this.recipe.ingredients.splice(this.recipe.ingredients.indexOf(ingredient), 1);
   }
 
   addStep(stepDescription: string) {
@@ -131,8 +131,8 @@ export class RecipeEditComponent implements OnInit {
     }
   }
 
-  removeStep(index) {
-    this.recipe.steps.splice(index, 1);
+  removeStep(step) {
+    this.recipe.steps.splice(this.recipe.steps.indexOf(step), 1);
   }
 
   goBack(): void {

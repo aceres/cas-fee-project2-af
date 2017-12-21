@@ -151,9 +151,9 @@
   <th></th>
   </thead>
   <tbody>
-  <tr *ngFor="let step of recipe.steps; let i = index;">
+  <tr *ngFor="let step of recipe.steps; let i = index">
     <td>
-      Schritt: {{i+1}}
+      Schritt {{ i+1 }}
     </td>
     <td>
       {{ step.stepDescription }}
