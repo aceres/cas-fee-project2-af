@@ -50,7 +50,7 @@ export class LoginComponent implements OnInit {
         } else if (response.code === 'auth/network-request-failed') {
             this.childAlert.showAlert('danger', `${ response.message }!`);
         } else {
-          this.childAlert.showAlert('success', `Sie sind erfolgreich angemeldet ${ response.email }! (Angemeldet am: ${(new Date()).toLocaleTimeString()})`);
+          this.childAlert.showAlert('success', `Du hast dich erfolgreich angemeldet ${ response.email }! (Angemeldet am: ${(new Date()).toLocaleTimeString()})`);
 
           // Get the role of user
           this.db.list('/users', {
@@ -73,7 +73,7 @@ export class LoginComponent implements OnInit {
 
   logout() {
     this.authService.logout();
-    this.childAlert.showAlert('success', `Sie sind erfolgreich abgemeldet am: ${(new Date()).toLocaleTimeString()})`);
+    this.childAlert.showAlert('success', `Du hast dich erfolgreich abgemeldet am: ${(new Date()).toLocaleTimeString()})`);
     this.router.navigateByUrl('/admin');
   }
 }

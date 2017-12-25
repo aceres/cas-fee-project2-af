@@ -27,7 +27,7 @@ export class UserAuthGuardService {
         if (!this.authService.isAuthenticated() && this.router.url !== '/login') {
             this.modalRef = this.modalService.show(ModalComponent);
             this.modalRef.content.title = 'Berechtigung';
-            this.modalRef.content.message = 'Bitte loggen Sie sich ein!';
+            this.modalRef.content.message = 'Bitte melde dich an.';
             this.modalRef.content._OK = 'Zum Login';
             this.modalRef.content._cancel = 'Abbrechen';
             this.modalRef.content.onClose.subscribe(result => {

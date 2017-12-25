@@ -68,7 +68,7 @@ export class AdminComponent implements OnInit {
 
         } else {
 
-          this.childAlert.showAlert('success', `Sie sind erfolgreich angemeldet ${ response.email }! (Angemeldet am: ${(new Date()).toLocaleTimeString()})`);
+          this.childAlert.showAlert('success', `Du hast dich erfolgreich angemeldet ${ response.email }! (Angemeldet am: ${(new Date()).toLocaleTimeString()})`);
 
           // Get the role of user
           this.db.list('/users', {
@@ -93,7 +93,7 @@ export class AdminComponent implements OnInit {
 
   logout() {
     this.authService.logout();
-    this.childAlert.showAlert('success', `Sie sind erfolgreich abgemeldet am: ${(new Date()).toLocaleTimeString()})`);
+    this.childAlert.showAlert('success', `Du hast dich erfolgreich abgemeldet am: ${(new Date()).toLocaleTimeString()})`);
     this.router.navigateByUrl('/admin');
   }
 }
