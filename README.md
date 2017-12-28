@@ -1,7 +1,7 @@
 # Projekt 2: www.manducare.ch :yum:
 
 This project for the final exam of CAS Frontend Engineering at the Hochschule in Rapperswil was implemented by
-Tanja Sennhauser and André Ceres.
+Tanja Sennhauser and André Ceres. The web application is optimized for Chrome, Safari, IE Edge and Mobile Browser.
 
 ## CLI tool for Angular
 
