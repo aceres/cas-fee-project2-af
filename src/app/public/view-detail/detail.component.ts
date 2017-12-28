@@ -102,7 +102,7 @@ export class PublicReceiptDetailComponent implements OnInit {
 
     if (this.authService !== null) {
       this.favoriteService.addRecipeToFavorites(this.authService.getUid().uid, recipeKey, recipeName);
-      this.childAlert.showAlert('success', `Super! Ihr Lieblingsrezept wurde in Ihrem Favoriten hinzugefügt! (Hinzugefügt am: ${(new Date()).toLocaleTimeString()})`);
+      this.childAlert.showAlert('success', `Das Rezept wurde zu deinen Favoriten hinzugefügt! (Hinzugefügt am: ${(new Date()).toLocaleTimeString()})`);
     }
   }
 
