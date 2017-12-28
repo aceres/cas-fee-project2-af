@@ -24,6 +24,7 @@
 * 2x Crash Erlebnisse
 * Ob wir es richtig bauen - Angular 2 (Style Guide) inkl. Firebase
 
+* Testing Mobile (use it - Upload the photo)
 * TypeScript
 * Entry Components
 * JWT Token nutzen / Custom Error Log / Observable / RxJS
