@@ -103,7 +103,7 @@
   <tbody>
   <tr *ngFor="let ingredient of recipe.ingredients; let i = index;">
     <td>
-      <input type="number" [ngModel]="ingredient.quantity" name="quantity" class="form-control" min="0" #recipeQuantity>
+      <input type="number" [(ngModel)]="ingredient.quantity" name="quantity" class="form-control" min="0" #recipeQuantity>
     </td>
     <td>
       <select name="unit" form="unit" [(ngModel)]="ingredient.unit" class="form-control" #recipeUnit>
@@ -111,7 +111,7 @@
       </select>
     </td>
     <td>
-      <input type="text" name="ingredient" [ngModel]="ingredient.ingredient" class="form-control" #recipeIngredient>
+      <input type="text" name="ingredient" [(ngModel)]="ingredient.ingredient" class="form-control" #recipeIngredient>
     </td>
     <td>
       <button (click)="removeIngredient(ingredient)" class="btn btn-default btn--right">
