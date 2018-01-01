@@ -7,5 +7,6 @@ export const listCuisines: Cuisine[] = [
   { value: 'german', name: 'deutsch' },
   { value: 'asian', name: 'asiatisch' },
   { value: 'italian', name: 'italienisch' },
-  { value: 'polish', name: 'polnisch' }
+  { value: 'polish', name: 'polnisch' },
+  { value: 'american', name: 'amerikanisch' }
 ];
