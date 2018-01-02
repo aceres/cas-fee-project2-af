@@ -22,6 +22,7 @@ export class PublicReceiptDetailComponent implements OnInit {
   image;
   key;
   rating: FirebaseListObservable<any[]>;
+  showLike: boolean = true;
 
   uid;
   recipeId;
@@ -114,12 +115,16 @@ export class PublicReceiptDetailComponent implements OnInit {
       }
       return rating;
     }).then( result => {
+
         this.getRecipe();
         this.childAlert.showAlert('success', `Super! Vielen Dank für das Voten!`);
+        this.showLike = false;
 
     }).catch( error => {
         this.childAlert.showAlert('danger', `Keine Verbindung! ` + error);
-    })
+    });
+
+    setTimeout(() => { this.showLike = true; }, 60000);
   }
 
   goBack(): void {

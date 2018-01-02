@@ -36,7 +36,7 @@
             <div class="like-group">
               <ul class="like__list">
                 <li>
-                  <span (click)="rateRecipe()" class="like__list like__list--like flaticon-like"></span>
+                  <span *ngIf="showLike" (click)="rateRecipe()" class="like__list like__list--like flaticon-like"></span>
                   {{(recipe)?.rating}}
                 </li>
                 <li *ngIf="authService.user | async">
