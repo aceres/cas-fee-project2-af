@@ -1,5 +1,6 @@
 export const listUnits = [
   { value: 'Blatt', display: 'Blatt' },
+  { value: 'Bündel', display: 'Bündel' },
   { value: 'Deziliter', display: 'Deziliter' },
   { value: 'Dose', display: 'Dose' },
   { value: 'Esslöffel', display: 'Esslöffel' },
