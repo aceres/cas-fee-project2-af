@@ -11,7 +11,7 @@
 * Registrationsprozess definiert
 * Polyfills IE11 aktiv geschaltet
 * Dokumentation verfasst (Readme)
-* UX Testing durchgeführt
+* UX Testing durchgeführt (spezifische Korrekturen vorgenommen)
 
 ## Verbesserungsbedürfnisse;
 
