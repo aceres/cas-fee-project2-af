@@ -11,8 +11,14 @@
     font-size: 18px;
     height: 50px;
     line-height: 20px;
-    padding: 15px 15px;
+    padding: 0;
     text-decoration: none;
+  }
+
+  &__logo {
+    height: 40px;
+    margin: 5px 15px;
+    width: auto;
   }
 
   &__link {
@@ -33,4 +39,12 @@
 
 .icon-bar {
   background-color: @white;
+}
+
+@media (min-width: 768px) {
+  .navbar-admin {
+    &__logo {
+      margin: 5px 0;
+    }
+  }
 }

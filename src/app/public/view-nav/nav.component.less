@@ -1,12 +1,24 @@
 @import "../../../_base";
 @import "../../../_settings";
 
-.navbar-default {
-  border-color: transparent;
-  border-radius: 0;
-  box-shadow: none;
-  font-family: @merri-weather;
-  text-transform: uppercase;
+.navbar {
+  &-default {
+    border-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    font-family: @merri-weather;
+    text-transform: uppercase;
+  }
+
+  &-brand {
+    padding: 0;
+
+    &__logo {
+      height: 40px;
+      margin: 5px 15px;
+      width: auto;
+    }
+  }
 }
 
 .nav .open > a,
