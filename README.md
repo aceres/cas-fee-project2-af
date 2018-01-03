@@ -1,3 +1,5 @@
+![Manducare](src/assets/img/logo.png?raw=true "Manducare")
+
 # Projekt 2: www.manducare.ch :yum:
 
 This project for the final exam of CAS Frontend Engineering at the Hochschule in Rapperswil was implemented by
