@@ -10,21 +10,23 @@
       <div class="col-md-12 text-center">
         <h2 class="favorite__heading"><span class="favorite__heading favorite__heading--yellow">Rezepte</span> die jeder mag</h2>
       </div>
-      <div class="col-sm-4 col-md-4" *ngFor="let recipe of (allRecipes | async)?.slice(0,3)">
-        <div class="favorite">
-          <div class="favorite__cover">
-            <div class="favorite__cover--top">
-              <img src="{{recipe.image?.url}}" alt="{{recipe.receipt}}">
+      <div class="favorite__container">
+        <div class="favorite__item" *ngFor="let recipe of (allRecipes | async)?.slice(0,3)">
+          <div class="favorite">
+            <div class="favorite__cover">
+              <div class="favorite__cover--top">
+                <img src="{{recipe.image?.url}}" alt="{{recipe.receipt}}">
+              </div>
             </div>
-          </div>
-          <div class="favorite__info">
-            <div class="favorite__header">
-              <h3 class="favorite__recipe">{{recipe.receipt}}</h3>
+            <div class="favorite__info">
+              <div class="favorite__header">
+                <h3 class="favorite__recipe">{{recipe.receipt}}</h3>
+              </div>
+              <p class="favorite__text">{{recipe.description}}</p>
             </div>
-            <p class="favorite__text">{{recipe.description}}</p>
+            <span class="favorite__like icon flaticon-like">{{recipe.rating}}</span>
+            <a class="favorite__button btn btn-default" (click)="detail(recipe)" role="button">Zum Rezept</a>
           </div>
-          <span class="favorite__like icon flaticon-like">{{recipe.rating}}</span>
-          <a class="favorite__button btn btn-default" (click)="detail(recipe)" role="button">Zum Rezept</a>
         </div>
       </div>
     </div>
@@ -52,72 +54,44 @@
       <div class="col-md-12 text-center">
         <h2 class="category__heading">Was möchtest du <span class="category__heading category__heading--yellow">zubereiten</span>?</h2>
       </div>
-      <div class="col-md-4 col-sm-6 col-xs-12">
+      <div class="category__container">
         <div class="category" (click)="listRecipeSpecificCategory('breakfast')">
-          <div class="category__img">
-            <img class="category__img--top" src="./assets/img/breakfast.svg" alt="Frühstück">
+          <div class="category__circle">
+            <img class="category__circle--inner" src="./assets/img/breakfast.svg" alt="Frühstück">
           </div>
-          <div class="category__body">
-            <h4 class="category__title">Frühstück</h4>
-          </div>
+          <h4 class="category__title">Frühstück</h4>
         </div>
-      </div>
-
-      <div class="col-md-4 col-sm-6 col-xs-12">
         <div class="category" (click)="listRecipeSpecificCategory('starter')">
-          <div class="category__img">
-            <img class="category__img--top" src="./assets/img/starter.svg" alt="Vorspeise">
+          <div class="category__circle">
+            <img class="category__circle--inner" src="./assets/img/starter.svg" alt="Vorspeise">
           </div>
-          <div class="category__body">
-            <h4 class="category__title">Vorspeise</h4>
-          </div>
+          <h4 class="category__title">Vorspeise</h4>
         </div>
-      </div>
-
-      <div class="col-md-4 col-sm-6 col-xs-12">
         <div class="category" (click)="listRecipeSpecificCategory('mainCourse')">
-          <div class="category__img">
-            <img class="category__img--top" src="./assets/img/main-course.svg" alt="Hauptspeise">
+          <div class="category__circle">
+            <img class="category__circle--inner" src="./assets/img/main-course.svg" alt="Hauptspeise">
           </div>
-          <div class="category__body">
-            <h4 class="category__title">Hauptgericht</h4>
-          </div>
+          <h4 class="category__title">Hauptgericht</h4>
         </div>
-      </div>
-
-      <div class="col-md-4 col-sm-6 col-xs-12">
         <div class="category" (click)="listRecipeSpecificCategory('snack')">
-          <div class="category__img">
-            <img class="category__img--top" src="./assets/img/snack.svg" alt="Snack">
+          <div class="category__circle">
+            <img class="category__circle--inner" src="./assets/img/snack.svg" alt="Snack">
           </div>
-          <div class="category__body">
-            <h4 class="category__title">Snack</h4>
-          </div>
+          <h4 class="category__title">Snack</h4>
         </div>
-      </div>
-
-      <div class="col-md-4 col-sm-6 col-xs-12">
         <div class="category" (click)="listRecipeSpecificCategory('sideDish')">
-          <div class="category__img">
-            <img class="category__img--top" src="./assets/img/side-dish.svg" alt="Beilage">
+          <div class="category__circle">
+            <img class="category__circle--inner" src="./assets/img/side-dish.svg" alt="Beilage">
           </div>
-          <div class="category__body">
-            <h4 class="category__title">Beilage</h4>
-          </div>
+          <h4 class="category__title">Beilage</h4>
         </div>
-      </div>
-
-      <div class="col-md-4 col-sm-6 col-xs-12">
         <div class="category" (click)="listRecipeSpecificCategory('dessert')">
-          <div class="category__img">
-            <img class="category__img--top" src="./assets/img/dessert.svg" alt="Dessert">
+          <div class="category__circle">
+            <img class="category__circle--inner" src="./assets/img/dessert.svg" alt="Dessert">
           </div>
-          <div class="category__body">
-            <h4 class="category__title">Dessert</h4>
-          </div>
+          <h4 class="category__title">Dessert</h4>
         </div>
       </div>
-
     </div>
   </div>
 </section>
