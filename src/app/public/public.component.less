@@ -154,46 +154,17 @@
     width: 100%;
   }
 
-  &__heading {
-    .fluid-type(font-size, @min-vw, @max-vw, 30px, 50px);
-
-    &--yellow {
-      color: @yellow;
-    }
-  }
-
-  &__circle {
-    align-items: center;
+  &__image {
+    color: @white;
     display: flex;
-    flex: 0 0 80%;
     justify-content: center;
-    position: relative;
-    width: 80%;
+    max-width: 200px;
+    padding: 10px;
+    transition: all 0.3s;
 
-    &:after {
-      background-color: @white;
-      border-radius: 50%;
-      content: "";
-      height: auto;
-      min-height: 200px;
-      /*padding-bottom: 100%;*/
-      min-width: 200px;
-      width: auto;
-    }
-
-    &--inner {
-      color: @white;
-      display: flex;
-      justify-content: center;
-      padding: 10px;
-      position: absolute;
-      transition: all 0.3s;
-      width: 80%;
-
-      &:hover {
-        cursor: pointer;
-        transform: scale(1.1);
-      }
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
     }
   }
 
@@ -202,19 +173,16 @@
     flex: 1 1 100%;
     font-size: 24px;
     justify-content: center;
-    margin: 20px 0 0 0;
+    margin: 0;
     text-align: center;
     width: 100%;
   }
-}
 
-@media (min-width: 480px) {
-  .category {
-    &__circle {
-      &:after {
-        min-height: 280px;
-        min-width: 280px;
-      }
+  &__heading {
+    .fluid-type(font-size, @min-vw, @max-vw, 30px, 50px);
+
+    &--yellow {
+      color: @yellow;
     }
   }
 }
@@ -233,15 +201,8 @@
   }
 
   .category {
-    flex: 1 1 calc(~"100% / 2 - 30px");
+    flex: 1 1 auto; /* needed for IE */
     width: calc(~"100% / 2 - 30px");
-
-    &__circle {
-      &:after {
-        min-height: 180px;
-        min-width: 180px;
-      }
-    }
   }
 }
 
@@ -257,14 +218,12 @@
   }
 
   .category {
-    flex: 1 1 calc(~"100% / 3 - 30px");
+    flex: 1 1 auto; /* needed for IE */
     width: calc(~"100% / 3 - 30px");
 
-    &__circle {
-      &:after {
-        min-height: 120px;
-        min-width: 120px;
-      }
+    &__image {
+      height: 160px;
+      width: 160px;
     }
   }
 }
@@ -273,6 +232,13 @@
   .tip  {
     &__text {
       font-size: 20px;
+    }
+  }
+
+  .category {
+    &__image {
+      height: auto;
+      width: auto;
     }
   }
 }
@@ -300,7 +266,6 @@
 
 @media (min-width: 1200px) {
   .favorite {
-
     &__cover {
       &--top {
         height: 22em;
@@ -309,7 +274,7 @@
   }
 
   .category {
-    flex: 1 1 calc(~"100% / 3 - 100px");
+    flex: 1 1 auto; /* needed for IE */
     margin: 0 50px 50px;
     width: calc(~"100% / 3 - 100px");
   }
