@@ -27,8 +27,10 @@
 * Testing Mobile (use it - Upload the photo)
 * TypeScript
 * Entry Components
+* Lazy Loading
 * JWT Token nutzen / Custom Error Log / Observable / RxJS
 * Emitter (Input / Output)
+* https://thinkster.io/tutorials/building-real-world-angular-2-apps/page-layout-and-routing
 
 ## Problem beim 2. Crash (Anfang November 2017)
 
