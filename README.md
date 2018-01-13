@@ -32,6 +32,10 @@ Our meeting protocols were all 2 - 3 weeks (shared status).
 Screenshots of our current web application (Desktop and mobile version).
 Flow for the login process (pdf).
 
+Hints for efforts:
+* Blank Slates (Adding new recipes, adding new favorite)
+* UX Tests were executed by several users (see the folder: `/doc/testing/usability/test-cases.pdf`)
+
 :open_file_folder: `/doc/wireframes/..`
 
 Wireframes (Mockups) for our web application and the Manduare Style Guide.
@@ -50,7 +54,7 @@ Must have requirements and optional tasks for our project.
 
 :open_file_folder: `/doc/testing/usability/test-cases.pdf`
 
-Test cases for our web application.
+Test cases for our web application. UX Tests were executed by several users.
 
 ###
 
