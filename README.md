@@ -15,6 +15,10 @@ The Angular CLI makes it easy to create an application that already works, right
 
 There is a folder: `/doc/..` for the documentation.
 
+:open_file_folder: `/doc/presentation/..`
+
+There is a file for the final presentation.
+
 :open_file_folder: `/doc/json/..`
 
 Analysis for the JSON, Testing with CURLs (POST, PUT, ...).
