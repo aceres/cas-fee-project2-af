@@ -1,36 +1,8 @@
-# Überlegung / Erfahrung (für die Präsentation gedacht - Slides machen):
+# Experience:
 
-## Besondere Leistungen:
+## Package Locking
 
-* Pläne und Zeile gesetzt (Meilensteine erreicht)
-* Organisieren von Templates (Public / Admin)
-* Alle 2-3 Wochen Statusmeetings (Evernote, Trello, ...)
-* Ausprobieren und Evaluation ngPrime / ngx-bootstrap
-* Schritte (in etappenweise, Proof of Concept, Einrichtung, Firebase, ...)
-* AuthGuard / Registration (Login) / Rollen definieren
-* Registrationsprozess definiert
-* Polyfills IE11 aktiv geschaltet
-* Dokumentation verfasst (Readme)
-* UX Testing durchgeführt (spezifische Korrekturen vorgenommen)
-
-## Verbesserungsbedürfnisse;
-
-* Unit Test - parallel schreiben und nicht am Schluss (mehr Zeit für Unit Tests)
-* AOT spät entdeckt (späte Korrekturen machen dann auch schwieriger)
-* AngularFire / Angular - Firebase (Vermischung) - Services
-* IP -> Like Favorite
-* package-lock.json (https://github.com/npm/npm/issues/16866)
-* Rezept entfernt - Was passiert mit dem Favorite?
-* 2x Crash Erlebnisse
-* Ob wir es richtig bauen - Angular 2 (Style Guide) inkl. Firebase
-
-* Testing Mobile (use it - Upload the photo)
-* TypeScript
-* Entry Components
-* Lazy Loading
-* JWT Token nutzen / Custom Error Log / Observable / RxJS
-* Emitter (Input / Output)
-* https://thinkster.io/tutorials/building-real-world-angular-2-apps/page-layout-and-routing
+* [package-lock.json](https://github.com/npm/npm/issues/16866)
 
 ## Problem beim 2. Crash (Anfang November 2017)
 

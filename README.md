@@ -38,7 +38,7 @@ Configurations, deployments and settings for the development of this project.
 
 :open_file_folder: `/doc/experience.md`
 
-Experience and reasons for the problem including links.
+Experience and reason for the problem including links.
 
 :open_file_folder: `/doc/todo.md`
 
