@@ -24,6 +24,10 @@
         <button type="button" class="btn btn-default" (click)="login()" [disabled]="!email || !password">
           <i class="flaticon-right-arrow"></i> Anmelden
         </button>
+        <div class="form-group help-block">
+          <a class="help-block__link" [routerLink]="['/register']">Noch nicht registriert?</a> <br>
+          <a class="help-block__link" [routerLink]="['/contact']">Passwort vergessen?</a>
+        </div>
       </div>
 
       <ul *ngIf="(authService.user | async)" class="nav nav-sidebar">
