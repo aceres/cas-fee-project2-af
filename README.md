@@ -181,6 +181,14 @@ Problem: Switching to prod with `ng build --prod`
 * [Issue 2](https://github.com/angular/angular-cli/issues/7113)
 * [Issue 3](https://github.com/angular/angular-cli/issues/7138)
 
+## REST API
+
+We have 3 data scopes:
+
+* users
+* recipes
+* favorites
+
 ## Running unit tests
 
 `
